@@ -10,6 +10,7 @@ using GameFramework;
 using HotfixBusiness.DataUser;
 using HotfixBusiness.UI;
 using Main.Runtime.Procedure;
+using UnityEngine;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
@@ -32,7 +33,7 @@ namespace HotfixBusiness.Procedure
             base.OnLeave(procedureOwner, isShutdown);
             //清理所有信息管理器
             DataManagerEntry.GetInstance()?.OnClear();
-            ShowUIEntranceMenuForm(false);            
+            ShowUIEntranceMenuForm(false);
         }
 
         private void ShowUIEntranceMenuForm(bool isOpen)
@@ -41,6 +42,7 @@ namespace HotfixBusiness.Procedure
             {
                 if (!GameEntry.UI.HasUIForm(m_UIEntranceMenuFormId) && !GameEntry.UI.IsLoadingUIForm(m_UIEntranceMenuFormId))
                 {
+                    Debug.LogError($"打开UIMainMenuForm time = {Time.time}");
                     m_UIEntranceMenuFormId = GameEntry.UI.OpenUIForm(ConstantUI.GetUIFormInfo<UIMainMenuForm>());
                 }
             }

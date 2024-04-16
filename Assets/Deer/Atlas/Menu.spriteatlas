@@ -7,7 +7,6 @@ SpriteAtlas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Menu
-  serializedVersion: 2
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -32,25 +31,14 @@ SpriteAtlas:
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
-    packables:
-    - {fileID: 102900000, guid: 32954c69e8cfc4a4eb4343f8609af7b8, type: 3}
+    packables: []
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys: []
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites:
-  - {fileID: 21300000, guid: 4fa05bb5cf0611a4d9cae4cc01194bf7, type: 3}
-  - {fileID: 21300000, guid: 1ba9fef6795f59644a661d051dee8f6c, type: 3}
-  - {fileID: 21300000, guid: 113d9c1831a604a4481c6b7d1553993b, type: 3}
-  - {fileID: 21300000, guid: 0e8bd0c923e544945b8739d634e12e83, type: 3}
-  - {fileID: 21300000, guid: cd7fb0eac14f22048abac8bfd630ed07, type: 3}
-  m_PackedSpriteNamesToIndex:
-  - MainMenuImage04
-  - MainMenuImage05
-  - MainMenuImage01
-  - MainMenuImage03
-  - MainMenuImage02
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
   m_RenderDataMap: {}
   m_Tag: Menu
   m_IsVariant: 0
-  m_IsPlaceholder: 0

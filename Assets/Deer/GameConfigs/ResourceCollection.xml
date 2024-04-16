@@ -2,21 +2,6 @@
 <UnityGameFramework>
   <ResourceCollection>
     <Resources>
-      <Resource Name="ADeerExample/EntityPrefabs" LoadType="0" Packed="False" ResourceGroups="ADeerExample" />
-      <Resource Name="ADeerExample/EntityResources" LoadType="0" Packed="False" ResourceGroups="ADeerExample" />
-      <Resource Name="ADeerExample/Scenes" LoadType="0" Packed="False" ResourceGroups="ADeerExample" />
-      <Resource Name="ADeerExample/UI/UIArt/AtlasCollection/Icon" LoadType="0" Packed="False" ResourceGroups="ADeerExample" />
-      <Resource Name="ADeerExample/UI/UIArt/Texture/login_bg" LoadType="0" Packed="False" ResourceGroups="ADeerExample" />
-      <Resource Name="ADeerExample/UI/UIArt/UISprites/Icon/Icon" LoadType="0" Packed="False" ResourceGroups="ADeerExample" />
-      <Resource Name="ADeerExample/UI/UIForms/UIBag/UIBagForm" LoadType="0" Packed="False" ResourceGroups="ADeerExample" />
-      <Resource Name="ADeerExample/UI/UIForms/UIBag/UIBagForm_SubUI" LoadType="0" Packed="False" ResourceGroups="ADeerExample" />
-      <Resource Name="ADeerExample/UI/UIForms/UIDeerGamePlay/UIDeerGamePlayForm" LoadType="0" Packed="False" ResourceGroups="ADeerExample" />
-      <Resource Name="ADeerExample/UI/UIForms/UILogin/UILoginForm" LoadType="0" Packed="False" ResourceGroups="ADeerExample" />
-      <Resource Name="AGameExample/EntityPrefabs" LoadType="0" Packed="False" ResourceGroups="AGameExample" />
-      <Resource Name="AGameExample/EntityResources" LoadType="0" Packed="False" ResourceGroups="AGameExample" />
-      <Resource Name="AGameExample/Scenes" LoadType="0" Packed="False" ResourceGroups="AGameExample" />
-      <Resource Name="AGameExample/Sounds" LoadType="0" Packed="False" ResourceGroups="AGameExample" />
-      <Resource Name="AGameExample/UI" LoadType="0" Packed="False" ResourceGroups="AGameExample" />
       <Resource Name="BaseAssets/Font" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/GameConfigs" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/GF" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
@@ -45,268 +30,36 @@
     </Resources>
     <Assets>
       <Asset Guid="022e3a7a56dcd374b99c91524e195749" ResourceName="BaseAssets/UITemplate/ScrollView/VGridScrollView" />
-      <Asset Guid="032c77bbc733b554dbdb01b54294e9e2" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="03cd95365a770834699b1ec0e42441b3" ResourceName="AGameExample/Scenes" />
-      <Asset Guid="04480931fc7c46c45872d2d3d26dd4b4" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="0519713ffa2bd1b4a97bb199f18cb45b" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="0727bf9eac9d5ce4abc49ec2d2bdcd77" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="092f38b80762dbf499dc284a496dbd33" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="09c073dcc0c0de149935455211d3fc1e" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="0a04f24070c254c4984db94c18bb2483" ResourceName="AGameExample/UI" />
-      <Asset Guid="0b8b597955a2b504eabca11b09872c9c" ResourceName="AGameExample/UI" />
-      <Asset Guid="0b8ddec19039a8245b8deb6222a7199b" ResourceName="AGameExample/Scenes" />
-      <Asset Guid="0c2f53eee4d58614f8e0f04273fe5ad7" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="0ca31bcb801c709439eb59c2f8496bb5" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="0d6bf45a3374f5d42b65dca0dd0dadd4" ResourceName="AGameExample/UI" />
-      <Asset Guid="0dc3044ef8e0b01469abafef25bf5783" ResourceName="AGameExample/UI" />
-      <Asset Guid="0e8bd0c923e544945b8739d634e12e83" ResourceName="AGameExample/UI" />
-      <Asset Guid="0fb4b84e184f63c41a6b6c3cb62b0e24" ResourceName="ADeerExample/EntityResources" />
+      <Asset Guid="0c210c5b35c48d4408b1fdf6cd3f3061" ResourceName="BaseAssets/Font" />
       <Asset Guid="102e820a7b9321d42b127d3104a7ca5a" ResourceName="BaseAssets/UI/UIForms/UILoading/UILoadingForm" />
-      <Asset Guid="113d9c1831a604a4481c6b7d1553993b" ResourceName="AGameExample/UI" />
-      <Asset Guid="11f2a592be5920842b8f65ed04d23b61" ResourceName="AGameExample/UI" />
-      <Asset Guid="122b5d5ce082b9e4a977e593fa010c30" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="136ae77db91351440b67adf32f4ec81c" ResourceName="AGameExample/UI" />
-      <Asset Guid="13c34e873dd40e64a84db56f3786db8e" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="16f17c4cbd248ed4e8f63a3c24845fb5" ResourceName="AGameExample/UI" />
-      <Asset Guid="176e05bf53f9343498681bc82e960b91" ResourceName="AGameExample/UI" />
-      <Asset Guid="17ec5b8f543c59345bc1257ec50c7228" ResourceName="ADeerExample/Scenes" />
-      <Asset Guid="18c562febc6780b428cdf121c09416b8" ResourceName="AGameExample/UI" />
       <Asset Guid="1933ea8013f08d644bac0beabf442d59" ResourceName="BaseAssets/UITemplate/ScrollView/HListScrollView" />
-      <Asset Guid="19d1f77867b631b4e8af112eb72e9daf" ResourceName="AGameExample/Sounds" />
-      <Asset Guid="1aa33f099cc2369499170e91099c1324" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="1b2a19769225c464b97b444f22144a73" ResourceName="AGameExample/UI" />
-      <Asset Guid="1b8727b32a423e64a8962b395bfecc15" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="1ba9fef6795f59644a661d051dee8f6c" ResourceName="AGameExample/UI" />
-      <Asset Guid="1cddfc3979dc2144098a87b4a2568741" ResourceName="ADeerExample/UI/UIArt/AtlasCollection/Icon" />
-      <Asset Guid="203729cadb1b806489e81f0d47ccb18d" ResourceName="ADeerExample/EntityResources" />
       <Asset Guid="227f8b54bf3f57b4392a62306a97b840" ResourceName="BaseAssets/UI/UIPrefabs" />
-      <Asset Guid="22f8dd74c70316046866d180dea83aed" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="24f9961372fb6c2439df9fbc7f4c0f79" ResourceName="ADeerExample/Scenes" />
-      <Asset Guid="255195c037717bd479546418eff08f34" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="286e4df74e44d33448b6dd82f9a8ec62" ResourceName="AGameExample/UI" />
-      <Asset Guid="29eab42364b975b418a947276f06e238" ResourceName="AGameExample/UI" />
-      <Asset Guid="2bf43712fc83976418ee9a19ce3b9dae" ResourceName="ADeerExample/UI/UIForms/UIDeerGamePlay/UIDeerGamePlayForm" />
-      <Asset Guid="2bfca9713ccd52c418bdeeb39cf737fb" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="2df7eec5b62d7fc48924adba00d11414" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="30a01dcc2faf5b14eb5dbcfe608e1356" ResourceName="AGameExample/UI" />
-      <Asset Guid="30f340fc58c456345bca27940e211c00" ResourceName="AGameExample/UI" />
-      <Asset Guid="32a570a82f875e54fb17e087569e2ddb" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="344fd999a66558c47adbfeb5d96e5704" ResourceName="AGameExample/Sounds" />
-      <Asset Guid="3485f7fb033b1ba4fac0682ce3ed04ea" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="36ea96fcdcff1974ea517efe19713b28" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="36f43a39e69d84d4db813e498fb7de42" ResourceName="AGameExample/UI" />
-      <Asset Guid="3899f2b9169643f46b702f48c794a160" ResourceName="AGameExample/UI" />
-      <Asset Guid="38ca611e1675ce84f828829596bba7c9" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="397b7bc6b9b47ed43b9a855c4e992dc5" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="3a311997e25dafd49b394538280309c0" ResourceName="AGameExample/UI" />
       <Asset Guid="3c31266dd0ae57c468b36845e0397b6a" ResourceName="BaseAssets/Font" />
-      <Asset Guid="3c781c240b425e048aebb2486eb9c2bb" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="3ca4a3018e19102449398f585286054f" ResourceName="AGameExample/UI" />
-      <Asset Guid="3cdd48bbd933e204f974c7eef90332c5" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="3d333cd0329fd1a49876030a56423ec7" ResourceName="AGameExample/UI" />
-      <Asset Guid="3dfb9dc1d025a7942bf0830afc430330" ResourceName="AGameExample/UI" />
-      <Asset Guid="3e08550ee680a0342bb21fe381786c26" ResourceName="AGameExample/UI" />
-      <Asset Guid="433ac8f3ed22c814a9e5dd5dc50d038c" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="43e97c1549feb204a856d851e06bff35" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="4489a1e5887e763489a277708dbeb4f0" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="449fb521201c6d94280392e284f8ca5c" ResourceName="AGameExample/UI" />
-      <Asset Guid="454cb32e9bdd3444e97d1c0099d71310" ResourceName="AGameExample/UI" />
-      <Asset Guid="4593cd7ae1ee77e459abf7d8a288ea6b" ResourceName="AGameExample/UI" />
-      <Asset Guid="462b58a8e55b2204f9a023b6056cd410" ResourceName="ADeerExample/EntityResources" />
       <Asset Guid="466741b236a7df54fa016d0554d0d255" ResourceName="BaseAssets/UI/UIPrefabs" />
-      <Asset Guid="4694e759cf995894d8187715e6298f1d" ResourceName="AGameExample/UI" />
-      <Asset Guid="47022650e9d7d4b43adc4a8597128d92" ResourceName="AGameExample/UI" />
-      <Asset Guid="48591b2c571784a4aa2fed5bf35023e8" ResourceName="AGameExample/EntityPrefabs" />
-      <Asset Guid="486bf572edacd1c4ead451e98ce8e1df" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="4870b6bf16d301540873459d2a9649b3" ResourceName="AGameExample/UI" />
-      <Asset Guid="48cfeef2374d66943b2c09ffcf3949f6" ResourceName="AGameExample/UI" />
-      <Asset Guid="4a797b0c36b7d85479b8c97d14eed930" ResourceName="AGameExample/UI" />
-      <Asset Guid="4b43362df9945064aa96b700875a3bae" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="4d7a5d3dd650fe547b2071bf06638d0a" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="4fa05bb5cf0611a4d9cae4cc01194bf7" ResourceName="AGameExample/UI" />
-      <Asset Guid="4fde46afd41051642ade17a899d8e954" ResourceName="AGameExample/EntityPrefabs" />
-      <Asset Guid="50d34de33b084324aa7de571819fe3cd" ResourceName="AGameExample/UI" />
-      <Asset Guid="5112c4ac96bb95c43b2acdaada7e01c1" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="524b6ffcacd3366478b061357d8a93d7" ResourceName="AGameExample/UI" />
-      <Asset Guid="540ec265363e3bc44ba6a9958670afd0" ResourceName="AGameExample/UI" />
-      <Asset Guid="54b9c5c8dc8b17f4fbc0a2a09eb91f86" ResourceName="AGameExample/Scenes" />
-      <Asset Guid="54c9da89f7a53e146b4ac2746bf85073" ResourceName="AGameExample/UI" />
-      <Asset Guid="54e670bec28d8ec45932b61837750000" ResourceName="AGameExample/EntityResources" />
       <Asset Guid="55132911c10aa8047bd0d678757f5794" ResourceName="BaseAssets/UITemplate/UIHealthBar" />
       <Asset Guid="56c3b222b5f9329408e788cb5f734add" ResourceName="BaseAssets/UI/UIArt/Texture/loading_bg" />
-      <Asset Guid="57a780f182fc7f9408d8f6231fac60aa" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="57dd586590103ce4a8641642560ee7a5" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="5901f05c0982e0e46a7e467a4fcb1351" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="5acbcf8425a460141a6419129614ad72" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="5b02b917dc22f37498d43c53c93a578c" ResourceName="AGameExample/UI" />
-      <Asset Guid="5c2a5444f8b63d84bb6c8226d5971884" ResourceName="AGameExample/UI" />
-      <Asset Guid="5d588d5d43458ec4eb4f0f7fec2d7479" ResourceName="AGameExample/UI" />
-      <Asset Guid="5e0a9a3e1215f344ebd1e03e83be62fa" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="5e16bc5b6498f8a4da06dae3aa331f33" ResourceName="AGameExample/UI" />
-      <Asset Guid="61b6f06d6bbc0554c9fd28da8df27295" ResourceName="AGameExample/EntityPrefabs" />
-      <Asset Guid="622acad4fdaf61543a0bf02f50958256" ResourceName="AGameExample/UI" />
-      <Asset Guid="62f31a47eade44b4da36f17771096948" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="6971f6b607ec36348875996ac5cb3f4d" ResourceName="AGameExample/EntityResources" />
       <Asset Guid="6a059a129e1575d4fb9a6b8abce19c6e" ResourceName="BaseAssets/UITemplate/UIButton" />
-      <Asset Guid="6bc2544cd31342c4ba1bd16489883db1" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="6f3463be3069d5947bb2374ebb58529f" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="6f3bb198973abdf47835520d6046d6d8" ResourceName="AGameExample/UI" />
-      <Asset Guid="6f7c68c2e63dbbb4eb1f4339b4b922b6" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="6f972ee29a786604bbc01331ee8e8533" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="70f7a0bd607a9b54aa5112c636c695d2" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="710c2483be39e5b4599499ac74a92a96" ResourceName="AGameExample/UI" />
       <Asset Guid="716a243830ee50249a909f893f37c5d4" ResourceName="BaseAssets/UI/UIArt/UISprites/Common" />
       <Asset Guid="7247e1fea0760b54caa253020097fcdf" ResourceName="BaseAssets/UITemplate/ScrollView/ScrollVItemPrefab" />
-      <Asset Guid="73e5cd8af6641ab4a851a0d30e1f8ac5" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="73ede691105c5e94abc1b4edb88bf2da" ResourceName="ADeerExample/EntityResources" />
       <Asset Guid="745e65d5ee916dd47944050290a22205" ResourceName="BaseAssets/UITemplate/Joystick/Joystick" />
-      <Asset Guid="756cc686b2ac75c45b2ac4a3384a297b" ResourceName="AGameExample/EntityPrefabs" />
-      <Asset Guid="794b4158949576248bdf4edbfc6bb7f4" ResourceName="AGameExample/UI" />
-      <Asset Guid="7a1da81cd6d4d6e41a36c6e26523dba8" ResourceName="ADeerExample/UI/UIForms/UIBag/UIBagForm" />
-      <Asset Guid="7bfcaa2401b79814abdcfcf8dd81b23e" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="7c6dd281b8aecc94f9311258f9c68c26" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="7cde59df6da47304bb92eeb070ecb061" ResourceName="AGameExample/UI" />
-      <Asset Guid="7eb78071f3d3dc941ac39e46f7269478" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="7ec84ca7dcd32bb47a238c8773c5fa05" ResourceName="AGameExample/UI" />
-      <Asset Guid="7fa3169807b04584e9bdfd7521a5879a" ResourceName="AGameExample/UI" />
-      <Asset Guid="7fe7fb69b72be3644bb88b9c03d0fbd2" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="7fec670294593b64e9dfac8731b13051" ResourceName="AGameExample/UI" />
-      <Asset Guid="805ea66278d2b704c87c0f6acc996932" ResourceName="AGameExample/UI" />
       <Asset Guid="80a9390956026d548935e7833d3257fa" ResourceName="BaseAssets/UI/UIPrefabs" />
-      <Asset Guid="80e1697efc05da0459b589eaa8b0d834" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="824ce40d3721d434d98b9a3034771a0c" ResourceName="AGameExample/Sounds" />
-      <Asset Guid="82511fec482182d419fa1d98dbc674d6" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="834c9dd3e41074b4684245b729aa5f9e" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="83e5d9d39f19f6b4bb36e1db1076f37e" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="856e2c0aee93ae849b2589e2d3f65134" ResourceName="AGameExample/UI" />
-      <Asset Guid="87fa4e8cd77907b4cb5d893ae2bfb945" ResourceName="AGameExample/UI" />
-      <Asset Guid="881b34bfdd52f1140b8e925b44263c03" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="892e00559d6281b4c8e3708912d10f0a" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="8953ac3e784556840a245693ce834a7c" ResourceName="AGameExample/UI" />
-      <Asset Guid="898f9d7defd9c8347b757df89f26dc45" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="8a345b401b8b5334ea019b1782279b6d" ResourceName="AGameExample/UI" />
-      <Asset Guid="8a3f541ec81331c498908be4132a45b6" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="8ac4f056005808a4197ddf2248638f3b" ResourceName="AGameExample/UI" />
-      <Asset Guid="8af1a88e7adc0094a934e51de30fa37e" ResourceName="AGameExample/UI" />
-      <Asset Guid="8cc4ca72a8284d94cb7bd97506f4faa5" ResourceName="AGameExample/UI" />
-      <Asset Guid="8d188b75d1db5bf4faa7c8cbdc4f5458" ResourceName="ADeerExample/UI/UIArt/UISprites/Icon/Icon" />
-      <Asset Guid="8e1bca5868e2e8448b5f3e516e8569c5" ResourceName="AGameExample/UI" />
-      <Asset Guid="8e3a0e47c6a5b8c45b7b63c4a53a3cfd" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="8ea6b80ab872a7d4dbbfbcf1e78024aa" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="8ecc92fe9c1cb5a48b194645c4ce92a6" ResourceName="AGameExample/UI" />
-      <Asset Guid="8f17db378be452a4a8b2588095651d08" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="9120db105c31aff4b8d2dc4f9c4bae59" ResourceName="AGameExample/UI" />
-      <Asset Guid="9428fcf2444b74348b3bd1d3c5632657" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="9809f2a407a34dc4ea1b2200a848faa9" ResourceName="AGameExample/UI" />
-      <Asset Guid="981a0351a321c2044845c5b024a1dfa2" ResourceName="AGameExample/EntityPrefabs" />
-      <Asset Guid="982b4cf628006bd4fbed8722f38a0df7" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="9854a8dc1e453f04ea9b9ff1c95c23ea" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="997ea98864b26f24b9fb3ccb3009dcd7" ResourceName="AGameExample/UI" />
-      <Asset Guid="9a4af8bfefee6604e92467fef1d00f5c" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="9c7b0e7398dd2d14e9557b9039acd07d" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="9cfd94a346ea1b943ab7a692a135d4a7" ResourceName="AGameExample/UI" />
-      <Asset Guid="9e79d9865c7136848b555bb5b462e5fa" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="9ee43f6a9dc4a7642834a65f2836b5f2" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="a03de0284eee2f541b5849a18c410e7c" ResourceName="AGameExample/UI" />
-      <Asset Guid="a198fe98483634b429df58c7235330cb" ResourceName="AGameExample/UI" />
-      <Asset Guid="a2f6f824f65f32d4297a3ec90f714424" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="a39d2ec7b7569884cbc727bcaf4ce708" ResourceName="AGameExample/UI" />
-      <Asset Guid="a4867808c62813f4d95ca64859149307" ResourceName="ADeerExample/EntityResources" />
       <Asset Guid="a493fd7876190a04b972bf7b3f90d962" ResourceName="BaseAssets/UITemplate/ScrollView/HGridScrollView" />
-      <Asset Guid="a4b19fcfadbfff74d93d622f055f4319" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="a4ecbc6afc651d94888a4b56e95f846f" ResourceName="ADeerExample/UI/UIForms/UIBag/UIBagForm_SubUI" />
       <Asset Guid="a5671ef5b26e98f48b513cadb9e87e2b" ResourceName="BaseAssets/UI/UIArt/UISprites/Common" />
-      <Asset Guid="a6e77abe2bde05c4390375b3113e066d" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="a9bb0d5df7af0c840935b6ee51debd27" ResourceName="ADeerExample/UI/UIArt/Texture/login_bg" />
-      <Asset Guid="ab645d36145d9f245925a95272fe06e6" ResourceName="AGameExample/UI" />
-      <Asset Guid="ab6c81b76b089da418122483196d6d95" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="ac86faf861cadec4daaf35e774ad8513" ResourceName="AGameExample/UI" />
-      <Asset Guid="ae040eae6ed923847a998012a56f9286" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="ae0baa29fe52f834998a68edb77c2690" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="b15222b24c580ba46aff91d5ce5e6d96" ResourceName="ADeerExample/EntityResources" />
       <Asset Guid="b171dbc43fa6a5243aaaa39a77b13dd6" ResourceName="BaseAssets/UI/UIForms/UIMainMenu/UIMainMenuForm" />
-      <Asset Guid="b1a7365aac5c335459d9d4661f285ef7" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="b1ab36efd861cf949b8390e4d0d613af" ResourceName="AGameExample/UI" />
-      <Asset Guid="b26ac10f2f1104049adae725a5e21d6e" ResourceName="AGameExample/UI" />
-      <Asset Guid="b2daa51d292351d42a8b8c06ea8ee681" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="b329cef85d01a66499fffb2938b20bad" ResourceName="AGameExample/UI" />
-      <Asset Guid="b3df1ca8d687d2a489848dae1431ef25" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="b5a5fcbac4609454eadc4f266ccee0b9" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="b5a74c2b51c3caa4d9c4c7952c063747" ResourceName="AGameExample/EntityPrefabs" />
       <Asset Guid="b5b6e5e5b63377b4e9b3556b6812194d" ResourceName="BaseAssets/UI/UIForms/UITips/UITipsForm" />
-      <Asset Guid="b63d82571508e9140a6ff1a3b9c8d83a" ResourceName="AGameExample/Sounds" />
-      <Asset Guid="b6b0a949c887efe48adaf6e3bfcd570f" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="b72b1111775d1844f98f41f3723b7bbd" ResourceName="AGameExample/UI" />
-      <Asset Guid="b7c5b5f3a199ebd4a86bcb8d9f4f7a48" ResourceName="AGameExample/UI" />
-      <Asset Guid="b96c543deac74e444ae64f48924bc92f" ResourceName="AGameExample/UI" />
-      <Asset Guid="bd736f612e072ca459149bd3b78decc2" ResourceName="AGameExample/UI" />
-      <Asset Guid="bd8909369c0fb37429924ef4e06d22b2" ResourceName="AGameExample/UI" />
       <Asset Guid="be2db0afaf364114488351f7201458b1" ResourceName="BaseAssets/UI/UIArt/AtlasCollection/Common" />
-      <Asset Guid="be71bfeb1088e824abccf6559fd133ed" ResourceName="ADeerExample/EntityPrefabs" />
-      <Asset Guid="bf36aab813e90fe4c9bf7b64bb16ed99" ResourceName="AGameExample/UI" />
-      <Asset Guid="c024f83a935575c43bae2f966232ecbe" ResourceName="AGameExample/UI" />
-      <Asset Guid="c2cb08dae240aad4e80bd7f35c339d8e" ResourceName="ADeerExample/EntityResources" />
       <Asset Guid="c3bacb295d4014847a8ef29520f9d1a2" ResourceName="BaseAssets/UI/UIPrefabs" />
-      <Asset Guid="c7779f6b5a9e50d4e9963aafb1bbfe53" ResourceName="AGameExample/EntityPrefabs" />
-      <Asset Guid="c97dc18b880c9194e89f7f68d864b4bf" ResourceName="AGameExample/UI" />
-      <Asset Guid="cd7fb0eac14f22048abac8bfd630ed07" ResourceName="AGameExample/UI" />
-      <Asset Guid="cf11a838d7d14df439d05cbb7c8e5d87" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="cf8a1d17e8520a440a65cfd108d6a2c4" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="cfc414cf554e67c4ca9dc4e9e10dd128" ResourceName="AGameExample/UI" />
-      <Asset Guid="d00823c9845880f47a0e21f7b110a3a1" ResourceName="ADeerExample/EntityResources" />
       <Asset Guid="d021a4349078f974ca8eb3f903f1fbd6" ResourceName="BaseAssets/UITemplate/UIToggle" />
-      <Asset Guid="d0344b2c5eaa51249892e06245810537" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="d535b0ee47587714d80719585fda5a52" ResourceName="AGameExample/UI" />
       <Asset Guid="d5ac5cc365a9d7f469a91f84c485f9f2" ResourceName="BaseAssets/UITemplate/UIModel" />
-      <Asset Guid="d64bc9831e9a3c44abd5731e44132c7a" ResourceName="AGameExample/Scenes" />
-      <Asset Guid="d74ec626f1b3c9b4eaf7b3627e2678f1" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="d759832436236de43b79fe23de3f41e6" ResourceName="AGameExample/EntityPrefabs" />
-      <Asset Guid="d901003b4546ace4f943b8211202b2aa" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="d9b36ed0d3415ec469b3f5e90d903fd9" ResourceName="AGameExample/EntityPrefabs" />
-      <Asset Guid="da27e40db716bc04794c3c5ddc3a475c" ResourceName="AGameExample/UI" />
-      <Asset Guid="db40aedd4f6dfa44795bc781dcca4ad9" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="db899a830b174bd4faf2b3496021e86d" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="dba8a2427fd6aa041bbd4d48afae9cc6" ResourceName="AGameExample/UI" />
-      <Asset Guid="dbb28dc6d32c38f4ebcb8337c27d1734" ResourceName="ADeerExample/EntityResources" />
       <Asset Guid="dbc1d4bc6018f1f4f928156f5e3ffe21" ResourceName="BaseAssets/GameConfigs" />
-      <Asset Guid="dcd6f3fef2ae31f4a805d60341502399" ResourceName="AGameExample/UI" />
-      <Asset Guid="dfb6e25f664288544b23b65b2d73c127" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="e206b8436d2bbab499449709b0bd7e73" ResourceName="AGameExample/UI" />
-      <Asset Guid="e21bdb3c9146c2a44bd6a6df1f5e0721" ResourceName="AGameExample/UI" />
-      <Asset Guid="e31789668d5b67a40b93a7c897091bfc" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="e319643f1c5a01c498501d61cc05328d" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="e37366b19f50c3d4ab38ee599d37b5c8" ResourceName="AGameExample/UI" />
       <Asset Guid="e41de5d16c3cfa04da3d39b8aebad451" ResourceName="BaseAssets/UI/UIForms/UIDialog/UIDialogForm" />
       <Asset Guid="e827f6256d45d1a4c8936370bebe2973" ResourceName="BaseAssets/UITemplate/UISpriteAnimation" />
-      <Asset Guid="e9957e6712c5de446a120dfeb75d425f" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="eb8a17d9eeaf7634084b3e278e3ef4b0" ResourceName="ADeerExample/UI/UIForms/UILogin/UILoginForm" />
       <Asset Guid="ec2ada8d5b3d0154a8edbefa51801e76" ResourceName="BaseAssets/UITemplate/UIInputField" />
-      <Asset Guid="ec707f5eab1dc8c46a3b85dd4bf73511" ResourceName="AGameExample/UI" />
-      <Asset Guid="ec9b88b0e66f84947979122ac3946632" ResourceName="AGameExample/UI" />
-      <Asset Guid="ed7dfbb703ef3a44c830907dba4e9c7d" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="edbd07c33c8b19d45a0ba538a4e6510d" ResourceName="ADeerExample/EntityResources" />
       <Asset Guid="ee434b8e75f92804ca01e3be759e7c7f" ResourceName="BaseAssets/UITemplate/UIForm" />
-      <Asset Guid="f0e013032515858489650cc5be43ddf1" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="f23c5735361a78f4a85f0e4afe76a056" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="f29a796feeff1ca40ac39825c1460b0e" ResourceName="AGameExample/UI" />
       <Asset Guid="f3ab0d53e9c425d4da9724fab4bfd7d9" ResourceName="BaseAssets/GF" />
-      <Asset Guid="f43aad5f638ba5246a8af2294cc70099" ResourceName="AGameExample/UI" />
       <Asset Guid="f4fa68baee1efc34e801c1853c42e375" ResourceName="BaseAssets/UITemplate/ScrollView/VListScrollView" />
-      <Asset Guid="f6c4890c8f316b54e99fe1ad0a90f53a" ResourceName="AGameExample/EntityPrefabs" />
-      <Asset Guid="f75772bd848fcbd498a9ca7b1523539b" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="f8617ff9c2c7c1a49aab39a9945d90ad" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="f8e646084847add4ea6950ebbe2c994c" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="f948cddd52354284e9472f8d1707a4e1" ResourceName="AGameExample/EntityResources" />
       <Asset Guid="f9612d2ea47890742846a458b552127a" ResourceName="BaseAssets/Font" />
-      <Asset Guid="fae6b955e4e25144095a805b0bcbf6c9" ResourceName="ADeerExample/EntityResources" />
       <Asset Guid="fb08855e4c34fc04891f62f0cf3225da" ResourceName="BaseAssets/UI/UIForms/UILoadingOne/UILoadingOneForm" />
-      <Asset Guid="fbe47d3b359212d4bb0513aee5d4ffce" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="fbe5e6bcb29b66344955f82ee7173a7e" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="fc768f280184f1046b33cfa9a1222370" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="fcf93c241a0352541b412d752b9a8d32" ResourceName="ADeerExample/EntityResources" />
-      <Asset Guid="fd3b7b3d85d29aa4b9f03b7e8836bc0b" ResourceName="AGameExample/EntityResources" />
-      <Asset Guid="fd6cd73479ccf7b42a8c407f626430a7" ResourceName="AGameExample/UI" />
-      <Asset Guid="ff192bf30a8c7414fa1a67aad9d7208e" ResourceName="ADeerExample/EntityResources" />
     </Assets>
   </ResourceCollection>
 </UnityGameFramework>
