@@ -12,7 +12,21 @@ namespace UGFExtensions.SpriteCollection
         /// <param name="spritePath">精灵名称</param>
         public static void SetSpriteAsync(this Image image, string collectionPath, string spritePath)
         {
-            GameEntry.SpriteCollection.SetSpriteAsync(WaitSetImage.Create(image,collectionPath,spritePath));
+            GameEntry.SpriteCollection.SetSpriteAsync(WaitSetImage.Create(image, collectionPath, spritePath));
+        }
+
+        /// <summary>
+        /// 设置精灵，collectionName图集名，spriteName图片名
+        /// </summary>
+        /// <param name="image"></param>
+        /// <param name="groupName"></param>
+        /// <param name="collectionName"></param>
+        /// <param name="spriteName"></param>
+        public static void SetSpriteByNameAsync(this Image image, string collectionName, string spriteName, string groupName = "BaseAssets")
+        {
+            string collectionPath = AssetUtility.UI.GetSpriteCollectionPath(groupName, collectionName);
+            string spritePath = AssetUtility.UI.GetSpritePath(groupName, $"{collectionName}/{spriteName}");
+            GameEntry.SpriteCollection.SetSpriteAsync(WaitSetImage.Create(image, collectionPath, spritePath));
         }
     }
 }
