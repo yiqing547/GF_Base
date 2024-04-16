@@ -2,9 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using GameFramework;
-using GameFramework.ObjectPool;
-using GameFramework.Resource;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,8 +30,10 @@ namespace GameFramework.Resource
                     {
                         if (instance == null)
                         {
-                            GameObject gameObject = new GameObject();
-                            gameObject.name = nameof(ResourceLoaderComponent);
+                            GameObject gameObject = new()
+                            {
+                                name = nameof(ResourceLoaderComponent)
+                            };
                             instance = gameObject.AddComponent<ResourceLoaderComponent>();
                             DontDestroyOnLoad(gameObject);
                         }
@@ -48,7 +47,7 @@ namespace GameFramework.Resource
                 {
                     if (instance == null)
                     {
-                        instance = this as ResourceLoaderComponent;
+                        instance = this;
                     }
                 }
 
@@ -185,7 +184,7 @@ namespace GameFramework.Resource
                     yield return asyncOperation;
                     if (asyncOperation.allowSceneActivation)
                     {
-                        SceneAsset sceneAsset = new SceneAsset();
+                        SceneAsset sceneAsset = new();
                         AssetObject assetObject = AssetObject.Create(assetName, sceneAsset, new List<object>(), assetBundle, m_ResourceManager.m_ResourceHelper, m_ResourceLoader);
                         m_ResourceLoader.m_AssetPool.Register(assetObject, true);
                         m_ResourceLoader.m_SceneToAssetMap.Add(assetName, sceneAsset);
