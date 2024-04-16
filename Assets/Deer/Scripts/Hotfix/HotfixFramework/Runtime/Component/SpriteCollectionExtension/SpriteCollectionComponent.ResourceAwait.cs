@@ -49,6 +49,7 @@ namespace UGFExtensions.SpriteCollection
                 m_LoadSpriteObjectsLinkedList.AddLast(new LoadSpriteObject(current.Value, collection));
                 current = current.Next;
             }
+            m_WaitSetObjects.Remove(setSpriteObject.CollectionPath);
         }
     }
 }
