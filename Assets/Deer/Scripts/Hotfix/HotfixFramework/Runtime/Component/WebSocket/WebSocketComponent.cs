@@ -16,6 +16,20 @@ public class WebSocketComponent : GameFrameworkComponent
     private readonly MemoryStream m_stream = new();
     private WebSocket m_WebSocket;
     private readonly Dictionary<int, OnRevicePacketMsg> m_vHandles = new();
+    private readonly float m_HeartBeatInterval = 10.0f;
+    private float m_Interval = 0.0f;
+
+    public void Update()
+    {
+        if (GetWebSocketState() == WebSocketState.Open)
+        {
+            m_Interval += Time.deltaTime;
+            if (m_Interval > m_HeartBeatInterval)
+            {
+                HeartBeat();
+            }
+        }
+    }
 
     public WebSocketState GetWebSocketState()
     {
@@ -70,7 +84,6 @@ public class WebSocketComponent : GameFrameworkComponent
         if (GetWebSocketState() == WebSocketState.Open)
         {
             int len = msg.CalculateSize();
-
             m_stream.Position = 0;
             m_stream.Write(BigEndian(len + 4), 0, 4);   //protobuff长度  
             m_stream.Write(BigEndian(msgID << 16), 0, 4);   //指令头 服务端约定左移16位
@@ -79,12 +92,14 @@ public class WebSocketComponent : GameFrameworkComponent
         }
         else
         {
-            //重新连接服务器
+            //todo
+            Log.Warning("重新连接服务器，待完成");
         }
     }
 
     private void Response(byte[] bytes)
     {
+        m_Interval = 0;
         if (bytes.Length >= PACKETHEADLEN)
         {
             int protoLength = BitConverter.ToInt32(bytes, 0);   //前四位pb长度
@@ -106,12 +121,12 @@ public class WebSocketComponent : GameFrameworkComponent
 
     private void OnError(object sender, UnityWebSocket.ErrorEventArgs e)
     {
-        m_WebSocket = null;
+        CloseSocket();
     }
 
     private void OnClose(object sender, CloseEventArgs e)
     {
-        m_WebSocket = null;
+        CloseSocket();
     }
 
     private void OnMessage(object sender, MessageEventArgs e)
@@ -145,4 +160,18 @@ public class WebSocketComponent : GameFrameworkComponent
         return result;
     }
 
+    private void CloseSocket()
+    {
+        m_WebSocket = null;
+    }
+
+    /// <summary>
+    /// 发送心跳包
+    /// </summary>
+    private void HeartBeat()
+    {
+        //todo
+        m_Interval = 0;
+        Log.Warning("发送心跳包，待完成");
+    }
 }
