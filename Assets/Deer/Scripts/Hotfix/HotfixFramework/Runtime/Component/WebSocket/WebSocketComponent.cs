@@ -52,7 +52,7 @@ public class WebSocketComponent : GameFrameworkComponent
     /// </summary>
     /// <param name="host"></param>
     /// <param name="port"></param>
-    public void ConnectNet(string host, string port)
+    public void ConnectNet(string host, int port)
     {
         string address = "wss://" + host + ":" + port;
         if (m_WebSocket == null)
