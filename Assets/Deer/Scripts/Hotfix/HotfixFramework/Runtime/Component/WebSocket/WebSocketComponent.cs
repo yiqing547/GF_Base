@@ -135,10 +135,6 @@ public class WebSocketComponent : GameFrameworkComponent
         {
             Response(e.RawData);
         }
-        else if (e.IsText)
-        {
-
-        }
     }
 
     private void OnOpen(object sender, OpenEventArgs e)
