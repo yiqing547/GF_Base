@@ -15,7 +15,7 @@ public class WebSocketComponent : GameFrameworkComponent
     private const int PACKETHEADLEN = 8;
     private readonly MemoryStream m_stream = new();
     private WebSocket m_WebSocket;
-    private readonly Dictionary<int, OnRevicePacketMsg> m_vHandles = new();
+    private readonly Dictionary<MID, OnRevicePacketMsg> m_vHandles = new();
     private readonly float m_HeartBeatInterval = 10.0f;
     private float m_Interval = 0.0f;
 
@@ -41,13 +41,13 @@ public class WebSocketComponent : GameFrameworkComponent
     /// </summary>
     /// <param name="msgID"></param>
     /// <param name="handler"></param>
-    public void RegisterEvent(int msgID, OnRevicePacketMsg handler)
+    public void RegisterEvent(MID msgID, OnRevicePacketMsg handler)
     {
         if (m_vHandles.ContainsKey(msgID)) return;
         m_vHandles.Add(msgID, handler);
     }
 
-    public void UnRegisterEvent(int msgID)
+    public void UnRegisterEvent(MID msgID)
     {
         if (!m_vHandles.ContainsKey(msgID)) return;
         m_vHandles.Remove(msgID);
@@ -85,16 +85,17 @@ public class WebSocketComponent : GameFrameworkComponent
     /// </summary>
     /// <param name="msgID">指令头</param>
     /// <param name="msg">指令内容</param>
-    public void Request(int msgID, IMessage msg)
+    public void Request(MID msgID, IMessage msg)
     {
         if (GetWebSocketState() == WebSocketState.Open)
         {
             int len = msg.CalculateSize();
             m_stream.Position = 0;
             m_stream.Write(BigEndian(len + 4), 0, 4);   //protobuff长度  
-            m_stream.Write(BigEndian(msgID << 16), 0, 4);   //指令头 服务端约定左移16位
+            m_stream.Write(BigEndian((int)msgID << 16), 0, 4);   //指令头 服务端约定左移16位
             m_stream.Write(msg.ToByteArray(), 0, len);  //指令内容
             m_WebSocket.SendAsync(m_stream.ToArray());
+            Log.Info("======sendPack======== mid: " + msgID + "  mName = " + Enum.GetName(typeof(MID), msgID) + "  msg = " + msg.ToString());
         }
         else
         {
@@ -114,7 +115,7 @@ public class WebSocketComponent : GameFrameworkComponent
 
             byte[] m_pReciveBuff = new byte[protoLength];
             Buffer.BlockCopy(bytes, PACKETHEADLEN, m_pReciveBuff, 0, protoLength);
-            if (m_vHandles.TryGetValue(msgID, out OnRevicePacketMsg onHandler))
+            if (m_vHandles.TryGetValue((MID)msgID, out OnRevicePacketMsg onHandler))
             {
                 onHandler?.Invoke(m_pReciveBuff);
             }

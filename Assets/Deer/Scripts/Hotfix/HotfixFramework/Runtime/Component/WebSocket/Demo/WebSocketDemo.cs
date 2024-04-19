@@ -15,8 +15,8 @@ public class WebSocketDemo : MonoBehaviour
 
     void Start()
     {
-        GameEntry.WebSocket.RegisterEvent((int)MID.LoginFinishRes, OnLoginFinish);
-        GameEntry.WebSocket.RegisterEvent((int)MID.LoginRes, OnLoginRes);
+        GameEntry.WebSocket.RegisterEvent(MID.LoginFinishRes, OnLoginFinish);
+        GameEntry.WebSocket.RegisterEvent(MID.LoginRes, OnLoginRes);
 
         GameEntry.Event.Subscribe(ServerConnectSuccessEventArgs.EventId, OnServerConnectSuccess);
     }
@@ -28,8 +28,8 @@ public class WebSocketDemo : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameEntry.WebSocket.UnRegisterEvent((int)MID.LoginFinishRes);
-        GameEntry.WebSocket.UnRegisterEvent((int)MID.LoginRes);
+        GameEntry.WebSocket.UnRegisterEvent(MID.LoginFinishRes);
+        GameEntry.WebSocket.UnRegisterEvent(MID.LoginRes);
     }
 
     private void OnLoginRes(byte[] msg)
@@ -113,7 +113,7 @@ public class WebSocketDemo : MonoBehaviour
         request.OsVersion = "other";
 #endif
 
-        GameEntry.WebSocket.Request((int)MID.LoginReq, request);
+        GameEntry.WebSocket.Request(MID.LoginReq, request);
     }
 }
 
