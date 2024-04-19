@@ -95,7 +95,7 @@ public class WebSocketComponent : GameFrameworkComponent
             m_stream.Write(BigEndian((int)msgID << 16), 0, 4);   //指令头 服务端约定左移16位
             m_stream.Write(msg.ToByteArray(), 0, len);  //指令内容
             m_WebSocket.SendAsync(m_stream.ToArray());
-            Log.Info("======sendPack======== mid: " + msgID + "  mName = " + Enum.GetName(typeof(MID), msgID) + "  msg = " + msg.ToString());
+            Log.Info("======Request======== mid: " + msgID + "  mName = " + Enum.GetName(typeof(MID), msgID) + "  msg = " + msg.ToString());
         }
         else
         {
@@ -119,6 +119,7 @@ public class WebSocketComponent : GameFrameworkComponent
             {
                 onHandler?.Invoke(m_pReciveBuff);
             }
+            Log.Info("======Response======== mid: " + msgID + "  mName = " + Enum.GetName(typeof(MID), msgID));
         }
         else
         {

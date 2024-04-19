@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DeerGlobalSettings
   m_EditorClassIdentifier: 
   m_UseDeerExample: 0
-  m_ScriptAuthor: AlanDu
+  m_ScriptAuthor: "\u58F9\u6DF8"
   m_ScriptVersion: 0.1
   m_AppStage: 1
   m_DefaultFont: wryhSDF
@@ -25,6 +25,7 @@ MonoBehaviour:
     m_CleanCommitPathRes: 1
     m_ServerType: 2
     m_InnerResourceSourceUrl: http://121.4.195.168:8088
+    m_ExtraResourceSourceUrl: http://121.4.195.168:8088
     m_FormalResourceSourceUrl: http://121.4.195.168:8088
   m_ResourceVersionFileName: ResourceVersion.txt
   WindowsAppUrl: 
