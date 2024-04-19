@@ -1,6 +1,5 @@
 syntax = "proto3";
 option java_package = "com.topgame.message";
-option csharp_namespace ="HotfixBusiness.UnityWebSocket";
 
 enum MID{
 	None  											= 0;

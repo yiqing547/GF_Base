@@ -1,6 +1,5 @@
 syntax = "proto3";
 option java_package = "com.topgame.message.hall";
-option csharp_namespace ="HotfixBusiness.UnityWebSocket"; 
 
 // 登录类型
 enum LoginType{

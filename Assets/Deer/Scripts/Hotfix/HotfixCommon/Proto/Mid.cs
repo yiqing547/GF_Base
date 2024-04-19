@@ -9,1811 +9,1807 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace HotfixBusiness.UnityWebSocket {
+/// <summary>Holder for reflection information generated from Mid.proto</summary>
+public static partial class MidReflection {
 
-  /// <summary>Holder for reflection information generated from Mid.proto</summary>
-  public static partial class MidReflection {
-
-    #region Descriptor
-    /// <summary>File descriptor for Mid.proto</summary>
-    public static pbr::FileDescriptor Descriptor {
-      get { return descriptor; }
-    }
-    private static pbr::FileDescriptor descriptor;
-
-    static MidReflection() {
-      byte[] descriptorData = global::System.Convert.FromBase64String(
-          string.Concat(
-            "CglNaWQucHJvdG8q0FAKA01JRBIICgROb25lEAASFQoRU2VydmVyUmVnaXN0",
-            "ZXJSZXEQZRIVChFTZXJ2ZXJSZWdpc3RlclJlcxBmEhEKDVNlcnZlckxpc3RS",
-            "ZXEQZxIRCg1TZXJ2ZXJMaXN0UmVzEGgSFwoTQ2hhbmdlUm9sZVNlcnZlclJl",
-            "cRBpEhcKE0NoYW5nZVJvbGVTZXJ2ZXJSZXMQahISCg5TZXJ2ZXJFdmVudFJl",
-            "cRBrEhIKDlNlcnZlckV2ZW50UmVzEGwSEwoPU2VydmVyU3RhdHVzUmVzEG0S",
-            "EwoORGVmYXVsdEdhdGVSZXEQyAESEwoORGVmYXVsdEdhdGVSZXMQyQESEwoO",
-            "U2VydmVyTWFpbHNSZXEQrQISGQoURGVmYXVsdFNlcnZlck1haWxSZXEQrgIS",
-            "EgoNVGFza1NlYXNvblJlcRCvAhIcChdEZWZhdWx0U2VydmVyTWFycXVlZVJl",
-            "cRCwAhIdChhJbmZpbml0ZVBhcmtvdXJTZWFzb25SZXEQsQISHQoYSW5maW5p",
-            "dGVQYXJrb3VyQ2hhbmdlUmVxELICEhIKDVVzZXJTZXJ2ZXJSZXEQswISFAoP",
-            "QWRkRnJpZW5kTG9nUmVxELQCEhcKElNldE90aGVyVHJpZ2dlclJlcRC1AhIW",
-            "ChFVc2VySW5mb0NoYW5nZVJlcRC2AhIVChBTZXJ2ZXJHTUV2ZW50UmVxELcC",
-            "Eg0KCExvZ2luUmVxEJFOEg0KCExvZ2luUmVzEJJOEg0KCEhlYXJ0UmVxEJtO",
-            "Eg0KCEhlYXJ0UmVzEJxOEhAKC0tpbGxVc2VyUmVzEJ1OEhMKDk1lc3NhZ2VT",
-            "ZWVkUmVzEJ5OEhMKDkxvZ2luRmluaXNoUmVzEJ9OEhAKC1ZlcmlmaWVkUmVx",
-            "EKBOEhAKC1ZlcmlmaWVkUmVzEKFOEhUKEFRpY2tldExvZ2luRXhSZXEQok4S",
-            "FwoSVGlja2V0UmVMb2dpbkV4UmVxEKNOEhsKFlRpY2tldExvZ2luSW50ZXJu",
-            "YWxSZXEQpE4SDgoJTG9nb3V0UmVxEKVOEg4KCUxvZ291dFJlcxCmThIVChBM",
-            "b2dpbkludGVybmFsUmVxEKdOEhEKDEdNQ29tbWFuZFJlcRD0ThIRCgxHTUNv",
-            "bW1hbmRSZXMQ9U4SEwoOU3lzdGVtRXJyb3JSZXMQ9k4SEgoNVXNlckFjdGlv",
-            "blJlcRD3ThIRCgxVc2VyRXJyb3JSZXMQ+E4SEAoLVXNlckluZm9SZXMQvFAS",
-            "EwoOQXZhdGFyc0luZm9SZXEQvVASEwoOQXZhdGFyc0luZm9SZXMQvlASFwoS",
-            "QXZhdGFyRnJhbWVJbmZvUmVxEL9QEhcKEkF2YXRhckZyYW1lSW5mb1JlcxDA",
-            "UBIRCgxUaXRsZUluZm9SZXEQwVASEQoMVGl0bGVJbmZvUmVzEMJQEhUKEENo",
-            "YW5nZUF2YXRhcnNSZXEQw1ASFQoQQ2hhbmdlQXZhdGFyc1JlcxDEUBIZChRD",
-            "aGFuZ2VBdmF0YXJGcmFtZVJlcRDFUBIZChRDaGFuZ2VBdmF0YXJGcmFtZVJl",
-            "cxDGUBITCg5DaGFuZ2VUaXRsZVJlcRDHUBITCg5DaGFuZ2VUaXRsZVJlcxDI",
-            "UBIWChFDaGFuZ2VVc2VybmFtZVJlcRDJUBIWChFDaGFuZ2VVc2VybmFtZVJl",
-            "cxDKUBIPCgpNYXJxdWVlUmVzEMtQEhEKDE5ld1JlZERvdFJlcRDMUBIRCgxO",
-            "ZXdSZWREb3RSZXMQzVASFQoQQWxsTmV3UmVkRG90c1JlcxDOUBIVChBDaGFu",
-            "Z2VBdHRyTnVtUmVzEM9QEhEKDEF0dHJpYnV0ZVJlcxDQUBIOCglDb21iYXRS",
-            "ZXMQ0VASFQoQVW5sb2NrQXZhdGFyc1JlcRDSUBIVChBVbmxvY2tBdmF0YXJz",
-            "UmVzENNQEhMKDlVubG9ja1RpdGxlUmVxENRQEhMKDlVubG9ja1RpdGxlUmVz",
-            "ENVQEhQKD1VzZXJJbmZvU3luY1JlcRDWUBISCg1Db21iYXRTeW5jUmVxENdQ",
-            "EhUKEFVzZXJTdGFnZVN5bmNSZXEQ2FASFgoRTm92aWNlR3VpZGFuY2VSZXMQ",
-            "2VASGgoVTm92aWNlR3VpZGFuY2VTdGVwUmVxENxQEhoKFU5vdmljZUd1aWRh",
-            "bmNlU3RlcFJlcxDdUBISCg1PbmxpbmVUaW1lUmVxEN5QEhIKDU9ubGluZVRp",
-            "bWVSZXMQ31ASHgoZV2F0Y2hpbmdBZHZlcnRpc2VtZW50c1JlcRDgUBIeChlX",
-            "YXRjaGluZ0FkdmVydGlzZW1lbnRzUmVzEOFQEhoKFVJlY2hhcmdlU3RhdGlz",
-            "dGljc1JlcRDiUBIaChVSZWNoYXJnZVN0YXRpc3RpY3NSZXMQ41ASEAoLTWFp",
-            "bEluZm9SZXMQoFESFQoQQWRkTWFpbE5vdGljZVJlcxChURIVChBTeW5BbGxT",
-            "ZXJNYWlsUmVxEKJREhMKDlJlY2VpdmVNYWlsUmVxEKNREhMKDlJlY2VpdmVN",
-            "YWlsUmVzEKRREhIKDURlbGV0ZU1haWxSZXEQpVESEgoNRGVsZXRlTWFpbFJl",
-            "cxCmURIQCgtSZWFkTWFpbFJlcRCnURIQCgtSZWFkTWFpbFJlcxCoURIPCgpW",
-            "aXBJbmZvUmVzEK5REhEKDFJld2FyZFZpcFJlcRCvURIRCgxSZXdhcmRWaXBS",
-            "ZXMQsFESEQoMVmlld1ZpZGVvUmVxELFREhEKDFZpZXdWaWRlb1JlcxCyURIQ",
-            "CgtCdWZmSW5mb1JlcxCzURIXChJCdXlTcGVjaWFsU3RvcmVSZXEQtFESFwoS",
-            "QnV5U3BlY2lhbFN0b3JlUmVzELVREhYKEURhaWx5U3RvcmVJbmZvUmVzELZR",
-            "EhUKEEJ1eURhaWx5U3RvcmVSZXEQt1ESFQoQQnV5RGFpbHlTdG9yZVJlcxC4",
-            "URIXChJCdXlEaWFtb25kU3RvcmVSZXEQuVESFwoSQnV5RGlhbW9uZFN0b3Jl",
-            "UmVzELpREhIKDUhXX1N5bk1haWxSZXEQu1ESEgoNSFdfU3luTWFpbFJlcxC8",
-            "URIeChlBZGRBbGxTZXJ2ZXJNYWlsTm90aWNlUmVzEL1REhUKEE5ld1JvbGxO",
-            "b3RpY2VSZXEQvlESFQoQTmV3Um9sbE5vdGljZVJlcxC/URISCg1WaWV3UGxh",
-            "eWVyUmVxEIRSEhIKDVZpZXdQbGF5ZXJSZXMQhVISFQoQUmVjZXB0aW9uUm9v",
-            "bVJlcRCGUhIVChBSZWNlcHRpb25Sb29tUmVzEIdSEhsKFlJld2FyZFJlY2Vw",
-            "dGlvblJvb21SZXEQiFISGwoWUmV3YXJkUmVjZXB0aW9uUm9vbVJlcxCJUhIS",
-            "Cg1QbGF5ZXJWaWV3UmVxEIpSEhIKDVBsYXllclZpZXdSZXMQi1ISEwoOVmlz",
-            "aXRQbGF5ZXJSZXEQjFISEwoOVmlzaXRQbGF5ZXJSZXMQjVISFQoQUGx1bmRl",
-            "clBsYXllclJlcRCOUhIVChBQbHVuZGVyUGxheWVyUmVzEI9SEhcKEkV4cHVs",
-            "c2lvblBsYXllclJlcRCQUhIXChJFeHB1bHNpb25QbGF5ZXJSZXMQkVISEgoN",
-            "UmVjYWxsSGVyb1JlcRCSUhISCg1SZWNhbGxIZXJvUmVzEJNSEhsKFk9uZUNs",
-            "aWNrVmlzaXRQbGF5ZXJSZXEQlFISGwoWT25lQ2xpY2tWaXNpdFBsYXllclJl",
-            "cxCVUhITCg5QbGF5ZXJFbnRyeVJlcRCWUhITCg5QbGF5ZXJFbnRyeVJlcxCX",
-            "UhIaChVQbGF5ZXJFbnRyeVJlZnJlc2hSZXEQmFISGgoVUGxheWVyRW50cnlS",
-            "ZWZyZXNoUmVzEJlSEhQKD1ZpZXdWaXNpdExvZ1JlcRCaUhIUCg9WaWV3Vmlz",
-            "aXRMb2dSZXMQm1ISGgoVUmV3YXJkVmlld1Zpc2l0TG9nUmVxEJxSEhoKFVJl",
-            "d2FyZFZpZXdWaXNpdExvZ1JlcxCdUhIXChJWaWV3UGxheWVyQnVpbGRSZXEQ",
-            "nlISFwoSVmlld1BsYXllckJ1aWxkUmVzEJ9SEhUKEFNvY2lhbGl6ZUl0ZW1S",
-            "ZXMQoFISFwoSVmlzaXRQbGF5ZXJTeW5jUmVxEKFSEhMKDlBsdW5kZXJTeW5j",
-            "UmVxEKJSEhkKFFBsdW5kZXJCdWlsZENsZWFyUmVxEKNSEhgKE1NvY2lhbGl6",
-            "ZUxvZ1N5bmNSZXEQpFISFAoPUmV3YXJkU2hpZWxkUmVxEKVSEhQKD1Jld2Fy",
-            "ZFNoaWVsZFJlcxCmUhIXChJWaWV3U2VsZlJhbmtpbmdSZXEQ6FISFwoSVmll",
-            "d1NlbGZSYW5raW5nUmVzEOlSEhMKDlZpZXdSYW5raW5nUmVxEOpSEhMKDlZp",
-            "ZXdSYW5raW5nUmVzEOtSEhUKEFJld2FyZFJhbmtpbmdSZXEQ7FISFQoQUmV3",
-            "YXJkUmFua2luZ1JlcxDtUhIfChpWaWV3U2VsZlJhbmtpbmdJbnRlcm5hbFJl",
-            "cRDuUhITCg5TdGFnZUNoYW5nZVJlcxDvUhITCg1CYXR0bGVJbmZvUmVzEKCc",
-            "ARIUCg5FbnRlckJhdHRsZVJlcRChnAESFAoORW50ZXJCYXR0bGVSZXMQopwB",
-            "EhUKD0ZpbmlzaEJhdHRsZVJlcRCjnAESFQoPRmluaXNoQmF0dGxlUmVzEKSc",
-            "ARIUCg5GaW5pc2hNb3BVcFJlcRCmnAESFAoORmluaXNoTW9wVXBSZXMQp5wB",
-            "EhgKEkVudGVyTGlmZUJhdHRsZVJlcRConAESGAoSRW50ZXJMaWZlQmF0dGxl",
-            "UmVzEKmcARIZChNGaW5pc2hMaWZlQmF0dGxlUmVxEKqcARIZChNGaW5pc2hM",
-            "aWZlQmF0dGxlUmVzEKucARIYChJGaW5pc2hMaWZlTW9wVXBSZXEQrJwBEhgK",
-            "EkZpbmlzaExpZmVNb3BVcFJlcxCtnAESGgoUQmF0dGxlVGlja2V0UmVzZXRS",
-            "ZXEQrpwBEhoKFEJhdHRsZVRpY2tldFJlc2V0UmVzEK+cARIaChRTdGFnZUZp",
-            "bmlzaEJhdHRsZVJlcRCwnAESGgoUU3RhZ2VGaW5pc2hCYXR0bGVSZXMQsZwB",
-            "EiIKHFN0YWdlSGFuZ2luZ09mZkxpbmVGaW5pc2hSZXMQspwBEiEKG1N0YWdl",
-            "QWR2YW5jZUZpbmlzaEJhdHRsZVJlcRC0nAESIQobU3RhZ2VBZHZhbmNlRmlu",
-            "aXNoQmF0dGxlUmVzELWcARIZChNFbnRlclN0YWdlQmF0dGxlUmVxELacARIZ",
-            "ChNFbnRlclN0YWdlQmF0dGxlUmVzELecARIkCh5TdGFnZUFkdmFuY2VCb3hG",
-            "aW5pc2hCYXR0bGVSZXEQuJwBEiQKHlN0YWdlQWR2YW5jZUJveEZpbmlzaEJh",
-            "dHRsZVJlcxC5nAESFAoOTXNnSGVyb0xpc3RSZXMQhJ0BEhcKEU1zZ0hlcm9D",
-            "b21wb3NlUmVxEIWdARIXChFNc2dIZXJvQ29tcG9zZVJlcxCGnQESFQoPTXNn",
-            "SGVyb0xldmVsUmVxEIidARIVCg9Nc2dIZXJvTGV2ZWxSZXMQiZ0BEhYKEE1z",
-            "Z0hlcm9CYXR0bGVSZXEQip0BEhYKEE1zZ0hlcm9CYXR0bGVSZXMQi50BEhMK",
-            "DU1zZ0FkZEhlcm9SZXMQjJ0BEhYKEE1zZ0hlcm9VcFN0YXJSZXEQjZ0BEhYK",
-            "EE1zZ0hlcm9VcFN0YXJSZXMQjp0BEhsKFU1zZ0hlcm9JdGVtQ29tcG9zZVJl",
-            "cRCPnQESGwoVTXNnSGVyb0l0ZW1Db21wb3NlUmVzEJCdARIUCg5Nc2dJdGVt",
-            "TGlzdFJlcxC2nQESEwoNTXNnQWRkSXRlbVJlcRC3nQESEwoNTXNnQWRkSXRl",
-            "bVJlcxC4nQESFgoQTXNnUmVtb3ZlSXRlbVJlcxC5nQESEwoNTXNnT3BlbkJv",
-            "eFJlcRC6nQESEwoNTXNnT3BlbkJveFJlcxC7nQESEwoNTXNnQ29tcG9zZVJl",
-            "cRC8nQESEwoNTXNnQ29tcG9zZVJlcxC9nQESFgoQTXNnV2VhcG9uTGlzdFJl",
-            "cxDonQESGQoTTXNnV2VhcG9uQ29tcG9zZVJlcRDpnQESGQoTTXNnV2VhcG9u",
-            "Q29tcG9zZVJlcxDqnQESFwoRTXNnV2VhcG9uTGV2ZWxSZXEQ7J0BEhcKEU1z",
-            "Z1dlYXBvbkxldmVsUmVzEO2dARIYChJNc2dXZWFwb25CYXR0bGVSZXEQ7p0B",
-            "EhgKEk1zZ1dlYXBvbkJhdHRsZVJlcxDvnQESFQoPTXNnQWRkV2VhcG9uUmVz",
-            "EPCdARIcChZNc2dXZWFwb25CYXR0bGVJbml0UmVzEPGdARIUCg5Nc2dTaG9w",
-            "SW5mb1JlcxCangESEwoNTXNnQnV5SXRlbVJlcRCbngESEwoNTXNnQnV5SXRl",
-            "bVJlcxCcngESGAoSQmxhY2tNYXJrZXRJbmZvUmVzEMyeARIaChRNc2dCdXlC",
-            "bGFja01hcmtldFJlcRDNngESGgoUTXNnQnV5QmxhY2tNYXJrZXRSZXMQzp4B",
-            "EhwKFk1zZ1Jlc2V0QmxhY2tNYXJrZXRSZXEQz54BEhwKFk1zZ1Jlc2V0Qmxh",
-            "Y2tNYXJrZXRSZXMQ0J4BEhgKEk1zZ0xvb3BTaWduSW5mb1JlcxD+ngESFAoO",
-            "TXNnTG9vcFNpZ25SZXEQ/54BEhQKDk1zZ0xvb3BTaWduUmVzEICfARIYChJN",
-            "c2dNYWluVGFza0luZm9SZXMQsJ8BEhoKFE1zZ01haW5UYXNrUmV3YXJkUmVx",
-            "ELGfARIaChRNc2dNYWluVGFza1Jld2FyZFJlcxCynwESGwoVTXNnQ3ljbGVU",
-            "YXNrUmV3YXJkUmVxELOfARIbChVNc2dDeWNsZVRhc2tSZXdhcmRSZXMQtJ8B",
-            "EiAKGk1zZ0N5Y2xlVGFza1Njb3JlUmV3YXJkUmVxELWfARIgChpNc2dDeWNs",
-            "ZVRhc2tTY29yZVJld2FyZFJlcxC2nwESGQoTTXNnRGFpbHlUYXNrSW5mb1Jl",
-            "cxDinwESGwoVTXNnRGFpbHlUYXNrUmV3YXJkUmVxEOOfARIbChVNc2dEYWls",
-            "eVRhc2tSZXdhcmRSZXMQ5J8BEiAKGk1zZ0RhaWx5VGFza1Njb3JlUmV3YXJk",
-            "UmVxEOWfARIgChpNc2dEYWlseVRhc2tTY29yZVJld2FyZFJlcxDmnwESGgoU",
-            "TXNnc3RCZXN0aWFyeUluZm9SZXMQlKABEhoKFE1zZ0Jlc3RpYXJ5VW5sb2Nr",
-            "UmVxEJWgARIaChRNc2dCZXN0aWFyeVVubG9ja1JlcxCWoAESGgoUTXNnQmVz",
-            "dGlhcnlSZXdhcmRSZXEQl6ABEhoKFE1zZ0Jlc3RpYXJ5UmV3YXJkUmVzEJig",
-            "ARIXChFNc2dEZXZlbG9wbWVudFJlcxDGoAESHAoWTXNnRGV2ZWxvcG1lbnRM",
-            "ZXZlbFJlcRDHoAESHAoWTXNnRGV2ZWxvcG1lbnRMZXZlbFJlcxDIoAESFgoQ",
-            "TXNnVGFsZW50SW5mb1JlcxD4oAESHAoWTXNnVGFsZW50UG9pbnRSZXNldFJl",
-            "cRD5oAESHAoWTXNnVGFsZW50UG9pbnRSZXNldFJlcxD6oAESFwoRTXNnVGFs",
-            "ZW50TGV2ZWxSZXEQ+6ABEhcKEU1zZ1RhbGVudExldmVsUmVzEPygARIgChpN",
-            "c2dUYWxlbnRBZGRQb2ludE5vdGlmeVJlcxD9oAESFQoPTXNnRXF1aXBMaXN0",
-            "UmVzENyhARIYChJNc2dFcXVpcEZvcmdpbmdSZXEQ3aEBEhgKEk1zZ0VxdWlw",
-            "Rm9yZ2luZ1JlcxDeoQESGAoSTXNnRm9yZ2luZ0xldmVsUmVxEOChARIYChJN",
-            "c2dGb3JnaW5nTGV2ZWxSZXMQ4aEBEhcKEU1zZ0VxdWlwQmF0dGxlUmVxEOKh",
-            "ARIXChFNc2dFcXVpcEJhdHRsZVJlcxDjoQESFQoPTXNnRXF1aXBTZWxsUmVx",
-            "EOShARIVCg9Nc2dFcXVpcFNlbGxSZXMQ5aEBEhUKD01zZ0J1aWxkSW5mb1Jl",
-            "cxCOogESFgoQTXNnQnVpbGRTcGVlZFJlcRCPogESFgoQTXNnQnVpbGRTcGVl",
-            "ZFJlcxCQogESFwoRTXNnQnVpbGRVbmxvY2tSZXEQkaIBEhcKEU1zZ0J1aWxk",
-            "VW5sb2NrUmVzEJKiARIWChBNc2dCdWlsZExldmVsUmVxEJOiARIWChBNc2dC",
-            "dWlsZExldmVsUmVzEJSiARIZChNNc2dCdWlsZExldmVsU3luUmVxEJWiARIZ",
-            "ChNNc2dCdWlsZExldmVsU3luUmVzEJaiARIfChlNc2dCdWlsZFBvd2VyQ29y",
-            "ZVNraWxsUmVxEJeiARIfChlNc2dCdWlsZFBvd2VyQ29yZVNraWxsUmVzEJii",
-            "ARIhChtNc2dCdWlsZFByb2R1Y3Rpb25GaW5pc2hSZXEQm6IBEiEKG01zZ0J1",
-            "aWxkUHJvZHVjdGlvbkZpbmlzaFJlcxCcogESFwoRTXNnQnVpbGROb3RpZnlS",
-            "ZXMQnaIBEiQKHk1zZ0J1aWxkUG93ZXJDb3JlU2tpbGxSZXNldFJlcRCeogES",
-            "JAoeTXNnQnVpbGRQb3dlckNvcmVTa2lsbFJlc2V0UmVzEJ+iARIZChNNc2dC",
-            "dWlsZEJ1eVF1ZXVlUmVxEKCiARIZChNNc2dCdWlsZEJ1eVF1ZXVlUmVzEKGi",
-            "ARIcChZNc2dCdWlsZExpYnJhcnlJbmZvUmVzEMCiARIdChdNc2dCdWlsZExp",
-            "YnJhcnlTcGVlZFJlcRDBogESHQoXTXNnQnVpbGRMaWJyYXJ5U3BlZWRSZXMQ",
-            "wqIBEh0KF01zZ0J1aWxkTGlicmFyeUxldmVsUmVxEMOiARIdChdNc2dCdWls",
-            "ZExpYnJhcnlMZXZlbFJlcxDEogESIAoaTXNnQnVpbGRMaWJyYXJ5TGV2ZWxT",
-            "eW5SZXEQxaIBEiAKGk1zZ0J1aWxkTGlicmFyeUxldmVsU3luUmVzEMaiARIe",
-            "ChhNc2dCdWlsZExpYnJhcnlVbmxvY2tSZXEQx6IBEh4KGE1zZ0J1aWxkTGli",
-            "cmFyeVVubG9ja1JlcxDIogESFwoRTXNnSGFsbG93c0xpc3RSZXMQ8qIBEhoK",
-            "FE1zZ0hhbGxvd3NDb21wb3NlUmVxEPOiARIaChRNc2dIYWxsb3dzQ29tcG9z",
-            "ZVJlcxD0ogESGAoSTXNnSGFsbG93c0xldmVsUmVxEPWiARIYChJNc2dIYWxs",
-            "b3dzTGV2ZWxSZXMQ9qIBEhkKE01zZ0hhbGxvd3NCYXR0bGVSZXEQ96IBEhkK",
-            "E01zZ0hhbGxvd3NCYXR0bGVSZXMQ+KIBEhYKEE1zZ0FkZEhhbGxvd3NSZXMQ",
-            "+aIBEh4KGE1zZ0hhbGxvd3NJdGVtQ29tcG9zZVJlcRD6ogESHgoYTXNnSGFs",
-            "bG93c0l0ZW1Db21wb3NlUmVzEPuiARIVCg9Nc2dSZWxpY0xpc3RSZXMQpKMB",
-            "EhgKEk1zZ1JlbGljQ29tcG9zZVJlcRClowESGAoSTXNnUmVsaWNDb21wb3Nl",
-            "UmVzEKajARIWChBNc2dSZWxpY0xldmVsUmVxEKejARIWChBNc2dSZWxpY0xl",
-            "dmVsUmVzEKijARIXChFNc2dSZWxpY0JhdHRsZVJlcRCpowESFwoRTXNnUmVs",
-            "aWNCYXR0bGVSZXMQq6MBEhQKDk1zZ0FkZFJlbGljUmVzEKyjARIcChZNc2dS",
-            "ZWxpY0l0ZW1Db21wb3NlUmVxEK2jARIcChZNc2dSZWxpY0l0ZW1Db21wb3Nl",
-            "UmVzEK6jARIXChFNc2dIZXJvUHViSW5mb1JlcxDWowESGQoTTXNnSGVyb1B1",
-            "YlVubG9ja1JlcRDXowESGQoTTXNnSGVyb1B1YlVubG9ja1JlcxDYowESGAoS",
-            "TXNnSGVyb1B1YlNlcnZlUmVxENmjARIYChJNc2dIZXJvUHViU2VydmVSZXMQ",
-            "2qMBEhkKE01zZ0hlcm9QdWJSZXdhcmRSZXEQ26MBEhkKE01zZ0hlcm9QdWJS",
-            "ZXdhcmRSZXMQ3KMBEh4KGE1zZ0hlcm9QdWJWaWRlb1dhaXRlclJlcRDdowES",
-            "HgoYTXNnSGVyb1B1YlZpZGVvV2FpdGVyUmVzEN6jARIfChlNc2dIZXJvUHVi",
-            "VmlkZW9DYXNoaWVyUmVxEN+jARIfChlNc2dIZXJvUHViVmlkZW9DYXNoaWVy",
-            "UmVzEOCjARIbChVNc2dIZXJvUHViT3BlblNob3BSZXEQ4aMBEhsKFU1zZ0hl",
-            "cm9QdWJPcGVuU2hvcFJlcxDiowESFwoRTXNnSGVyb1B1YkRpc2hSZXEQ46MB",
-            "EhcKEU1zZ0hlcm9QdWJEaXNoUmVzEOSjARIYChJNc2dIZXJvUHViR3Vlc3RS",
-            "ZXEQ5aMBEhgKEk1zZ0hlcm9QdWJHdWVzdFJlcxDmowESHQoXTXNnSGVyb1B1",
-            "YlZpZGVvUG93ZXJSZXEQ56MBEh0KF01zZ0hlcm9QdWJWaWRlb1Bvd2VyUmVz",
-            "EOijARIdChdNc2dIZXJvUHViUmV3YXJkU2hvd1JlcRDpowESHQoXTXNnSGVy",
-            "b1B1YlJld2FyZFNob3dSZXMQ6qMBEh4KGE1zZ0hlcm9QdWJQb3dlck5vdGlm",
-            "eVJlcxDrowESGgoUTXNnRW5lcmd5Q3ViZUxpc3RSZXMQiKQBEh0KF01zZ0Vu",
-            "ZXJneUN1YmVDb21wb3NlUmVxEImkARIdChdNc2dFbmVyZ3lDdWJlQ29tcG9z",
-            "ZVJlcxCKpAESGwoVTXNnRW5lcmd5Q3ViZUxldmVsUmVxEIukARIbChVNc2dF",
-            "bmVyZ3lDdWJlTGV2ZWxSZXMQjKQBEhwKFk1zZ0VuZXJneUN1YmVCYXR0bGVS",
-            "ZXEQjaQBEhwKFk1zZ0VuZXJneUN1YmVCYXR0bGVSZXMQjqQBEhkKE01zZ0Fk",
-            "ZEVuZXJneUN1YmVSZXMQj6QBEiEKG01zZ0VuZXJneUN1YmVJdGVtQ29tcG9z",
-            "ZVJlcRCQpAESIQobTXNnRW5lcmd5Q3ViZUl0ZW1Db21wb3NlUmVzEJGkARIX",
-            "ChFNc2dDYW5ub25Jbm9mb1JlcxC6pAESGAoSTXNnQ2Fubm9uRmluaXNoUmVx",
-            "EL+kARIYChJNc2dDYW5ub25GaW5pc2hSZXMQwKQBEhkKE01zZ0Nhbm5vbkNv",
-            "bXBvc2VSZXEQwqQBEhkKE01zZ0Nhbm5vbkNvbXBvc2VSZXMQw6QBEhgKEk1z",
-            "Z0Nhbm5vbkJhdHRsZVJlcRDEpAESGAoSTXNnQ2Fubm9uQmF0dGxlUmVzEMWk",
-            "ARIZChNNc2dDYW5ub25VcExldmVsUmVxEMikARIZChNNc2dDYW5ub25VcExl",
-            "dmVsUmVzEMmkARIXChFNc2dDYW5ub25TbWVsdFJlcRDKpAESFwoRTXNnQ2Fu",
-            "bm9uU21lbHRSZXMQy6QBEhkKE01zZ1dhcmVob3VzZUluZm9SZXMQ7KQBEiIK",
-            "HE1zZ0NoYW5nZVdhcmVob3VzZUF0dHJOdW1SZXMQ7aQBEhoKFE1zZ1Bhc3NV",
-            "bmxvY2tJbmZvUmVzEJ6lARIjCh1Nc2dDaGFuZ2VQYXNzVW5sb2NrQXR0ck51",
-            "bVJlcxCfpQESHwoZTXNnUGFzc1VubG9ja0NsaWVudFN5blJlcRCgpQESHwoZ",
-            "TXNnUGFzc1VubG9ja0NsaWVudFN5blJlcxChpQESFwoRTXNnc3RNZWRhbElu",
-            "Zm9SZXMQ0KUBEhcKEU1zZ01lZGFsVW5sb2NrUmVxENGlARIXChFNc2dNZWRh",
-            "bFVubG9ja1JlcxDSpQESHAoWTXNnTWVkYWxTY29yZVJld2FyZFJlcRDTpQES",
-            "HAoWTXNnTWVkYWxTY29yZVJld2FyZFJlcxDUpQESEwoNTXNnUGF5SW5mb1Jl",
-            "cxCCpgESFwoRTXNnUGF5U3RvcmVCdXlSZXEQg6YBEhcKEU1zZ1BheVN0b3Jl",
-            "QnV5UmVzEISmARIbChVNc2dQYXlHaWZ0VGltZUluZm9SZXMQjKYBEhoKFE1z",
-            "Z1BheUdpZnRUaW1lQnV5UmVxEI2mARIaChRNc2dQYXlHaWZ0VGltZUJ1eVJl",
-            "cxCOpgESHQoXTXNnUGF5R2lmdFRpbWVOb3RpZnlSZXMQj6YBEhkKE01zZ09y",
-            "ZGVyQ3JlYXRpb25SZXEQkKYBEhkKE01zZ09yZGVyQ3JlYXRpb25SZXMQkaYB",
-            "EhUKD01zZ09yZGVyRmFpbFJlcRCSpgESFQoPTXNnT3JkZXJGYWlsUmVzEJOm",
-            "ARIhChtNc2dOb3ZpY2VEZXZlbG9wbWVudEluZm9SZXMQtKYBEiMKHU1zZ05v",
-            "dmljZURldmVsb3BtZW50UmV3YXJkUmVxELWmARIjCh1Nc2dOb3ZpY2VEZXZl",
-            "bG9wbWVudFJld2FyZFJlcxC2pgESKAoiTXNnTm92aWNlRGV2ZWxvcG1lbnRT",
-            "Y29yZVJld2FyZFJlcRC3pgESKAoiTXNnTm92aWNlRGV2ZWxvcG1lbnRTY29y",
-            "ZVJld2FyZFJlcxC4pgESHgoYTXNnTm92aWNlV2FyT3JkZXJJbmZvUmVzEOam",
-            "ARIgChpNc2dOb3ZpY2VXYXJPcmRlclJld2FyZFJlcRDnpgESIAoaTXNnTm92",
-            "aWNlV2FyT3JkZXJSZXdhcmRSZXMQ6KYBEh0KF01zZ05vdmljZVdhck9yZGVy",
-            "QnV5UmVxEOmmARIdChdNc2dOb3ZpY2VXYXJPcmRlckJ1eVJlcxDqpgESJAoe",
-            "TXNnTm92aWNlV2FyT3JkZXJGaW5pc2hUaW1lUmVxEOumARIkCh5Nc2dOb3Zp",
-            "Y2VXYXJPcmRlckZpbmlzaFRpbWVSZXMQ7KYBEiAKGk1zZ0J1aWxkTG90dGVy",
-            "eURyYXdJbmZvUmVzEJinARIcChZNc2dCdWlsZExvdHRlcnlEcmF3UmVxEJmn",
-            "ARIcChZNc2dCdWlsZExvdHRlcnlEcmF3UmVzEJqnARIcChZNc2dQYXlNb250",
-            "aENhcmRJbmZvUmVzEMqnARIbChVNc2dQYXlNb250aENhcmRCdXlSZXEQy6cB",
-            "EhsKFU1zZ1BheU1vbnRoQ2FyZEJ1eVJlcxDMpwESHwoZTXNnUGF5TW9udGhD",
-            "YXJkUmVjZWl2ZVJlcRDNpwESHwoZTXNnUGF5TW9udGhDYXJkUmVjZWl2ZVJl",
-            "cxDOpwESGAoSQmF0dGxlVG93ZXJJbmZvUmVzEPynARIaChRGaW5pc2hCYXR0",
-            "bGVUb3dlclJlcRD9pwESGgoURmluaXNoQmF0dGxlVG93ZXJSZXMQ/qcBEhgK",
-            "EkZhc3RCYXR0bGVUb3dlclJlcRD/pwESGAoSRmFzdEJhdHRsZVRvd2VyUmVz",
-            "EICoARIaChRDYW5ub25CYXR0bGVUb3dlclJlcRCBqAESGgoUQ2Fubm9uQmF0",
-            "dGxlVG93ZXJSZXMQgqgBEh4KGEV4cGVkaXRpb25CYXR0bGVUb3dlclJlcRCD",
-            "qAESHgoYRXhwZWRpdGlvbkJhdHRsZVRvd2VyUmVzEISoARIZChNSZXNldEJh",
-            "dHRsZVRvd2VyUmVxEIWoARIZChNSZXNldEJhdHRsZVRvd2VyUmVzEIaoARIZ",
-            "ChNSZWNlaXZlQnVmZlRvd2VyUmVxEIeoARIZChNSZWNlaXZlQnVmZlRvd2Vy",
-            "UmVzEIioARIbChVOZXh0RGF5RmluaXNoVG93ZXJSZXEQiagBEhsKFU5leHRE",
-            "YXlGaW5pc2hUb3dlclJlcxCKqAESGQoTUmVmcmVzaEJ1ZmZUb3dlclJlcRCL",
-            "qAESGQoTUmVmcmVzaEJ1ZmZUb3dlclJlcxCMqAFCNQoTY29tLnRvcGdhbWUu",
-            "bWVzc2FnZaoCHUhvdGZpeEJ1c2luZXNzLlVuaXR5V2ViU29ja2V0YgZwcm90",
-            "bzM="));
-      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::HotfixBusiness.UnityWebSocket.MID), }, null, null));
-    }
-    #endregion
-
+  #region Descriptor
+  /// <summary>File descriptor for Mid.proto</summary>
+  public static pbr::FileDescriptor Descriptor {
+    get { return descriptor; }
   }
-  #region Enums
-  public enum MID {
-    [pbr::OriginalName("None")] None = 0,
-    /// <summary>
-    //// 服务器内部消息===========================================================================
-    /// </summary>
-    [pbr::OriginalName("ServerRegisterReq")] ServerRegisterReq = 101,
-    /// <summary>
-    /// 注册服务器消息
-    /// </summary>
-    [pbr::OriginalName("ServerRegisterRes")] ServerRegisterRes = 102,
-    /// <summary>
-    /// 获取服务器列表
-    /// </summary>
-    [pbr::OriginalName("ServerListReq")] ServerListReq = 103,
-    /// <summary>
-    /// 获取服务器列表
-    /// </summary>
-    [pbr::OriginalName("ServerListRes")] ServerListRes = 104,
-    /// <summary>
-    /// 改变角色服务器
-    /// </summary>
-    [pbr::OriginalName("ChangeRoleServerReq")] ChangeRoleServerReq = 105,
-    /// <summary>
-    /// 改变角色服务器
-    /// </summary>
-    [pbr::OriginalName("ChangeRoleServerRes")] ChangeRoleServerRes = 106,
-    /// <summary>
-    /// 服务器事件
-    /// </summary>
-    [pbr::OriginalName("ServerEventReq")] ServerEventReq = 107,
-    /// <summary>
-    /// 服务器事件
-    /// </summary>
-    [pbr::OriginalName("ServerEventRes")] ServerEventRes = 108,
-    /// <summary>
-    /// 服务器状态 	
-    /// </summary>
-    [pbr::OriginalName("ServerStatusRes")] ServerStatusRes = 109,
-    [pbr::OriginalName("DefaultGateReq")] DefaultGateReq = 200,
-    [pbr::OriginalName("DefaultGateRes")] DefaultGateRes = 201,
-    [pbr::OriginalName("ServerMailsReq")] ServerMailsReq = 301,
-    [pbr::OriginalName("DefaultServerMailReq")] DefaultServerMailReq = 302,
-    [pbr::OriginalName("TaskSeasonReq")] TaskSeasonReq = 303,
-    [pbr::OriginalName("DefaultServerMarqueeReq")] DefaultServerMarqueeReq = 304,
-    [pbr::OriginalName("InfiniteParkourSeasonReq")] InfiniteParkourSeasonReq = 305,
-    [pbr::OriginalName("InfiniteParkourChangeReq")] InfiniteParkourChangeReq = 306,
-    [pbr::OriginalName("UserServerReq")] UserServerReq = 307,
-    [pbr::OriginalName("AddFriendLogReq")] AddFriendLogReq = 308,
-    [pbr::OriginalName("SetOtherTriggerReq")] SetOtherTriggerReq = 309,
-    [pbr::OriginalName("UserInfoChangeReq")] UserInfoChangeReq = 310,
-    [pbr::OriginalName("ServerGMEventReq")] ServerGmeventReq = 311,
-    /// <summary>
-    /// 登陆
-    /// </summary>
-    [pbr::OriginalName("LoginReq")] LoginReq = 10001,
-    /// <summary>
-    /// 登录 
-    /// </summary>
-    [pbr::OriginalName("LoginRes")] LoginRes = 10002,
-    /// <summary>
-    /// 心跳
-    /// </summary>
-    [pbr::OriginalName("HeartReq")] HeartReq = 10011,
-    /// <summary>
-    /// 心跳
-    /// </summary>
-    [pbr::OriginalName("HeartRes")] HeartRes = 10012,
-    /// <summary>
-    /// 玩家被踢下线
-    /// </summary>
-    [pbr::OriginalName("KillUserRes")] KillUserRes = 10013,
-    /// <summary>
-    /// 消息种子
-    /// </summary>
-    [pbr::OriginalName("MessageSeedRes")] MessageSeedRes = 10014,
-    /// <summary>
-    /// 登陆完成
-    /// </summary>
-    [pbr::OriginalName("LoginFinishRes")] LoginFinishRes = 10015,
-    /// <summary>
-    /// 实名认证
-    /// </summary>
-    [pbr::OriginalName("VerifiedReq")] VerifiedReq = 10016,
-    /// <summary>
-    /// 实名认证	
-    /// </summary>
-    [pbr::OriginalName("VerifiedRes")] VerifiedRes = 10017,
-    /// <summary>
-    /// Ticket登录
-    /// </summary>
-    [pbr::OriginalName("TicketLoginExReq")] TicketLoginExReq = 10018,
-    /// <summary>
-    /// Ticket登录
-    /// </summary>
-    [pbr::OriginalName("TicketReLoginExReq")] TicketReLoginExReq = 10019,
-    /// <summary>
-    /// Ticket登录（服务器内部使用）
-    /// </summary>
-    [pbr::OriginalName("TicketLoginInternalReq")] TicketLoginInternalReq = 10020,
-    /// <summary>
-    /// 登出
-    /// </summary>
-    [pbr::OriginalName("LogoutReq")] LogoutReq = 10021,
-    /// <summary>
-    /// 登出
-    /// </summary>
-    [pbr::OriginalName("LogoutRes")] LogoutRes = 10022,
-    [pbr::OriginalName("LoginInternalReq")] LoginInternalReq = 10023,
-    /// <summary>
-    /// 通用消息
-    /// </summary>
-    [pbr::OriginalName("GMCommandReq")] GmcommandReq = 10100,
-    /// <summary>
-    /// GM命令 
-    /// </summary>
-    [pbr::OriginalName("GMCommandRes")] GmcommandRes = 10101,
-    /// <summary>
-    /// 系统错误
-    /// </summary>
-    [pbr::OriginalName("SystemErrorRes")] SystemErrorRes = 10102,
-    /// <summary>
-    /// 玩家行为
-    /// </summary>
-    [pbr::OriginalName("UserActionReq")] UserActionReq = 10103,
-    /// <summary>
-    /// 错误统一消息	
-    /// </summary>
-    [pbr::OriginalName("UserErrorRes")] UserErrorRes = 10104,
-    /// <summary>
-    /// 用户基础信息
-    /// </summary>
-    [pbr::OriginalName("UserInfoRes")] UserInfoRes = 10300,
-    /// <summary>
-    /// 头像信息
-    /// </summary>
-    [pbr::OriginalName("AvatarsInfoReq")] AvatarsInfoReq = 10301,
-    /// <summary>
-    /// 头像信息
-    /// </summary>
-    [pbr::OriginalName("AvatarsInfoRes")] AvatarsInfoRes = 10302,
-    /// <summary>
-    /// 头像框信息
-    /// </summary>
-    [pbr::OriginalName("AvatarFrameInfoReq")] AvatarFrameInfoReq = 10303,
-    /// <summary>
-    /// 头像框信息
-    /// </summary>
-    [pbr::OriginalName("AvatarFrameInfoRes")] AvatarFrameInfoRes = 10304,
-    /// <summary>
-    /// 称号信息
-    /// </summary>
-    [pbr::OriginalName("TitleInfoReq")] TitleInfoReq = 10305,
-    /// <summary>
-    /// 称号信息	
-    /// </summary>
-    [pbr::OriginalName("TitleInfoRes")] TitleInfoRes = 10306,
-    /// <summary>
-    /// 更换头像
-    /// </summary>
-    [pbr::OriginalName("ChangeAvatarsReq")] ChangeAvatarsReq = 10307,
-    /// <summary>
-    /// 更换头像
-    /// </summary>
-    [pbr::OriginalName("ChangeAvatarsRes")] ChangeAvatarsRes = 10308,
-    /// <summary>
-    /// 更换头像框
-    /// </summary>
-    [pbr::OriginalName("ChangeAvatarFrameReq")] ChangeAvatarFrameReq = 10309,
-    /// <summary>
-    /// 更换头像框
-    /// </summary>
-    [pbr::OriginalName("ChangeAvatarFrameRes")] ChangeAvatarFrameRes = 10310,
-    /// <summary>
-    /// 更换称号
-    /// </summary>
-    [pbr::OriginalName("ChangeTitleReq")] ChangeTitleReq = 10311,
-    /// <summary>
-    /// 更换称号
-    /// </summary>
-    [pbr::OriginalName("ChangeTitleRes")] ChangeTitleRes = 10312,
-    /// <summary>
-    /// 修改昵称
-    /// </summary>
-    [pbr::OriginalName("ChangeUsernameReq")] ChangeUsernameReq = 10313,
-    /// <summary>
-    /// 修改昵称 
-    /// </summary>
-    [pbr::OriginalName("ChangeUsernameRes")] ChangeUsernameRes = 10314,
-    /// <summary>
-    /// 跑马灯	 
-    /// </summary>
-    [pbr::OriginalName("MarqueeRes")] MarqueeRes = 10315,
-    /// <summary>
-    /// 单个红点信息 
-    /// </summary>
-    [pbr::OriginalName("NewRedDotReq")] NewRedDotReq = 10316,
-    /// <summary>
-    /// 单个红点信息 
-    /// </summary>
-    [pbr::OriginalName("NewRedDotRes")] NewRedDotRes = 10317,
-    /// <summary>
-    /// 红点信息
-    /// </summary>
-    [pbr::OriginalName("AllNewRedDotsRes")] AllNewRedDotsRes = 10318,
-    /// <summary>
-    /// S->C 整形属性变更 value = 最终值
-    /// </summary>
-    [pbr::OriginalName("ChangeAttrNumRes")] ChangeAttrNumRes = 10319,
-    /// <summary>
-    /// 属性变更 
-    /// </summary>
-    [pbr::OriginalName("AttributeRes")] AttributeRes = 10320,
-    /// <summary>
-    /// 战斗力变更 
-    /// </summary>
-    [pbr::OriginalName("CombatRes")] CombatRes = 10321,
-    /// <summary>
-    /// 解锁头像
-    /// </summary>
-    [pbr::OriginalName("UnlockAvatarsReq")] UnlockAvatarsReq = 10322,
-    /// <summary>
-    /// 解锁头像 
-    /// </summary>
-    [pbr::OriginalName("UnlockAvatarsRes")] UnlockAvatarsRes = 10323,
-    /// <summary>
-    /// 解锁称号
-    /// </summary>
-    [pbr::OriginalName("UnlockTitleReq")] UnlockTitleReq = 10324,
-    /// <summary>
-    /// 解锁称号
-    /// </summary>
-    [pbr::OriginalName("UnlockTitleRes")] UnlockTitleRes = 10325,
-    /// <summary>
-    /// 同步玩家信息（服务器内部使用）
-    /// </summary>
-    [pbr::OriginalName("UserInfoSyncReq")] UserInfoSyncReq = 10326,
-    /// <summary>
-    /// 同步玩家战斗力（服务器内部使用）
-    /// </summary>
-    [pbr::OriginalName("CombatSyncReq")] CombatSyncReq = 10327,
-    /// <summary>
-    /// 同步玩家关卡进度（服务器内部使用）
-    /// </summary>
-    [pbr::OriginalName("UserStageSyncReq")] UserStageSyncReq = 10328,
-    /// <summary>
-    /// 新手引导信息
-    /// </summary>
-    [pbr::OriginalName("NoviceGuidanceRes")] NoviceGuidanceRes = 10329,
-    /// <summary>
-    /// 设置新手引导进度
-    /// </summary>
-    [pbr::OriginalName("NoviceGuidanceStepReq")] NoviceGuidanceStepReq = 10332,
-    /// <summary>
-    /// 设置新手引导进度
-    /// </summary>
-    [pbr::OriginalName("NoviceGuidanceStepRes")] NoviceGuidanceStepRes = 10333,
-    /// <summary>
-    /// 在线时间设置（客户端打点用）
-    /// </summary>
-    [pbr::OriginalName("OnlineTimeReq")] OnlineTimeReq = 10334,
-    /// <summary>
-    /// 在线时间设置（客户端打点用）
-    /// </summary>
-    [pbr::OriginalName("OnlineTimeRes")] OnlineTimeRes = 10335,
-    /// <summary>
-    /// 看广告
-    /// </summary>
-    [pbr::OriginalName("WatchingAdvertisementsReq")] WatchingAdvertisementsReq = 10336,
-    /// <summary>
-    /// 看广告
-    /// </summary>
-    [pbr::OriginalName("WatchingAdvertisementsRes")] WatchingAdvertisementsRes = 10337,
-    /// <summary>
-    /// 充值次数统计
-    /// </summary>
-    [pbr::OriginalName("RechargeStatisticsReq")] RechargeStatisticsReq = 10338,
-    /// <summary>
-    /// 充值次数统计
-    /// </summary>
-    [pbr::OriginalName("RechargeStatisticsRes")] RechargeStatisticsRes = 10339,
-    /// <summary>
-    /// 邮件
-    /// </summary>
-    [pbr::OriginalName("MailInfoRes")] MailInfoRes = 10400,
-    /// <summary>
-    /// 新增邮件通知
-    /// </summary>
-    [pbr::OriginalName("AddMailNoticeRes")] AddMailNoticeRes = 10401,
-    /// <summary>
-    /// 请求最新全服邮件
-    /// </summary>
-    [pbr::OriginalName("SynAllSerMailReq")] SynAllSerMailReq = 10402,
-    /// <summary>
-    /// 领取邮件
-    /// </summary>
-    [pbr::OriginalName("ReceiveMailReq")] ReceiveMailReq = 10403,
-    /// <summary>
-    /// 
-    /// </summary>
-    [pbr::OriginalName("ReceiveMailRes")] ReceiveMailRes = 10404,
-    /// <summary>
-    /// 一键删除邮件
-    /// </summary>
-    [pbr::OriginalName("DeleteMailReq")] DeleteMailReq = 10405,
-    /// <summary>
-    /// 
-    /// </summary>
-    [pbr::OriginalName("DeleteMailRes")] DeleteMailRes = 10406,
-    /// <summary>
-    /// 阅读邮件--支持多封邮件
-    /// </summary>
-    [pbr::OriginalName("ReadMailReq")] ReadMailReq = 10407,
-    /// <summary>
-    /// 
-    /// </summary>
-    [pbr::OriginalName("ReadMailRes")] ReadMailRes = 10408,
-    /// <summary>
-    /// VIP
-    /// </summary>
-    [pbr::OriginalName("VipInfoRes")] VipInfoRes = 10414,
-    /// <summary>
-    /// VIP领奖
-    /// </summary>
-    [pbr::OriginalName("RewardVipReq")] RewardVipReq = 10415,
-    /// <summary>
-    /// VIP领奖
-    /// </summary>
-    [pbr::OriginalName("RewardVipRes")] RewardVipRes = 10416,
-    /// <summary>
-    /// 观看视频
-    /// </summary>
-    [pbr::OriginalName("ViewVideoReq")] ViewVideoReq = 10417,
-    /// <summary>
-    /// 观看视频
-    /// </summary>
-    [pbr::OriginalName("ViewVideoRes")] ViewVideoRes = 10418,
-    /// <summary>
-    /// buff信息
-    /// </summary>
-    [pbr::OriginalName("BuffInfoRes")] BuffInfoRes = 10419,
-    /// <summary>
-    /// 购买特权商店
-    /// </summary>
-    [pbr::OriginalName("BuySpecialStoreReq")] BuySpecialStoreReq = 10420,
-    /// <summary>
-    /// 购买特权商店
-    /// </summary>
-    [pbr::OriginalName("BuySpecialStoreRes")] BuySpecialStoreRes = 10421,
-    /// <summary>
-    /// 每日每周商店信息
-    /// </summary>
-    [pbr::OriginalName("DailyStoreInfoRes")] DailyStoreInfoRes = 10422,
-    /// <summary>
-    /// 购买每日每周商店
-    /// </summary>
-    [pbr::OriginalName("BuyDailyStoreReq")] BuyDailyStoreReq = 10423,
-    /// <summary>
-    /// 购买每日每周商店
-    /// </summary>
-    [pbr::OriginalName("BuyDailyStoreRes")] BuyDailyStoreRes = 10424,
-    /// <summary>
-    /// 购买钻石商店
-    /// </summary>
-    [pbr::OriginalName("BuyDiamondStoreReq")] BuyDiamondStoreReq = 10425,
-    /// <summary>
-    /// 购买钻石商店
-    /// </summary>
-    [pbr::OriginalName("BuyDiamondStoreRes")] BuyDiamondStoreRes = 10426,
-    /// <summary>
-    /// 邮件同步
-    /// </summary>
-    [pbr::OriginalName("HW_SynMailReq")] HwSynMailReq = 10427,
-    /// <summary>
-    /// 
-    /// </summary>
-    [pbr::OriginalName("HW_SynMailRes")] HwSynMailRes = 10428,
-    /// <summary>
-    /// 广播给前端 最新的全服消息编号
-    /// </summary>
-    [pbr::OriginalName("AddAllServerMailNoticeRes")] AddAllServerMailNoticeRes = 10429,
-    /// <summary>
-    /// 
-    /// </summary>
-    [pbr::OriginalName("NewRollNoticeReq")] NewRollNoticeReq = 10430,
-    /// <summary>
-    /// 新增 OR 修改 跑马灯公告通知
-    /// </summary>
-    [pbr::OriginalName("NewRollNoticeRes")] NewRollNoticeRes = 10431,
-    /// <summary>
-    /// 社交
-    /// </summary>
-    [pbr::OriginalName("ViewPlayerReq")] ViewPlayerReq = 10500,
-    /// <summary>
-    /// 查看他人信息
-    /// </summary>
-    [pbr::OriginalName("ViewPlayerRes")] ViewPlayerRes = 10501,
-    /// <summary>
-    /// 获取访客列表
-    /// </summary>
-    [pbr::OriginalName("ReceptionRoomReq")] ReceptionRoomReq = 10502,
-    /// <summary>
-    /// 获取访客列表
-    /// </summary>
-    [pbr::OriginalName("ReceptionRoomRes")] ReceptionRoomRes = 10503,
-    /// <summary>
-    /// 领取拜访问奖励
-    /// </summary>
-    [pbr::OriginalName("RewardReceptionRoomReq")] RewardReceptionRoomReq = 10504,
-    /// <summary>
-    /// 领取拜访问奖励
-    /// </summary>
-    [pbr::OriginalName("RewardReceptionRoomRes")] RewardReceptionRoomRes = 10505,
-    /// <summary>
-    /// 拜访列表
-    /// </summary>
-    [pbr::OriginalName("PlayerViewReq")] PlayerViewReq = 10506,
-    /// <summary>
-    /// 拜访列表
-    /// </summary>
-    [pbr::OriginalName("PlayerViewRes")] PlayerViewRes = 10507,
-    /// <summary>
-    /// 拜访玩家
-    /// </summary>
-    [pbr::OriginalName("VisitPlayerReq")] VisitPlayerReq = 10508,
-    /// <summary>
-    /// 拜访玩家
-    /// </summary>
-    [pbr::OriginalName("VisitPlayerRes")] VisitPlayerRes = 10509,
-    /// <summary>
-    /// 掠夺玩家
-    /// </summary>
-    [pbr::OriginalName("PlunderPlayerReq")] PlunderPlayerReq = 10510,
-    /// <summary>
-    /// 掠夺玩家
-    /// </summary>
-    [pbr::OriginalName("PlunderPlayerRes")] PlunderPlayerRes = 10511,
-    /// <summary>
-    /// 驱逐玩家
-    /// </summary>
-    [pbr::OriginalName("ExpulsionPlayerReq")] ExpulsionPlayerReq = 10512,
-    /// <summary>
-    /// 驱逐玩家
-    /// </summary>
-    [pbr::OriginalName("ExpulsionPlayerRes")] ExpulsionPlayerRes = 10513,
-    /// <summary>
-    /// 召回英雄
-    /// </summary>
-    [pbr::OriginalName("RecallHeroReq")] RecallHeroReq = 10514,
-    /// <summary>
-    /// 召回英雄
-    /// </summary>
-    [pbr::OriginalName("RecallHeroRes")] RecallHeroRes = 10515,
-    /// <summary>
-    /// 一键拜访
-    /// </summary>
-    [pbr::OriginalName("OneClickVisitPlayerReq")] OneClickVisitPlayerReq = 10516,
-    /// <summary>
-    /// 一键拜访
-    /// </summary>
-    [pbr::OriginalName("OneClickVisitPlayerRes")] OneClickVisitPlayerRes = 10517,
-    /// <summary>
-    /// 玩家列表
-    /// </summary>
-    [pbr::OriginalName("PlayerEntryReq")] PlayerEntryReq = 10518,
-    /// <summary>
-    /// 玩家列表
-    /// </summary>
-    [pbr::OriginalName("PlayerEntryRes")] PlayerEntryRes = 10519,
-    /// <summary>
-    /// 刷新玩家列表
-    /// </summary>
-    [pbr::OriginalName("PlayerEntryRefreshReq")] PlayerEntryRefreshReq = 10520,
-    /// <summary>
-    /// 刷新玩家列表
-    /// </summary>
-    [pbr::OriginalName("PlayerEntryRefreshRes")] PlayerEntryRefreshRes = 10521,
-    /// <summary>
-    /// 事件日志
-    /// </summary>
-    [pbr::OriginalName("ViewVisitLogReq")] ViewVisitLogReq = 10522,
-    /// <summary>
-    /// 事件日志
-    /// </summary>
-    [pbr::OriginalName("ViewVisitLogRes")] ViewVisitLogRes = 10523,
-    /// <summary>
-    /// 领取事件奖励
-    /// </summary>
-    [pbr::OriginalName("RewardViewVisitLogReq")] RewardViewVisitLogReq = 10524,
-    /// <summary>
-    /// 领取事件奖励
-    /// </summary>
-    [pbr::OriginalName("RewardViewVisitLogRes")] RewardViewVisitLogRes = 10525,
-    /// <summary>
-    /// 查看他人建筑信息
-    /// </summary>
-    [pbr::OriginalName("ViewPlayerBuildReq")] ViewPlayerBuildReq = 10526,
-    /// <summary>
-    /// 查看他人建筑信息
-    /// </summary>
-    [pbr::OriginalName("ViewPlayerBuildRes")] ViewPlayerBuildRes = 10527,
-    /// <summary>
-    /// 社交道具信息
-    /// </summary>
-    [pbr::OriginalName("SocializeItemRes")] SocializeItemRes = 10528,
-    /// <summary>
-    /// 同步拜访玩家信息（服务器内部使用）
-    /// </summary>
-    [pbr::OriginalName("VisitPlayerSyncReq")] VisitPlayerSyncReq = 10529,
-    /// <summary>
-    /// 同步掠夺信息（服务器内部使用）
-    /// </summary>
-    [pbr::OriginalName("PlunderSyncReq")] PlunderSyncReq = 10530,
-    /// <summary>
-    /// 清除建筑信息（服务器内部使用）
-    /// </summary>
-    [pbr::OriginalName("PlunderBuildClearReq")] PlunderBuildClearReq = 10531,
-    /// <summary>
-    /// 同步玩家日志（服务器内部使用）
-    /// </summary>
-    [pbr::OriginalName("SocializeLogSyncReq")] SocializeLogSyncReq = 10532,
-    [pbr::OriginalName("RewardShieldReq")] RewardShieldReq = 10533,
-    [pbr::OriginalName("RewardShieldRes")] RewardShieldRes = 10534,
-    /// <summary>
-    /// 排行榜
-    /// </summary>
-    [pbr::OriginalName("ViewSelfRankingReq")] ViewSelfRankingReq = 10600,
-    /// <summary>
-    /// 查看自己排行榜信息
-    /// </summary>
-    [pbr::OriginalName("ViewSelfRankingRes")] ViewSelfRankingRes = 10601,
-    /// <summary>
-    /// 查看排行榜信息
-    /// </summary>
-    [pbr::OriginalName("ViewRankingReq")] ViewRankingReq = 10602,
-    /// <summary>
-    /// 查看排行榜信息
-    /// </summary>
-    [pbr::OriginalName("ViewRankingRes")] ViewRankingRes = 10603,
-    /// <summary>
-    /// 排行榜领奖
-    /// </summary>
-    [pbr::OriginalName("RewardRankingReq")] RewardRankingReq = 10604,
-    /// <summary>
-    /// 排行榜领奖
-    /// </summary>
-    [pbr::OriginalName("RewardRankingRes")] RewardRankingRes = 10605,
-    /// <summary>
-    /// 查看自己排行榜信息（服务器内部使用）
-    /// </summary>
-    [pbr::OriginalName("ViewSelfRankingInternalReq")] ViewSelfRankingInternalReq = 10606,
-    /// <summary>
-    /// 段位变更 
-    /// </summary>
-    [pbr::OriginalName("StageChangeRes")] StageChangeRes = 10607,
-    /// <summary>
-    /// 战斗相关 - 关卡
-    /// </summary>
-    [pbr::OriginalName("BattleInfoRes")] BattleInfoRes = 20000,
-    /// <summary>
-    /// C->S 进入战斗
-    /// </summary>
-    [pbr::OriginalName("EnterBattleReq")] EnterBattleReq = 20001,
-    /// <summary>
-    /// S->C 进入战斗
-    /// </summary>
-    [pbr::OriginalName("EnterBattleRes")] EnterBattleRes = 20002,
-    /// <summary>
-    /// C->S 战斗结算
-    /// </summary>
-    [pbr::OriginalName("FinishBattleReq")] FinishBattleReq = 20003,
-    /// <summary>
-    /// S->C 战斗结算
-    /// </summary>
-    [pbr::OriginalName("FinishBattleRes")] FinishBattleRes = 20004,
-    /// <summary>
-    /// C->S 副本扫荡结算
-    /// </summary>
-    [pbr::OriginalName("FinishMopUpReq")] FinishMopUpReq = 20006,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("FinishMopUpRes")] FinishMopUpRes = 20007,
-    /// <summary>
-    /// C->S 进入刷血副本
-    /// </summary>
-    [pbr::OriginalName("EnterLifeBattleReq")] EnterLifeBattleReq = 20008,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("EnterLifeBattleRes")] EnterLifeBattleRes = 20009,
-    /// <summary>
-    /// C->S 刷血副本结算
-    /// </summary>
-    [pbr::OriginalName("FinishLifeBattleReq")] FinishLifeBattleReq = 20010,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("FinishLifeBattleRes")] FinishLifeBattleRes = 20011,
-    /// <summary>
-    /// C->S 刷血副本扫荡结算
-    /// </summary>
-    [pbr::OriginalName("FinishLifeMopUpReq")] FinishLifeMopUpReq = 20012,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("FinishLifeMopUpRes")] FinishLifeMopUpRes = 20013,
-    /// <summary>
-    /// C->S 副本门票刷新请求
-    /// </summary>
-    [pbr::OriginalName("BattleTicketResetReq")] BattleTicketResetReq = 20014,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("BattleTicketResetRes")] BattleTicketResetRes = 20015,
-    /// <summary>
-    /// C->S 关卡挂机结算
-    /// </summary>
-    [pbr::OriginalName("StageFinishBattleReq")] StageFinishBattleReq = 20016,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("StageFinishBattleRes")] StageFinishBattleRes = 20017,
-    /// <summary>
-    /// S->C 关卡离线挂机结算
-    /// </summary>
-    [pbr::OriginalName("StageHangingOffLineFinishRes")] StageHangingOffLineFinishRes = 20018,
-    /// <summary>
-    /// C->S 关卡进度结算
-    /// </summary>
-    [pbr::OriginalName("StageAdvanceFinishBattleReq")] StageAdvanceFinishBattleReq = 20020,
-    /// <summary>
-    /// S->C
-    /// </summary>
-    [pbr::OriginalName("StageAdvanceFinishBattleRes")] StageAdvanceFinishBattleRes = 20021,
-    /// <summary>
-    /// C->S 进入挂机关卡预结算
-    /// </summary>
-    [pbr::OriginalName("EnterStageBattleReq")] EnterStageBattleReq = 20022,
-    /// <summary>
-    /// S->C
-    /// </summary>
-    [pbr::OriginalName("EnterStageBattleRes")] EnterStageBattleRes = 20023,
-    /// <summary>
-    /// C->S 关卡宝箱结算
-    /// </summary>
-    [pbr::OriginalName("StageAdvanceBoxFinishBattleReq")] StageAdvanceBoxFinishBattleReq = 20024,
-    /// <summary>
-    /// S->C
-    /// </summary>
-    [pbr::OriginalName("StageAdvanceBoxFinishBattleRes")] StageAdvanceBoxFinishBattleRes = 20025,
-    /// <summary>
-    /// 英雄模块 -----------------
-    /// </summary>
-    [pbr::OriginalName("MsgHeroListRes")] MsgHeroListRes = 20100,
-    /// <summary>
-    /// C->S 英雄合成
-    /// </summary>
-    [pbr::OriginalName("MsgHeroComposeReq")] MsgHeroComposeReq = 20101,
-    /// <summary>
-    /// S->C 英雄合成
-    /// </summary>
-    [pbr::OriginalName("MsgHeroComposeRes")] MsgHeroComposeRes = 20102,
-    /// <summary>
-    /// C->S 英雄升级
-    /// </summary>
-    [pbr::OriginalName("MsgHeroLevelReq")] MsgHeroLevelReq = 20104,
-    /// <summary>
-    /// S->C 英雄升级
-    /// </summary>
-    [pbr::OriginalName("MsgHeroLevelRes")] MsgHeroLevelRes = 20105,
-    /// <summary>
-    /// C->S 英雄上阵
-    /// </summary>
-    [pbr::OriginalName("MsgHeroBattleReq")] MsgHeroBattleReq = 20106,
-    /// <summary>
-    /// S->C 英雄上阵
-    /// </summary>
-    [pbr::OriginalName("MsgHeroBattleRes")] MsgHeroBattleRes = 20107,
-    /// <summary>
-    /// S->C 英雄新增
-    /// </summary>
-    [pbr::OriginalName("MsgAddHeroRes")] MsgAddHeroRes = 20108,
-    /// <summary>
-    /// C->S 英雄升星
-    /// </summary>
-    [pbr::OriginalName("MsgHeroUpStarReq")] MsgHeroUpStarReq = 20109,
-    /// <summary>
-    /// S->C 英雄升星
-    /// </summary>
-    [pbr::OriginalName("MsgHeroUpStarRes")] MsgHeroUpStarRes = 20110,
-    /// <summary>
-    /// C->S 英雄碎片合成
-    /// </summary>
-    [pbr::OriginalName("MsgHeroItemComposeReq")] MsgHeroItemComposeReq = 20111,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHeroItemComposeRes")] MsgHeroItemComposeRes = 20112,
-    /// <summary>
-    /// 物品模块-----------------
-    /// </summary>
-    [pbr::OriginalName("MsgItemListRes")] MsgItemListRes = 20150,
-    /// <summary>
-    /// C->S 新增物品
-    /// </summary>
-    [pbr::OriginalName("MsgAddItemReq")] MsgAddItemReq = 20151,
-    /// <summary>
-    /// S->C 新增物品
-    /// </summary>
-    [pbr::OriginalName("MsgAddItemRes")] MsgAddItemRes = 20152,
-    /// <summary>
-    /// S->C 移除物品
-    /// </summary>
-    [pbr::OriginalName("MsgRemoveItemRes")] MsgRemoveItemRes = 20153,
-    /// <summary>
-    /// C->S 打开箱子
-    /// </summary>
-    [pbr::OriginalName("MsgOpenBoxReq")] MsgOpenBoxReq = 20154,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgOpenBoxRes")] MsgOpenBoxRes = 20155,
-    /// <summary>
-    /// C->S 物品合成
-    /// </summary>
-    [pbr::OriginalName("MsgComposeReq")] MsgComposeReq = 20156,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgComposeRes")] MsgComposeRes = 20157,
-    /// <summary>
-    /// 武器模块
-    /// </summary>
-    [pbr::OriginalName("MsgWeaponListRes")] MsgWeaponListRes = 20200,
-    /// <summary>
-    /// C->S 武器合成
-    /// </summary>
-    [pbr::OriginalName("MsgWeaponComposeReq")] MsgWeaponComposeReq = 20201,
-    /// <summary>
-    /// S->C 武器合成
-    /// </summary>
-    [pbr::OriginalName("MsgWeaponComposeRes")] MsgWeaponComposeRes = 20202,
-    /// <summary>
-    /// C->S 武器升级
-    /// </summary>
-    [pbr::OriginalName("MsgWeaponLevelReq")] MsgWeaponLevelReq = 20204,
-    /// <summary>
-    /// S->C 武器升级
-    /// </summary>
-    [pbr::OriginalName("MsgWeaponLevelRes")] MsgWeaponLevelRes = 20205,
-    /// <summary>
-    /// C->S 武器上阵
-    /// </summary>
-    [pbr::OriginalName("MsgWeaponBattleReq")] MsgWeaponBattleReq = 20206,
-    /// <summary>
-    /// S->C 武器上阵
-    /// </summary>
-    [pbr::OriginalName("MsgWeaponBattleRes")] MsgWeaponBattleRes = 20207,
-    /// <summary>
-    /// S->C 武器新增
-    /// </summary>
-    [pbr::OriginalName("MsgAddWeaponRes")] MsgAddWeaponRes = 20208,
-    /// <summary>
-    /// S->C 英雄武器初始化
-    /// </summary>
-    [pbr::OriginalName("MsgWeaponBattleInitRes")] MsgWeaponBattleInitRes = 20209,
-    /// <summary>
-    /// 商店模块
-    /// </summary>
-    [pbr::OriginalName("MsgShopInfoRes")] MsgShopInfoRes = 20250,
-    /// <summary>
-    /// C->S 商店购买
-    /// </summary>
-    [pbr::OriginalName("MsgBuyItemReq")] MsgBuyItemReq = 20251,
-    /// <summary>
-    /// S->C 商店购买
-    /// </summary>
-    [pbr::OriginalName("MsgBuyItemRes")] MsgBuyItemRes = 20252,
-    /// <summary>
-    /// 黑市商店模块
-    /// </summary>
-    [pbr::OriginalName("BlackMarketInfoRes")] BlackMarketInfoRes = 20300,
-    /// <summary>
-    /// C->S 黑市商店购买
-    /// </summary>
-    [pbr::OriginalName("MsgBuyBlackMarketReq")] MsgBuyBlackMarketReq = 20301,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuyBlackMarketRes")] MsgBuyBlackMarketRes = 20302,
-    /// <summary>
-    /// C->S 黑市商店刷新
-    /// </summary>
-    [pbr::OriginalName("MsgResetBlackMarketReq")] MsgResetBlackMarketReq = 20303,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgResetBlackMarketRes")] MsgResetBlackMarketRes = 20304,
-    /// <summary>
-    /// 循环签到模块
-    /// </summary>
-    [pbr::OriginalName("MsgLoopSignInfoRes")] MsgLoopSignInfoRes = 20350,
-    /// <summary>
-    /// C->S 签到请求
-    /// </summary>
-    [pbr::OriginalName("MsgLoopSignReq")] MsgLoopSignReq = 20351,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgLoopSignRes")] MsgLoopSignRes = 20352,
-    /// <summary>
-    /// 主线任务模块
-    /// </summary>
-    [pbr::OriginalName("MsgMainTaskInfoRes")] MsgMainTaskInfoRes = 20400,
-    /// <summary>
-    /// C->S 领取任务奖励请求
-    /// </summary>
-    [pbr::OriginalName("MsgMainTaskRewardReq")] MsgMainTaskRewardReq = 20401,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgMainTaskRewardRes")] MsgMainTaskRewardRes = 20402,
-    /// <summary>
-    /// C->S 领取循环任务奖励
-    /// </summary>
-    [pbr::OriginalName("MsgCycleTaskRewardReq")] MsgCycleTaskRewardReq = 20403,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgCycleTaskRewardRes")] MsgCycleTaskRewardRes = 20404,
-    /// <summary>
-    /// C->S 领线循环任务积分奖励
-    /// </summary>
-    [pbr::OriginalName("MsgCycleTaskScoreRewardReq")] MsgCycleTaskScoreRewardReq = 20405,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgCycleTaskScoreRewardRes")] MsgCycleTaskScoreRewardRes = 20406,
-    /// <summary>
-    /// 日常任务模块
-    /// </summary>
-    [pbr::OriginalName("MsgDailyTaskInfoRes")] MsgDailyTaskInfoRes = 20450,
-    /// <summary>
-    /// C->S 领线日常任务奖励
-    /// </summary>
-    [pbr::OriginalName("MsgDailyTaskRewardReq")] MsgDailyTaskRewardReq = 20451,
-    /// <summary>
-    /// S->C
-    /// </summary>
-    [pbr::OriginalName("MsgDailyTaskRewardRes")] MsgDailyTaskRewardRes = 20452,
-    /// <summary>
-    /// C->S 领线日常任务积分奖励
-    /// </summary>
-    [pbr::OriginalName("MsgDailyTaskScoreRewardReq")] MsgDailyTaskScoreRewardReq = 20453,
-    /// <summary>
-    /// S->C
-    /// </summary>
-    [pbr::OriginalName("MsgDailyTaskScoreRewardRes")] MsgDailyTaskScoreRewardRes = 20454,
-    /// <summary>
-    /// 图鉴模块
-    /// </summary>
-    [pbr::OriginalName("MsgstBestiaryInfoRes")] MsgstBestiaryInfoRes = 20500,
-    /// <summary>
-    /// C->S 图鉴解锁
-    /// </summary>
-    [pbr::OriginalName("MsgBestiaryUnlockReq")] MsgBestiaryUnlockReq = 20501,
-    /// <summary>
-    /// S->C
-    /// </summary>
-    [pbr::OriginalName("MsgBestiaryUnlockRes")] MsgBestiaryUnlockRes = 20502,
-    /// <summary>
-    /// C->S 图鉴领奖
-    /// </summary>
-    [pbr::OriginalName("MsgBestiaryRewardReq")] MsgBestiaryRewardReq = 20503,
-    /// <summary>
-    /// S->C
-    /// </summary>
-    [pbr::OriginalName("MsgBestiaryRewardRes")] MsgBestiaryRewardRes = 20504,
-    /// <summary>
-    /// 成长养成模块
-    /// </summary>
-    [pbr::OriginalName("MsgDevelopmentRes")] MsgDevelopmentRes = 20550,
-    /// <summary>
-    /// C->S 养成升级
-    /// </summary>
-    [pbr::OriginalName("MsgDevelopmentLevelReq")] MsgDevelopmentLevelReq = 20551,
-    /// <summary>
-    /// S->C
-    /// </summary>
-    [pbr::OriginalName("MsgDevelopmentLevelRes")] MsgDevelopmentLevelRes = 20552,
-    /// <summary>
-    /// 天赋模块
-    /// </summary>
-    [pbr::OriginalName("MsgTalentInfoRes")] MsgTalentInfoRes = 20600,
-    /// <summary>
-    /// C->S 重置天赋
-    /// </summary>
-    [pbr::OriginalName("MsgTalentPointResetReq")] MsgTalentPointResetReq = 20601,
-    /// <summary>
-    /// S->C
-    /// </summary>
-    [pbr::OriginalName("MsgTalentPointResetRes")] MsgTalentPointResetRes = 20602,
-    /// <summary>
-    /// C->S 天赋升级
-    /// </summary>
-    [pbr::OriginalName("MsgTalentLevelReq")] MsgTalentLevelReq = 20603,
-    /// <summary>
-    /// S->C
-    /// </summary>
-    [pbr::OriginalName("MsgTalentLevelRes")] MsgTalentLevelRes = 20604,
-    /// <summary>
-    /// S->C 天赋点获得
-    /// </summary>
-    [pbr::OriginalName("MsgTalentAddPointNotifyRes")] MsgTalentAddPointNotifyRes = 20605,
-    /// <summary>
-    /// 装备模块
-    /// </summary>
-    [pbr::OriginalName("MsgEquipListRes")] MsgEquipListRes = 20700,
-    /// <summary>
-    /// C->S 锻造装备
-    /// </summary>
-    [pbr::OriginalName("MsgEquipForgingReq")] MsgEquipForgingReq = 20701,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgEquipForgingRes")] MsgEquipForgingRes = 20702,
-    /// <summary>
-    /// C->S 锻造升级
-    /// </summary>
-    [pbr::OriginalName("MsgForgingLevelReq")] MsgForgingLevelReq = 20704,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgForgingLevelRes")] MsgForgingLevelRes = 20705,
-    /// <summary>
-    /// C->S 装备上阵
-    /// </summary>
-    [pbr::OriginalName("MsgEquipBattleReq")] MsgEquipBattleReq = 20706,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgEquipBattleRes")] MsgEquipBattleRes = 20707,
-    /// <summary>
-    /// S->C 装备出售
-    /// </summary>
-    [pbr::OriginalName("MsgEquipSellReq")] MsgEquipSellReq = 20708,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgEquipSellRes")] MsgEquipSellRes = 20709,
-    /// <summary>
-    /// 建筑模块 ==========================================新版本========================================
-    /// </summary>
-    [pbr::OriginalName("MsgBuildInfoRes")] MsgBuildInfoRes = 20750,
-    /// <summary>
-    /// C->S 建筑加速
-    /// </summary>
-    [pbr::OriginalName("MsgBuildSpeedReq")] MsgBuildSpeedReq = 20751,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildSpeedRes")] MsgBuildSpeedRes = 20752,
-    /// <summary>
-    /// C->S 建筑解锁
-    /// </summary>
-    [pbr::OriginalName("MsgBuildUnlockReq")] MsgBuildUnlockReq = 20753,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildUnlockRes")] MsgBuildUnlockRes = 20754,
-    /// <summary>
-    /// C->S 建筑升级
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLevelReq")] MsgBuildLevelReq = 20755,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLevelRes")] MsgBuildLevelRes = 20756,
-    /// <summary>
-    /// C->S 建筑升级同步
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLevelSynReq")] MsgBuildLevelSynReq = 20757,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLevelSynRes")] MsgBuildLevelSynRes = 20758,
-    /// <summary>
-    /// C->S 动力核心升级
-    /// </summary>
-    [pbr::OriginalName("MsgBuildPowerCoreSkillReq")] MsgBuildPowerCoreSkillReq = 20759,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildPowerCoreSkillRes")] MsgBuildPowerCoreSkillRes = 20760,
-    /// <summary>
-    /// C->S 钢铁工厂/秘银工厂/矿石工厂/水晶工厂可以提升钢铁/秘银/矿石/水晶的资源生产 结算
-    /// </summary>
-    [pbr::OriginalName("MsgBuildProductionFinishReq")] MsgBuildProductionFinishReq = 20763,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildProductionFinishRes")] MsgBuildProductionFinishRes = 20764,
-    /// <summary>
-    /// S->C 建筑更新通知
-    /// </summary>
-    [pbr::OriginalName("MsgBuildNotifyRes")] MsgBuildNotifyRes = 20765,
-    /// <summary>
-    /// C->S 动力核心重置
-    /// </summary>
-    [pbr::OriginalName("MsgBuildPowerCoreSkillResetReq")] MsgBuildPowerCoreSkillResetReq = 20766,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildPowerCoreSkillResetRes")] MsgBuildPowerCoreSkillResetRes = 20767,
-    /// <summary>
-    /// C->S 购买试用队列
-    /// </summary>
-    [pbr::OriginalName("MsgBuildBuyQueueReq")] MsgBuildBuyQueueReq = 20768,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildBuyQueueRes")] MsgBuildBuyQueueRes = 20769,
-    /// <summary>
-    /// 建筑图书馆模块
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLibraryInfoRes")] MsgBuildLibraryInfoRes = 20800,
-    /// <summary>
-    /// C->S  图书馆加速
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLibrarySpeedReq")] MsgBuildLibrarySpeedReq = 20801,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLibrarySpeedRes")] MsgBuildLibrarySpeedRes = 20802,
-    /// <summary>
-    /// C->S  图书馆升级
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLibraryLevelReq")] MsgBuildLibraryLevelReq = 20803,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLibraryLevelRes")] MsgBuildLibraryLevelRes = 20804,
-    /// <summary>
-    /// C->S  图书馆升级同步
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLibraryLevelSynReq")] MsgBuildLibraryLevelSynReq = 20805,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLibraryLevelSynRes")] MsgBuildLibraryLevelSynRes = 20806,
-    /// <summary>
-    /// C->S  图书馆节解锁
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLibraryUnlockReq")] MsgBuildLibraryUnlockReq = 20807,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLibraryUnlockRes")] MsgBuildLibraryUnlockRes = 20808,
-    /// <summary>
-    /// 圣物模块
-    /// </summary>
-    [pbr::OriginalName("MsgHallowsListRes")] MsgHallowsListRes = 20850,
-    /// <summary>
-    /// C->S  圣物合成
-    /// </summary>
-    [pbr::OriginalName("MsgHallowsComposeReq")] MsgHallowsComposeReq = 20851,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHallowsComposeRes")] MsgHallowsComposeRes = 20852,
-    /// <summary>
-    /// C->S  圣物升级
-    /// </summary>
-    [pbr::OriginalName("MsgHallowsLevelReq")] MsgHallowsLevelReq = 20853,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHallowsLevelRes")] MsgHallowsLevelRes = 20854,
-    /// <summary>
-    /// C->S  圣物上阵
-    /// </summary>
-    [pbr::OriginalName("MsgHallowsBattleReq")] MsgHallowsBattleReq = 20855,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHallowsBattleRes")] MsgHallowsBattleRes = 20856,
-    /// <summary>
-    /// S->C  圣物新增
-    /// </summary>
-    [pbr::OriginalName("MsgAddHallowsRes")] MsgAddHallowsRes = 20857,
-    /// <summary>
-    /// C->S  圣物碎片合成
-    /// </summary>
-    [pbr::OriginalName("MsgHallowsItemComposeReq")] MsgHallowsItemComposeReq = 20858,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHallowsItemComposeRes")] MsgHallowsItemComposeRes = 20859,
-    /// <summary>
-    /// 遗物模块
-    /// </summary>
-    [pbr::OriginalName("MsgRelicListRes")] MsgRelicListRes = 20900,
-    /// <summary>
-    /// C->S  遗物合成
-    /// </summary>
-    [pbr::OriginalName("MsgRelicComposeReq")] MsgRelicComposeReq = 20901,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgRelicComposeRes")] MsgRelicComposeRes = 20902,
-    /// <summary>
-    /// C->S  遗物升级
-    /// </summary>
-    [pbr::OriginalName("MsgRelicLevelReq")] MsgRelicLevelReq = 20903,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgRelicLevelRes")] MsgRelicLevelRes = 20904,
-    /// <summary>
-    /// C->S  遗物上阵
-    /// </summary>
-    [pbr::OriginalName("MsgRelicBattleReq")] MsgRelicBattleReq = 20905,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgRelicBattleRes")] MsgRelicBattleRes = 20907,
-    /// <summary>
-    /// S->C  遗物新增
-    /// </summary>
-    [pbr::OriginalName("MsgAddRelicRes")] MsgAddRelicRes = 20908,
-    /// <summary>
-    /// C->S  遗物碎片合成
-    /// </summary>
-    [pbr::OriginalName("MsgRelicItemComposeReq")] MsgRelicItemComposeReq = 20909,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgRelicItemComposeRes")] MsgRelicItemComposeRes = 20910,
-    /// <summary>
-    /// 英雄酒馆模块
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubInfoRes")] MsgHeroPubInfoRes = 20950,
-    /// <summary>
-    /// C->S  解锁桌子
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubUnlockReq")] MsgHeroPubUnlockReq = 20951,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubUnlockRes")] MsgHeroPubUnlockRes = 20952,
-    /// <summary>
-    /// C->S  接待英雄-喝酒
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubServeReq")] MsgHeroPubServeReq = 20953,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubServeRes")] MsgHeroPubServeRes = 20954,
-    /// <summary>
-    /// C->S  领取接待奖励-收银
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubRewardReq")] MsgHeroPubRewardReq = 20955,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubRewardRes")] MsgHeroPubRewardRes = 20956,
-    /// <summary>
-    /// C->S  广告增加服务员
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubVideoWaiterReq")] MsgHeroPubVideoWaiterReq = 20957,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubVideoWaiterRes")] MsgHeroPubVideoWaiterRes = 20958,
-    /// <summary>
-    /// C->S  广告增加收钱员
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubVideoCashierReq")] MsgHeroPubVideoCashierReq = 20959,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubVideoCashierRes")] MsgHeroPubVideoCashierRes = 20960,
-    /// <summary>
-    /// C->S  开启商店
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubOpenShopReq")] MsgHeroPubOpenShopReq = 20961,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubOpenShopRes")] MsgHeroPubOpenShopRes = 20962,
-    /// <summary>
-    /// C->S  上菜状态记录
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubDishReq")] MsgHeroPubDishReq = 20963,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubDishRes")] MsgHeroPubDishRes = 20964,
-    /// <summary>
-    /// C->S  英雄/客人的生成
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubGuestReq")] MsgHeroPubGuestReq = 20965,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubGuestRes")] MsgHeroPubGuestRes = 20966,
-    /// <summary>
-    /// C->S  广告增加食材-灰复体力
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubVideoPowerReq")] MsgHeroPubVideoPowerReq = 20967,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubVideoPowerRes")] MsgHeroPubVideoPowerRes = 20968,
-    /// <summary>
-    /// C->S  领取接待奖励-展示
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubRewardShowReq")] MsgHeroPubRewardShowReq = 20969,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubRewardShowRes")] MsgHeroPubRewardShowRes = 20970,
-    /// <summary>
-    /// S->C  体力同步通知
-    /// </summary>
-    [pbr::OriginalName("MsgHeroPubPowerNotifyRes")] MsgHeroPubPowerNotifyRes = 20971,
-    /// <summary>
-    /// 能量魔方模块
-    /// </summary>
-    [pbr::OriginalName("MsgEnergyCubeListRes")] MsgEnergyCubeListRes = 21000,
-    /// <summary>
-    /// C->S  能量魔方合成
-    /// </summary>
-    [pbr::OriginalName("MsgEnergyCubeComposeReq")] MsgEnergyCubeComposeReq = 21001,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgEnergyCubeComposeRes")] MsgEnergyCubeComposeRes = 21002,
-    /// <summary>
-    /// C->S  能量魔方升级
-    /// </summary>
-    [pbr::OriginalName("MsgEnergyCubeLevelReq")] MsgEnergyCubeLevelReq = 21003,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgEnergyCubeLevelRes")] MsgEnergyCubeLevelRes = 21004,
-    /// <summary>
-    /// C->S  能量魔方上阵
-    /// </summary>
-    [pbr::OriginalName("MsgEnergyCubeBattleReq")] MsgEnergyCubeBattleReq = 21005,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgEnergyCubeBattleRes")] MsgEnergyCubeBattleRes = 21006,
-    /// <summary>
-    /// S->C  能量魔方新增
-    /// </summary>
-    [pbr::OriginalName("MsgAddEnergyCubeRes")] MsgAddEnergyCubeRes = 21007,
-    /// <summary>
-    /// C->S  能量魔方碎片合成
-    /// </summary>
-    [pbr::OriginalName("MsgEnergyCubeItemComposeReq")] MsgEnergyCubeItemComposeReq = 21008,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgEnergyCubeItemComposeRes")] MsgEnergyCubeItemComposeRes = 21009,
-    /// <summary>
-    /// 巨炮模块
-    /// </summary>
-    [pbr::OriginalName("MsgCannonInofoRes")] MsgCannonInofoRes = 21050,
-    /// <summary>
-    /// C->S  领取建造完成的巨炮
-    /// </summary>
-    [pbr::OriginalName("MsgCannonFinishReq")] MsgCannonFinishReq = 21055,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgCannonFinishRes")] MsgCannonFinishRes = 21056,
-    /// <summary>
-    /// C->S  巨炮合成
-    /// </summary>
-    [pbr::OriginalName("MsgCannonComposeReq")] MsgCannonComposeReq = 21058,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgCannonComposeRes")] MsgCannonComposeRes = 21059,
-    /// <summary>
-    /// C->S  巨炮上阵
-    /// </summary>
-    [pbr::OriginalName("MsgCannonBattleReq")] MsgCannonBattleReq = 21060,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgCannonBattleRes")] MsgCannonBattleRes = 21061,
-    /// <summary>
-    /// C->S  巨炮升级
-    /// </summary>
-    [pbr::OriginalName("MsgCannonUpLevelReq")] MsgCannonUpLevelReq = 21064,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgCannonUpLevelRes")] MsgCannonUpLevelRes = 21065,
-    /// <summary>
-    /// C->S  磨法实验室 熔炼
-    /// </summary>
-    [pbr::OriginalName("MsgCannonSmeltReq")] MsgCannonSmeltReq = 21066,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgCannonSmeltRes")] MsgCannonSmeltRes = 21067,
-    /// <summary>
-    /// 仓库模块
-    /// </summary>
-    [pbr::OriginalName("MsgWarehouseInfoRes")] MsgWarehouseInfoRes = 21100,
-    /// <summary>
-    /// S->C  仓库整形属性变更 value = 最终值
-    /// </summary>
-    [pbr::OriginalName("MsgChangeWarehouseAttrNumRes")] MsgChangeWarehouseAttrNumRes = 21101,
-    /// <summary>
-    ///通用解锁模块
-    /// </summary>
-    [pbr::OriginalName("MsgPassUnlockInfoRes")] MsgPassUnlockInfoRes = 21150,
-    /// <summary>
-    /// S->C  通用解锁整形属性变更 value = 最终值
-    /// </summary>
-    [pbr::OriginalName("MsgChangePassUnlockAttrNumRes")] MsgChangePassUnlockAttrNumRes = 21151,
-    /// <summary>
-    /// C->S  前端同步的解锁数据
-    /// </summary>
-    [pbr::OriginalName("MsgPassUnlockClientSynReq")] MsgPassUnlockClientSynReq = 21152,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgPassUnlockClientSynRes")] MsgPassUnlockClientSynRes = 21153,
-    /// <summary>
-    /// 勋章模块
-    /// </summary>
-    [pbr::OriginalName("MsgstMedalInfoRes")] MsgstMedalInfoRes = 21200,
-    /// <summary>
-    /// C->S  勋章解锁
-    /// </summary>
-    [pbr::OriginalName("MsgMedalUnlockReq")] MsgMedalUnlockReq = 21201,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgMedalUnlockRes")] MsgMedalUnlockRes = 21202,
-    /// <summary>
-    /// C->S  积分等级领奖
-    /// </summary>
-    [pbr::OriginalName("MsgMedalScoreRewardReq")] MsgMedalScoreRewardReq = 21203,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgMedalScoreRewardRes")] MsgMedalScoreRewardRes = 21204,
-    /// <summary>
-    /// 支付模块
-    /// </summary>
-    [pbr::OriginalName("MsgPayInfoRes")] MsgPayInfoRes = 21250,
-    /// <summary>
-    /// C->S  商店购买物品
-    /// </summary>
-    [pbr::OriginalName("MsgPayStoreBuyReq")] MsgPayStoreBuyReq = 21251,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgPayStoreBuyRes")] MsgPayStoreBuyRes = 21252,
-    /// <summary>
-    /// S->C  所有限时礼包信息
-    /// </summary>
-    [pbr::OriginalName("MsgPayGiftTimeInfoRes")] MsgPayGiftTimeInfoRes = 21260,
-    /// <summary>
-    /// C->S  购买限时礼包
-    /// </summary>
-    [pbr::OriginalName("MsgPayGiftTimeBuyReq")] MsgPayGiftTimeBuyReq = 21261,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgPayGiftTimeBuyRes")] MsgPayGiftTimeBuyRes = 21262,
-    /// <summary>
-    /// S->C  激活 限时礼包通知
-    /// </summary>
-    [pbr::OriginalName("MsgPayGiftTimeNotifyRes")] MsgPayGiftTimeNotifyRes = 21263,
-    /// <summary>
-    /// C->S 
-    /// </summary>
-    [pbr::OriginalName("MsgOrderCreationReq")] MsgOrderCreationReq = 21264,
-    /// <summary>
-    /// S->C   
-    /// </summary>
-    [pbr::OriginalName("MsgOrderCreationRes")] MsgOrderCreationRes = 21265,
-    /// <summary>
-    /// C->S 
-    /// </summary>
-    [pbr::OriginalName("MsgOrderFailReq")] MsgOrderFailReq = 21266,
-    /// <summary>
-    /// S->C   
-    /// </summary>
-    [pbr::OriginalName("MsgOrderFailRes")] MsgOrderFailRes = 21267,
-    /// <summary>
-    /// 新手成长模块
-    /// </summary>
-    [pbr::OriginalName("MsgNoviceDevelopmentInfoRes")] MsgNoviceDevelopmentInfoRes = 21300,
-    /// <summary>
-    /// C->S  领取新手成长奖励
-    /// </summary>
-    [pbr::OriginalName("MsgNoviceDevelopmentRewardReq")] MsgNoviceDevelopmentRewardReq = 21301,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgNoviceDevelopmentRewardRes")] MsgNoviceDevelopmentRewardRes = 21302,
-    /// <summary>
-    /// C->S  领线成长任务积分奖励
-    /// </summary>
-    [pbr::OriginalName("MsgNoviceDevelopmentScoreRewardReq")] MsgNoviceDevelopmentScoreRewardReq = 21303,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgNoviceDevelopmentScoreRewardRes")] MsgNoviceDevelopmentScoreRewardRes = 21304,
-    /// <summary>
-    /// 新手战令模块 
-    /// </summary>
-    [pbr::OriginalName("MsgNoviceWarOrderInfoRes")] MsgNoviceWarOrderInfoRes = 21350,
-    /// <summary>
-    /// C->S  领取新手战令奖励
-    /// </summary>
-    [pbr::OriginalName("MsgNoviceWarOrderRewardReq")] MsgNoviceWarOrderRewardReq = 21351,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgNoviceWarOrderRewardRes")] MsgNoviceWarOrderRewardRes = 21352,
-    /// <summary>
-    /// C->S  购买新手战令--测试用
-    /// </summary>
-    [pbr::OriginalName("MsgNoviceWarOrderBuyReq")] MsgNoviceWarOrderBuyReq = 21353,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgNoviceWarOrderBuyRes")] MsgNoviceWarOrderBuyRes = 21354,
-    /// <summary>
-    /// C->S  所有的占领任务完成时间
-    /// </summary>
-    [pbr::OriginalName("MsgNoviceWarOrderFinishTimeReq")] MsgNoviceWarOrderFinishTimeReq = 21355,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgNoviceWarOrderFinishTimeRes")] MsgNoviceWarOrderFinishTimeRes = 21356,
-    /// <summary>
-    /// 抽奖抽奖 古玩店/教堂/魔方 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLotteryDrawInfoRes")] MsgBuildLotteryDrawInfoRes = 21400,
-    /// <summary>
-    /// C->S  抽奖抽奖 古玩店/教堂/魔方
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLotteryDrawReq")] MsgBuildLotteryDrawReq = 21401,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgBuildLotteryDrawRes")] MsgBuildLotteryDrawRes = 21402,
-    /// <summary>
-    /// 月卡功能
-    /// </summary>
-    [pbr::OriginalName("MsgPayMonthCardInfoRes")] MsgPayMonthCardInfoRes = 21450,
-    /// <summary>
-    /// C->S  购买月卡----临时消息，后期转为充值功能处理
-    /// </summary>
-    [pbr::OriginalName("MsgPayMonthCardBuyReq")] MsgPayMonthCardBuyReq = 21451,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgPayMonthCardBuyRes")] MsgPayMonthCardBuyRes = 21452,
-    /// <summary>
-    /// C->S  领取月卡的奖励
-    /// </summary>
-    [pbr::OriginalName("MsgPayMonthCardReceiveReq")] MsgPayMonthCardReceiveReq = 21453,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("MsgPayMonthCardReceiveRes")] MsgPayMonthCardReceiveRes = 21454,
-    /// <summary>
-    /// 爬塔功能
-    /// </summary>
-    [pbr::OriginalName("BattleTowerInfoRes")] BattleTowerInfoRes = 21500,
-    /// <summary>
-    /// C->S  副本结算
-    /// </summary>
-    [pbr::OriginalName("FinishBattleTowerReq")] FinishBattleTowerReq = 21501,
-    /// <summary>
-    /// S->C
-    /// </summary>
-    [pbr::OriginalName("FinishBattleTowerRes")] FinishBattleTowerRes = 21502,
-    /// <summary>
-    /// C->S  快速结算
-    /// </summary>
-    [pbr::OriginalName("FastBattleTowerReq")] FastBattleTowerReq = 21503,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("FastBattleTowerRes")] FastBattleTowerRes = 21504,
-    /// <summary>
-    /// C->S  上阵魔石
-    /// </summary>
-    [pbr::OriginalName("CannonBattleTowerReq")] CannonBattleTowerReq = 21505,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("CannonBattleTowerRes")] CannonBattleTowerRes = 21506,
-    /// <summary>
-    /// C->S  上阵英雄
-    /// </summary>
-    [pbr::OriginalName("ExpeditionBattleTowerReq")] ExpeditionBattleTowerReq = 21507,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("ExpeditionBattleTowerRes")] ExpeditionBattleTowerRes = 21508,
-    /// <summary>
-    /// C->S  复活英雄
-    /// </summary>
-    [pbr::OriginalName("ResetBattleTowerReq")] ResetBattleTowerReq = 21509,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("ResetBattleTowerRes")] ResetBattleTowerRes = 21510,
-    /// <summary>
-    /// C->S  领取Buff
-    /// </summary>
-    [pbr::OriginalName("ReceiveBuffTowerReq")] ReceiveBuffTowerReq = 21511,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("ReceiveBuffTowerRes")] ReceiveBuffTowerRes = 21512,
-    /// <summary>
-    /// C->S  过天结算
-    /// </summary>
-    [pbr::OriginalName("NextDayFinishTowerReq")] NextDayFinishTowerReq = 21513,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("NextDayFinishTowerRes")] NextDayFinishTowerRes = 21514,
-    /// <summary>
-    /// C->S  刷新Buff
-    /// </summary>
-    [pbr::OriginalName("RefreshBuffTowerReq")] RefreshBuffTowerReq = 21515,
-    /// <summary>
-    /// S->C 
-    /// </summary>
-    [pbr::OriginalName("RefreshBuffTowerRes")] RefreshBuffTowerRes = 21516,
-  }
+  private static pbr::FileDescriptor descriptor;
 
+  static MidReflection() {
+    byte[] descriptorData = global::System.Convert.FromBase64String(
+        string.Concat(
+          "CglNaWQucHJvdG8q0FAKA01JRBIICgROb25lEAASFQoRU2VydmVyUmVnaXN0",
+          "ZXJSZXEQZRIVChFTZXJ2ZXJSZWdpc3RlclJlcxBmEhEKDVNlcnZlckxpc3RS",
+          "ZXEQZxIRCg1TZXJ2ZXJMaXN0UmVzEGgSFwoTQ2hhbmdlUm9sZVNlcnZlclJl",
+          "cRBpEhcKE0NoYW5nZVJvbGVTZXJ2ZXJSZXMQahISCg5TZXJ2ZXJFdmVudFJl",
+          "cRBrEhIKDlNlcnZlckV2ZW50UmVzEGwSEwoPU2VydmVyU3RhdHVzUmVzEG0S",
+          "EwoORGVmYXVsdEdhdGVSZXEQyAESEwoORGVmYXVsdEdhdGVSZXMQyQESEwoO",
+          "U2VydmVyTWFpbHNSZXEQrQISGQoURGVmYXVsdFNlcnZlck1haWxSZXEQrgIS",
+          "EgoNVGFza1NlYXNvblJlcRCvAhIcChdEZWZhdWx0U2VydmVyTWFycXVlZVJl",
+          "cRCwAhIdChhJbmZpbml0ZVBhcmtvdXJTZWFzb25SZXEQsQISHQoYSW5maW5p",
+          "dGVQYXJrb3VyQ2hhbmdlUmVxELICEhIKDVVzZXJTZXJ2ZXJSZXEQswISFAoP",
+          "QWRkRnJpZW5kTG9nUmVxELQCEhcKElNldE90aGVyVHJpZ2dlclJlcRC1AhIW",
+          "ChFVc2VySW5mb0NoYW5nZVJlcRC2AhIVChBTZXJ2ZXJHTUV2ZW50UmVxELcC",
+          "Eg0KCExvZ2luUmVxEJFOEg0KCExvZ2luUmVzEJJOEg0KCEhlYXJ0UmVxEJtO",
+          "Eg0KCEhlYXJ0UmVzEJxOEhAKC0tpbGxVc2VyUmVzEJ1OEhMKDk1lc3NhZ2VT",
+          "ZWVkUmVzEJ5OEhMKDkxvZ2luRmluaXNoUmVzEJ9OEhAKC1ZlcmlmaWVkUmVx",
+          "EKBOEhAKC1ZlcmlmaWVkUmVzEKFOEhUKEFRpY2tldExvZ2luRXhSZXEQok4S",
+          "FwoSVGlja2V0UmVMb2dpbkV4UmVxEKNOEhsKFlRpY2tldExvZ2luSW50ZXJu",
+          "YWxSZXEQpE4SDgoJTG9nb3V0UmVxEKVOEg4KCUxvZ291dFJlcxCmThIVChBM",
+          "b2dpbkludGVybmFsUmVxEKdOEhEKDEdNQ29tbWFuZFJlcRD0ThIRCgxHTUNv",
+          "bW1hbmRSZXMQ9U4SEwoOU3lzdGVtRXJyb3JSZXMQ9k4SEgoNVXNlckFjdGlv",
+          "blJlcRD3ThIRCgxVc2VyRXJyb3JSZXMQ+E4SEAoLVXNlckluZm9SZXMQvFAS",
+          "EwoOQXZhdGFyc0luZm9SZXEQvVASEwoOQXZhdGFyc0luZm9SZXMQvlASFwoS",
+          "QXZhdGFyRnJhbWVJbmZvUmVxEL9QEhcKEkF2YXRhckZyYW1lSW5mb1JlcxDA",
+          "UBIRCgxUaXRsZUluZm9SZXEQwVASEQoMVGl0bGVJbmZvUmVzEMJQEhUKEENo",
+          "YW5nZUF2YXRhcnNSZXEQw1ASFQoQQ2hhbmdlQXZhdGFyc1JlcxDEUBIZChRD",
+          "aGFuZ2VBdmF0YXJGcmFtZVJlcRDFUBIZChRDaGFuZ2VBdmF0YXJGcmFtZVJl",
+          "cxDGUBITCg5DaGFuZ2VUaXRsZVJlcRDHUBITCg5DaGFuZ2VUaXRsZVJlcxDI",
+          "UBIWChFDaGFuZ2VVc2VybmFtZVJlcRDJUBIWChFDaGFuZ2VVc2VybmFtZVJl",
+          "cxDKUBIPCgpNYXJxdWVlUmVzEMtQEhEKDE5ld1JlZERvdFJlcRDMUBIRCgxO",
+          "ZXdSZWREb3RSZXMQzVASFQoQQWxsTmV3UmVkRG90c1JlcxDOUBIVChBDaGFu",
+          "Z2VBdHRyTnVtUmVzEM9QEhEKDEF0dHJpYnV0ZVJlcxDQUBIOCglDb21iYXRS",
+          "ZXMQ0VASFQoQVW5sb2NrQXZhdGFyc1JlcRDSUBIVChBVbmxvY2tBdmF0YXJz",
+          "UmVzENNQEhMKDlVubG9ja1RpdGxlUmVxENRQEhMKDlVubG9ja1RpdGxlUmVz",
+          "ENVQEhQKD1VzZXJJbmZvU3luY1JlcRDWUBISCg1Db21iYXRTeW5jUmVxENdQ",
+          "EhUKEFVzZXJTdGFnZVN5bmNSZXEQ2FASFgoRTm92aWNlR3VpZGFuY2VSZXMQ",
+          "2VASGgoVTm92aWNlR3VpZGFuY2VTdGVwUmVxENxQEhoKFU5vdmljZUd1aWRh",
+          "bmNlU3RlcFJlcxDdUBISCg1PbmxpbmVUaW1lUmVxEN5QEhIKDU9ubGluZVRp",
+          "bWVSZXMQ31ASHgoZV2F0Y2hpbmdBZHZlcnRpc2VtZW50c1JlcRDgUBIeChlX",
+          "YXRjaGluZ0FkdmVydGlzZW1lbnRzUmVzEOFQEhoKFVJlY2hhcmdlU3RhdGlz",
+          "dGljc1JlcRDiUBIaChVSZWNoYXJnZVN0YXRpc3RpY3NSZXMQ41ASEAoLTWFp",
+          "bEluZm9SZXMQoFESFQoQQWRkTWFpbE5vdGljZVJlcxChURIVChBTeW5BbGxT",
+          "ZXJNYWlsUmVxEKJREhMKDlJlY2VpdmVNYWlsUmVxEKNREhMKDlJlY2VpdmVN",
+          "YWlsUmVzEKRREhIKDURlbGV0ZU1haWxSZXEQpVESEgoNRGVsZXRlTWFpbFJl",
+          "cxCmURIQCgtSZWFkTWFpbFJlcRCnURIQCgtSZWFkTWFpbFJlcxCoURIPCgpW",
+          "aXBJbmZvUmVzEK5REhEKDFJld2FyZFZpcFJlcRCvURIRCgxSZXdhcmRWaXBS",
+          "ZXMQsFESEQoMVmlld1ZpZGVvUmVxELFREhEKDFZpZXdWaWRlb1JlcxCyURIQ",
+          "CgtCdWZmSW5mb1JlcxCzURIXChJCdXlTcGVjaWFsU3RvcmVSZXEQtFESFwoS",
+          "QnV5U3BlY2lhbFN0b3JlUmVzELVREhYKEURhaWx5U3RvcmVJbmZvUmVzELZR",
+          "EhUKEEJ1eURhaWx5U3RvcmVSZXEQt1ESFQoQQnV5RGFpbHlTdG9yZVJlcxC4",
+          "URIXChJCdXlEaWFtb25kU3RvcmVSZXEQuVESFwoSQnV5RGlhbW9uZFN0b3Jl",
+          "UmVzELpREhIKDUhXX1N5bk1haWxSZXEQu1ESEgoNSFdfU3luTWFpbFJlcxC8",
+          "URIeChlBZGRBbGxTZXJ2ZXJNYWlsTm90aWNlUmVzEL1REhUKEE5ld1JvbGxO",
+          "b3RpY2VSZXEQvlESFQoQTmV3Um9sbE5vdGljZVJlcxC/URISCg1WaWV3UGxh",
+          "eWVyUmVxEIRSEhIKDVZpZXdQbGF5ZXJSZXMQhVISFQoQUmVjZXB0aW9uUm9v",
+          "bVJlcRCGUhIVChBSZWNlcHRpb25Sb29tUmVzEIdSEhsKFlJld2FyZFJlY2Vw",
+          "dGlvblJvb21SZXEQiFISGwoWUmV3YXJkUmVjZXB0aW9uUm9vbVJlcxCJUhIS",
+          "Cg1QbGF5ZXJWaWV3UmVxEIpSEhIKDVBsYXllclZpZXdSZXMQi1ISEwoOVmlz",
+          "aXRQbGF5ZXJSZXEQjFISEwoOVmlzaXRQbGF5ZXJSZXMQjVISFQoQUGx1bmRl",
+          "clBsYXllclJlcRCOUhIVChBQbHVuZGVyUGxheWVyUmVzEI9SEhcKEkV4cHVs",
+          "c2lvblBsYXllclJlcRCQUhIXChJFeHB1bHNpb25QbGF5ZXJSZXMQkVISEgoN",
+          "UmVjYWxsSGVyb1JlcRCSUhISCg1SZWNhbGxIZXJvUmVzEJNSEhsKFk9uZUNs",
+          "aWNrVmlzaXRQbGF5ZXJSZXEQlFISGwoWT25lQ2xpY2tWaXNpdFBsYXllclJl",
+          "cxCVUhITCg5QbGF5ZXJFbnRyeVJlcRCWUhITCg5QbGF5ZXJFbnRyeVJlcxCX",
+          "UhIaChVQbGF5ZXJFbnRyeVJlZnJlc2hSZXEQmFISGgoVUGxheWVyRW50cnlS",
+          "ZWZyZXNoUmVzEJlSEhQKD1ZpZXdWaXNpdExvZ1JlcRCaUhIUCg9WaWV3Vmlz",
+          "aXRMb2dSZXMQm1ISGgoVUmV3YXJkVmlld1Zpc2l0TG9nUmVxEJxSEhoKFVJl",
+          "d2FyZFZpZXdWaXNpdExvZ1JlcxCdUhIXChJWaWV3UGxheWVyQnVpbGRSZXEQ",
+          "nlISFwoSVmlld1BsYXllckJ1aWxkUmVzEJ9SEhUKEFNvY2lhbGl6ZUl0ZW1S",
+          "ZXMQoFISFwoSVmlzaXRQbGF5ZXJTeW5jUmVxEKFSEhMKDlBsdW5kZXJTeW5j",
+          "UmVxEKJSEhkKFFBsdW5kZXJCdWlsZENsZWFyUmVxEKNSEhgKE1NvY2lhbGl6",
+          "ZUxvZ1N5bmNSZXEQpFISFAoPUmV3YXJkU2hpZWxkUmVxEKVSEhQKD1Jld2Fy",
+          "ZFNoaWVsZFJlcxCmUhIXChJWaWV3U2VsZlJhbmtpbmdSZXEQ6FISFwoSVmll",
+          "d1NlbGZSYW5raW5nUmVzEOlSEhMKDlZpZXdSYW5raW5nUmVxEOpSEhMKDlZp",
+          "ZXdSYW5raW5nUmVzEOtSEhUKEFJld2FyZFJhbmtpbmdSZXEQ7FISFQoQUmV3",
+          "YXJkUmFua2luZ1JlcxDtUhIfChpWaWV3U2VsZlJhbmtpbmdJbnRlcm5hbFJl",
+          "cRDuUhITCg5TdGFnZUNoYW5nZVJlcxDvUhITCg1CYXR0bGVJbmZvUmVzEKCc",
+          "ARIUCg5FbnRlckJhdHRsZVJlcRChnAESFAoORW50ZXJCYXR0bGVSZXMQopwB",
+          "EhUKD0ZpbmlzaEJhdHRsZVJlcRCjnAESFQoPRmluaXNoQmF0dGxlUmVzEKSc",
+          "ARIUCg5GaW5pc2hNb3BVcFJlcRCmnAESFAoORmluaXNoTW9wVXBSZXMQp5wB",
+          "EhgKEkVudGVyTGlmZUJhdHRsZVJlcRConAESGAoSRW50ZXJMaWZlQmF0dGxl",
+          "UmVzEKmcARIZChNGaW5pc2hMaWZlQmF0dGxlUmVxEKqcARIZChNGaW5pc2hM",
+          "aWZlQmF0dGxlUmVzEKucARIYChJGaW5pc2hMaWZlTW9wVXBSZXEQrJwBEhgK",
+          "EkZpbmlzaExpZmVNb3BVcFJlcxCtnAESGgoUQmF0dGxlVGlja2V0UmVzZXRS",
+          "ZXEQrpwBEhoKFEJhdHRsZVRpY2tldFJlc2V0UmVzEK+cARIaChRTdGFnZUZp",
+          "bmlzaEJhdHRsZVJlcRCwnAESGgoUU3RhZ2VGaW5pc2hCYXR0bGVSZXMQsZwB",
+          "EiIKHFN0YWdlSGFuZ2luZ09mZkxpbmVGaW5pc2hSZXMQspwBEiEKG1N0YWdl",
+          "QWR2YW5jZUZpbmlzaEJhdHRsZVJlcRC0nAESIQobU3RhZ2VBZHZhbmNlRmlu",
+          "aXNoQmF0dGxlUmVzELWcARIZChNFbnRlclN0YWdlQmF0dGxlUmVxELacARIZ",
+          "ChNFbnRlclN0YWdlQmF0dGxlUmVzELecARIkCh5TdGFnZUFkdmFuY2VCb3hG",
+          "aW5pc2hCYXR0bGVSZXEQuJwBEiQKHlN0YWdlQWR2YW5jZUJveEZpbmlzaEJh",
+          "dHRsZVJlcxC5nAESFAoOTXNnSGVyb0xpc3RSZXMQhJ0BEhcKEU1zZ0hlcm9D",
+          "b21wb3NlUmVxEIWdARIXChFNc2dIZXJvQ29tcG9zZVJlcxCGnQESFQoPTXNn",
+          "SGVyb0xldmVsUmVxEIidARIVCg9Nc2dIZXJvTGV2ZWxSZXMQiZ0BEhYKEE1z",
+          "Z0hlcm9CYXR0bGVSZXEQip0BEhYKEE1zZ0hlcm9CYXR0bGVSZXMQi50BEhMK",
+          "DU1zZ0FkZEhlcm9SZXMQjJ0BEhYKEE1zZ0hlcm9VcFN0YXJSZXEQjZ0BEhYK",
+          "EE1zZ0hlcm9VcFN0YXJSZXMQjp0BEhsKFU1zZ0hlcm9JdGVtQ29tcG9zZVJl",
+          "cRCPnQESGwoVTXNnSGVyb0l0ZW1Db21wb3NlUmVzEJCdARIUCg5Nc2dJdGVt",
+          "TGlzdFJlcxC2nQESEwoNTXNnQWRkSXRlbVJlcRC3nQESEwoNTXNnQWRkSXRl",
+          "bVJlcxC4nQESFgoQTXNnUmVtb3ZlSXRlbVJlcxC5nQESEwoNTXNnT3BlbkJv",
+          "eFJlcRC6nQESEwoNTXNnT3BlbkJveFJlcxC7nQESEwoNTXNnQ29tcG9zZVJl",
+          "cRC8nQESEwoNTXNnQ29tcG9zZVJlcxC9nQESFgoQTXNnV2VhcG9uTGlzdFJl",
+          "cxDonQESGQoTTXNnV2VhcG9uQ29tcG9zZVJlcRDpnQESGQoTTXNnV2VhcG9u",
+          "Q29tcG9zZVJlcxDqnQESFwoRTXNnV2VhcG9uTGV2ZWxSZXEQ7J0BEhcKEU1z",
+          "Z1dlYXBvbkxldmVsUmVzEO2dARIYChJNc2dXZWFwb25CYXR0bGVSZXEQ7p0B",
+          "EhgKEk1zZ1dlYXBvbkJhdHRsZVJlcxDvnQESFQoPTXNnQWRkV2VhcG9uUmVz",
+          "EPCdARIcChZNc2dXZWFwb25CYXR0bGVJbml0UmVzEPGdARIUCg5Nc2dTaG9w",
+          "SW5mb1JlcxCangESEwoNTXNnQnV5SXRlbVJlcRCbngESEwoNTXNnQnV5SXRl",
+          "bVJlcxCcngESGAoSQmxhY2tNYXJrZXRJbmZvUmVzEMyeARIaChRNc2dCdXlC",
+          "bGFja01hcmtldFJlcRDNngESGgoUTXNnQnV5QmxhY2tNYXJrZXRSZXMQzp4B",
+          "EhwKFk1zZ1Jlc2V0QmxhY2tNYXJrZXRSZXEQz54BEhwKFk1zZ1Jlc2V0Qmxh",
+          "Y2tNYXJrZXRSZXMQ0J4BEhgKEk1zZ0xvb3BTaWduSW5mb1JlcxD+ngESFAoO",
+          "TXNnTG9vcFNpZ25SZXEQ/54BEhQKDk1zZ0xvb3BTaWduUmVzEICfARIYChJN",
+          "c2dNYWluVGFza0luZm9SZXMQsJ8BEhoKFE1zZ01haW5UYXNrUmV3YXJkUmVx",
+          "ELGfARIaChRNc2dNYWluVGFza1Jld2FyZFJlcxCynwESGwoVTXNnQ3ljbGVU",
+          "YXNrUmV3YXJkUmVxELOfARIbChVNc2dDeWNsZVRhc2tSZXdhcmRSZXMQtJ8B",
+          "EiAKGk1zZ0N5Y2xlVGFza1Njb3JlUmV3YXJkUmVxELWfARIgChpNc2dDeWNs",
+          "ZVRhc2tTY29yZVJld2FyZFJlcxC2nwESGQoTTXNnRGFpbHlUYXNrSW5mb1Jl",
+          "cxDinwESGwoVTXNnRGFpbHlUYXNrUmV3YXJkUmVxEOOfARIbChVNc2dEYWls",
+          "eVRhc2tSZXdhcmRSZXMQ5J8BEiAKGk1zZ0RhaWx5VGFza1Njb3JlUmV3YXJk",
+          "UmVxEOWfARIgChpNc2dEYWlseVRhc2tTY29yZVJld2FyZFJlcxDmnwESGgoU",
+          "TXNnc3RCZXN0aWFyeUluZm9SZXMQlKABEhoKFE1zZ0Jlc3RpYXJ5VW5sb2Nr",
+          "UmVxEJWgARIaChRNc2dCZXN0aWFyeVVubG9ja1JlcxCWoAESGgoUTXNnQmVz",
+          "dGlhcnlSZXdhcmRSZXEQl6ABEhoKFE1zZ0Jlc3RpYXJ5UmV3YXJkUmVzEJig",
+          "ARIXChFNc2dEZXZlbG9wbWVudFJlcxDGoAESHAoWTXNnRGV2ZWxvcG1lbnRM",
+          "ZXZlbFJlcRDHoAESHAoWTXNnRGV2ZWxvcG1lbnRMZXZlbFJlcxDIoAESFgoQ",
+          "TXNnVGFsZW50SW5mb1JlcxD4oAESHAoWTXNnVGFsZW50UG9pbnRSZXNldFJl",
+          "cRD5oAESHAoWTXNnVGFsZW50UG9pbnRSZXNldFJlcxD6oAESFwoRTXNnVGFs",
+          "ZW50TGV2ZWxSZXEQ+6ABEhcKEU1zZ1RhbGVudExldmVsUmVzEPygARIgChpN",
+          "c2dUYWxlbnRBZGRQb2ludE5vdGlmeVJlcxD9oAESFQoPTXNnRXF1aXBMaXN0",
+          "UmVzENyhARIYChJNc2dFcXVpcEZvcmdpbmdSZXEQ3aEBEhgKEk1zZ0VxdWlw",
+          "Rm9yZ2luZ1JlcxDeoQESGAoSTXNnRm9yZ2luZ0xldmVsUmVxEOChARIYChJN",
+          "c2dGb3JnaW5nTGV2ZWxSZXMQ4aEBEhcKEU1zZ0VxdWlwQmF0dGxlUmVxEOKh",
+          "ARIXChFNc2dFcXVpcEJhdHRsZVJlcxDjoQESFQoPTXNnRXF1aXBTZWxsUmVx",
+          "EOShARIVCg9Nc2dFcXVpcFNlbGxSZXMQ5aEBEhUKD01zZ0J1aWxkSW5mb1Jl",
+          "cxCOogESFgoQTXNnQnVpbGRTcGVlZFJlcRCPogESFgoQTXNnQnVpbGRTcGVl",
+          "ZFJlcxCQogESFwoRTXNnQnVpbGRVbmxvY2tSZXEQkaIBEhcKEU1zZ0J1aWxk",
+          "VW5sb2NrUmVzEJKiARIWChBNc2dCdWlsZExldmVsUmVxEJOiARIWChBNc2dC",
+          "dWlsZExldmVsUmVzEJSiARIZChNNc2dCdWlsZExldmVsU3luUmVxEJWiARIZ",
+          "ChNNc2dCdWlsZExldmVsU3luUmVzEJaiARIfChlNc2dCdWlsZFBvd2VyQ29y",
+          "ZVNraWxsUmVxEJeiARIfChlNc2dCdWlsZFBvd2VyQ29yZVNraWxsUmVzEJii",
+          "ARIhChtNc2dCdWlsZFByb2R1Y3Rpb25GaW5pc2hSZXEQm6IBEiEKG01zZ0J1",
+          "aWxkUHJvZHVjdGlvbkZpbmlzaFJlcxCcogESFwoRTXNnQnVpbGROb3RpZnlS",
+          "ZXMQnaIBEiQKHk1zZ0J1aWxkUG93ZXJDb3JlU2tpbGxSZXNldFJlcRCeogES",
+          "JAoeTXNnQnVpbGRQb3dlckNvcmVTa2lsbFJlc2V0UmVzEJ+iARIZChNNc2dC",
+          "dWlsZEJ1eVF1ZXVlUmVxEKCiARIZChNNc2dCdWlsZEJ1eVF1ZXVlUmVzEKGi",
+          "ARIcChZNc2dCdWlsZExpYnJhcnlJbmZvUmVzEMCiARIdChdNc2dCdWlsZExp",
+          "YnJhcnlTcGVlZFJlcRDBogESHQoXTXNnQnVpbGRMaWJyYXJ5U3BlZWRSZXMQ",
+          "wqIBEh0KF01zZ0J1aWxkTGlicmFyeUxldmVsUmVxEMOiARIdChdNc2dCdWls",
+          "ZExpYnJhcnlMZXZlbFJlcxDEogESIAoaTXNnQnVpbGRMaWJyYXJ5TGV2ZWxT",
+          "eW5SZXEQxaIBEiAKGk1zZ0J1aWxkTGlicmFyeUxldmVsU3luUmVzEMaiARIe",
+          "ChhNc2dCdWlsZExpYnJhcnlVbmxvY2tSZXEQx6IBEh4KGE1zZ0J1aWxkTGli",
+          "cmFyeVVubG9ja1JlcxDIogESFwoRTXNnSGFsbG93c0xpc3RSZXMQ8qIBEhoK",
+          "FE1zZ0hhbGxvd3NDb21wb3NlUmVxEPOiARIaChRNc2dIYWxsb3dzQ29tcG9z",
+          "ZVJlcxD0ogESGAoSTXNnSGFsbG93c0xldmVsUmVxEPWiARIYChJNc2dIYWxs",
+          "b3dzTGV2ZWxSZXMQ9qIBEhkKE01zZ0hhbGxvd3NCYXR0bGVSZXEQ96IBEhkK",
+          "E01zZ0hhbGxvd3NCYXR0bGVSZXMQ+KIBEhYKEE1zZ0FkZEhhbGxvd3NSZXMQ",
+          "+aIBEh4KGE1zZ0hhbGxvd3NJdGVtQ29tcG9zZVJlcRD6ogESHgoYTXNnSGFs",
+          "bG93c0l0ZW1Db21wb3NlUmVzEPuiARIVCg9Nc2dSZWxpY0xpc3RSZXMQpKMB",
+          "EhgKEk1zZ1JlbGljQ29tcG9zZVJlcRClowESGAoSTXNnUmVsaWNDb21wb3Nl",
+          "UmVzEKajARIWChBNc2dSZWxpY0xldmVsUmVxEKejARIWChBNc2dSZWxpY0xl",
+          "dmVsUmVzEKijARIXChFNc2dSZWxpY0JhdHRsZVJlcRCpowESFwoRTXNnUmVs",
+          "aWNCYXR0bGVSZXMQq6MBEhQKDk1zZ0FkZFJlbGljUmVzEKyjARIcChZNc2dS",
+          "ZWxpY0l0ZW1Db21wb3NlUmVxEK2jARIcChZNc2dSZWxpY0l0ZW1Db21wb3Nl",
+          "UmVzEK6jARIXChFNc2dIZXJvUHViSW5mb1JlcxDWowESGQoTTXNnSGVyb1B1",
+          "YlVubG9ja1JlcRDXowESGQoTTXNnSGVyb1B1YlVubG9ja1JlcxDYowESGAoS",
+          "TXNnSGVyb1B1YlNlcnZlUmVxENmjARIYChJNc2dIZXJvUHViU2VydmVSZXMQ",
+          "2qMBEhkKE01zZ0hlcm9QdWJSZXdhcmRSZXEQ26MBEhkKE01zZ0hlcm9QdWJS",
+          "ZXdhcmRSZXMQ3KMBEh4KGE1zZ0hlcm9QdWJWaWRlb1dhaXRlclJlcRDdowES",
+          "HgoYTXNnSGVyb1B1YlZpZGVvV2FpdGVyUmVzEN6jARIfChlNc2dIZXJvUHVi",
+          "VmlkZW9DYXNoaWVyUmVxEN+jARIfChlNc2dIZXJvUHViVmlkZW9DYXNoaWVy",
+          "UmVzEOCjARIbChVNc2dIZXJvUHViT3BlblNob3BSZXEQ4aMBEhsKFU1zZ0hl",
+          "cm9QdWJPcGVuU2hvcFJlcxDiowESFwoRTXNnSGVyb1B1YkRpc2hSZXEQ46MB",
+          "EhcKEU1zZ0hlcm9QdWJEaXNoUmVzEOSjARIYChJNc2dIZXJvUHViR3Vlc3RS",
+          "ZXEQ5aMBEhgKEk1zZ0hlcm9QdWJHdWVzdFJlcxDmowESHQoXTXNnSGVyb1B1",
+          "YlZpZGVvUG93ZXJSZXEQ56MBEh0KF01zZ0hlcm9QdWJWaWRlb1Bvd2VyUmVz",
+          "EOijARIdChdNc2dIZXJvUHViUmV3YXJkU2hvd1JlcRDpowESHQoXTXNnSGVy",
+          "b1B1YlJld2FyZFNob3dSZXMQ6qMBEh4KGE1zZ0hlcm9QdWJQb3dlck5vdGlm",
+          "eVJlcxDrowESGgoUTXNnRW5lcmd5Q3ViZUxpc3RSZXMQiKQBEh0KF01zZ0Vu",
+          "ZXJneUN1YmVDb21wb3NlUmVxEImkARIdChdNc2dFbmVyZ3lDdWJlQ29tcG9z",
+          "ZVJlcxCKpAESGwoVTXNnRW5lcmd5Q3ViZUxldmVsUmVxEIukARIbChVNc2dF",
+          "bmVyZ3lDdWJlTGV2ZWxSZXMQjKQBEhwKFk1zZ0VuZXJneUN1YmVCYXR0bGVS",
+          "ZXEQjaQBEhwKFk1zZ0VuZXJneUN1YmVCYXR0bGVSZXMQjqQBEhkKE01zZ0Fk",
+          "ZEVuZXJneUN1YmVSZXMQj6QBEiEKG01zZ0VuZXJneUN1YmVJdGVtQ29tcG9z",
+          "ZVJlcRCQpAESIQobTXNnRW5lcmd5Q3ViZUl0ZW1Db21wb3NlUmVzEJGkARIX",
+          "ChFNc2dDYW5ub25Jbm9mb1JlcxC6pAESGAoSTXNnQ2Fubm9uRmluaXNoUmVx",
+          "EL+kARIYChJNc2dDYW5ub25GaW5pc2hSZXMQwKQBEhkKE01zZ0Nhbm5vbkNv",
+          "bXBvc2VSZXEQwqQBEhkKE01zZ0Nhbm5vbkNvbXBvc2VSZXMQw6QBEhgKEk1z",
+          "Z0Nhbm5vbkJhdHRsZVJlcRDEpAESGAoSTXNnQ2Fubm9uQmF0dGxlUmVzEMWk",
+          "ARIZChNNc2dDYW5ub25VcExldmVsUmVxEMikARIZChNNc2dDYW5ub25VcExl",
+          "dmVsUmVzEMmkARIXChFNc2dDYW5ub25TbWVsdFJlcRDKpAESFwoRTXNnQ2Fu",
+          "bm9uU21lbHRSZXMQy6QBEhkKE01zZ1dhcmVob3VzZUluZm9SZXMQ7KQBEiIK",
+          "HE1zZ0NoYW5nZVdhcmVob3VzZUF0dHJOdW1SZXMQ7aQBEhoKFE1zZ1Bhc3NV",
+          "bmxvY2tJbmZvUmVzEJ6lARIjCh1Nc2dDaGFuZ2VQYXNzVW5sb2NrQXR0ck51",
+          "bVJlcxCfpQESHwoZTXNnUGFzc1VubG9ja0NsaWVudFN5blJlcRCgpQESHwoZ",
+          "TXNnUGFzc1VubG9ja0NsaWVudFN5blJlcxChpQESFwoRTXNnc3RNZWRhbElu",
+          "Zm9SZXMQ0KUBEhcKEU1zZ01lZGFsVW5sb2NrUmVxENGlARIXChFNc2dNZWRh",
+          "bFVubG9ja1JlcxDSpQESHAoWTXNnTWVkYWxTY29yZVJld2FyZFJlcRDTpQES",
+          "HAoWTXNnTWVkYWxTY29yZVJld2FyZFJlcxDUpQESEwoNTXNnUGF5SW5mb1Jl",
+          "cxCCpgESFwoRTXNnUGF5U3RvcmVCdXlSZXEQg6YBEhcKEU1zZ1BheVN0b3Jl",
+          "QnV5UmVzEISmARIbChVNc2dQYXlHaWZ0VGltZUluZm9SZXMQjKYBEhoKFE1z",
+          "Z1BheUdpZnRUaW1lQnV5UmVxEI2mARIaChRNc2dQYXlHaWZ0VGltZUJ1eVJl",
+          "cxCOpgESHQoXTXNnUGF5R2lmdFRpbWVOb3RpZnlSZXMQj6YBEhkKE01zZ09y",
+          "ZGVyQ3JlYXRpb25SZXEQkKYBEhkKE01zZ09yZGVyQ3JlYXRpb25SZXMQkaYB",
+          "EhUKD01zZ09yZGVyRmFpbFJlcRCSpgESFQoPTXNnT3JkZXJGYWlsUmVzEJOm",
+          "ARIhChtNc2dOb3ZpY2VEZXZlbG9wbWVudEluZm9SZXMQtKYBEiMKHU1zZ05v",
+          "dmljZURldmVsb3BtZW50UmV3YXJkUmVxELWmARIjCh1Nc2dOb3ZpY2VEZXZl",
+          "bG9wbWVudFJld2FyZFJlcxC2pgESKAoiTXNnTm92aWNlRGV2ZWxvcG1lbnRT",
+          "Y29yZVJld2FyZFJlcRC3pgESKAoiTXNnTm92aWNlRGV2ZWxvcG1lbnRTY29y",
+          "ZVJld2FyZFJlcxC4pgESHgoYTXNnTm92aWNlV2FyT3JkZXJJbmZvUmVzEOam",
+          "ARIgChpNc2dOb3ZpY2VXYXJPcmRlclJld2FyZFJlcRDnpgESIAoaTXNnTm92",
+          "aWNlV2FyT3JkZXJSZXdhcmRSZXMQ6KYBEh0KF01zZ05vdmljZVdhck9yZGVy",
+          "QnV5UmVxEOmmARIdChdNc2dOb3ZpY2VXYXJPcmRlckJ1eVJlcxDqpgESJAoe",
+          "TXNnTm92aWNlV2FyT3JkZXJGaW5pc2hUaW1lUmVxEOumARIkCh5Nc2dOb3Zp",
+          "Y2VXYXJPcmRlckZpbmlzaFRpbWVSZXMQ7KYBEiAKGk1zZ0J1aWxkTG90dGVy",
+          "eURyYXdJbmZvUmVzEJinARIcChZNc2dCdWlsZExvdHRlcnlEcmF3UmVxEJmn",
+          "ARIcChZNc2dCdWlsZExvdHRlcnlEcmF3UmVzEJqnARIcChZNc2dQYXlNb250",
+          "aENhcmRJbmZvUmVzEMqnARIbChVNc2dQYXlNb250aENhcmRCdXlSZXEQy6cB",
+          "EhsKFU1zZ1BheU1vbnRoQ2FyZEJ1eVJlcxDMpwESHwoZTXNnUGF5TW9udGhD",
+          "YXJkUmVjZWl2ZVJlcRDNpwESHwoZTXNnUGF5TW9udGhDYXJkUmVjZWl2ZVJl",
+          "cxDOpwESGAoSQmF0dGxlVG93ZXJJbmZvUmVzEPynARIaChRGaW5pc2hCYXR0",
+          "bGVUb3dlclJlcRD9pwESGgoURmluaXNoQmF0dGxlVG93ZXJSZXMQ/qcBEhgK",
+          "EkZhc3RCYXR0bGVUb3dlclJlcRD/pwESGAoSRmFzdEJhdHRsZVRvd2VyUmVz",
+          "EICoARIaChRDYW5ub25CYXR0bGVUb3dlclJlcRCBqAESGgoUQ2Fubm9uQmF0",
+          "dGxlVG93ZXJSZXMQgqgBEh4KGEV4cGVkaXRpb25CYXR0bGVUb3dlclJlcRCD",
+          "qAESHgoYRXhwZWRpdGlvbkJhdHRsZVRvd2VyUmVzEISoARIZChNSZXNldEJh",
+          "dHRsZVRvd2VyUmVxEIWoARIZChNSZXNldEJhdHRsZVRvd2VyUmVzEIaoARIZ",
+          "ChNSZWNlaXZlQnVmZlRvd2VyUmVxEIeoARIZChNSZWNlaXZlQnVmZlRvd2Vy",
+          "UmVzEIioARIbChVOZXh0RGF5RmluaXNoVG93ZXJSZXEQiagBEhsKFU5leHRE",
+          "YXlGaW5pc2hUb3dlclJlcxCKqAESGQoTUmVmcmVzaEJ1ZmZUb3dlclJlcRCL",
+          "qAESGQoTUmVmcmVzaEJ1ZmZUb3dlclJlcxCMqAFCFQoTY29tLnRvcGdhbWUu",
+          "bWVzc2FnZWIGcHJvdG8z"));
+    descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+        new pbr::FileDescriptor[] { },
+        new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MID), }, null, null));
+  }
   #endregion
 
 }
+#region Enums
+public enum MID {
+  [pbr::OriginalName("None")] None = 0,
+  /// <summary>
+  //// 服务器内部消息===========================================================================
+  /// </summary>
+  [pbr::OriginalName("ServerRegisterReq")] ServerRegisterReq = 101,
+  /// <summary>
+  /// 注册服务器消息
+  /// </summary>
+  [pbr::OriginalName("ServerRegisterRes")] ServerRegisterRes = 102,
+  /// <summary>
+  /// 获取服务器列表
+  /// </summary>
+  [pbr::OriginalName("ServerListReq")] ServerListReq = 103,
+  /// <summary>
+  /// 获取服务器列表
+  /// </summary>
+  [pbr::OriginalName("ServerListRes")] ServerListRes = 104,
+  /// <summary>
+  /// 改变角色服务器
+  /// </summary>
+  [pbr::OriginalName("ChangeRoleServerReq")] ChangeRoleServerReq = 105,
+  /// <summary>
+  /// 改变角色服务器
+  /// </summary>
+  [pbr::OriginalName("ChangeRoleServerRes")] ChangeRoleServerRes = 106,
+  /// <summary>
+  /// 服务器事件
+  /// </summary>
+  [pbr::OriginalName("ServerEventReq")] ServerEventReq = 107,
+  /// <summary>
+  /// 服务器事件
+  /// </summary>
+  [pbr::OriginalName("ServerEventRes")] ServerEventRes = 108,
+  /// <summary>
+  /// 服务器状态 	
+  /// </summary>
+  [pbr::OriginalName("ServerStatusRes")] ServerStatusRes = 109,
+  [pbr::OriginalName("DefaultGateReq")] DefaultGateReq = 200,
+  [pbr::OriginalName("DefaultGateRes")] DefaultGateRes = 201,
+  [pbr::OriginalName("ServerMailsReq")] ServerMailsReq = 301,
+  [pbr::OriginalName("DefaultServerMailReq")] DefaultServerMailReq = 302,
+  [pbr::OriginalName("TaskSeasonReq")] TaskSeasonReq = 303,
+  [pbr::OriginalName("DefaultServerMarqueeReq")] DefaultServerMarqueeReq = 304,
+  [pbr::OriginalName("InfiniteParkourSeasonReq")] InfiniteParkourSeasonReq = 305,
+  [pbr::OriginalName("InfiniteParkourChangeReq")] InfiniteParkourChangeReq = 306,
+  [pbr::OriginalName("UserServerReq")] UserServerReq = 307,
+  [pbr::OriginalName("AddFriendLogReq")] AddFriendLogReq = 308,
+  [pbr::OriginalName("SetOtherTriggerReq")] SetOtherTriggerReq = 309,
+  [pbr::OriginalName("UserInfoChangeReq")] UserInfoChangeReq = 310,
+  [pbr::OriginalName("ServerGMEventReq")] ServerGmeventReq = 311,
+  /// <summary>
+  /// 登陆
+  /// </summary>
+  [pbr::OriginalName("LoginReq")] LoginReq = 10001,
+  /// <summary>
+  /// 登录 
+  /// </summary>
+  [pbr::OriginalName("LoginRes")] LoginRes = 10002,
+  /// <summary>
+  /// 心跳
+  /// </summary>
+  [pbr::OriginalName("HeartReq")] HeartReq = 10011,
+  /// <summary>
+  /// 心跳
+  /// </summary>
+  [pbr::OriginalName("HeartRes")] HeartRes = 10012,
+  /// <summary>
+  /// 玩家被踢下线
+  /// </summary>
+  [pbr::OriginalName("KillUserRes")] KillUserRes = 10013,
+  /// <summary>
+  /// 消息种子
+  /// </summary>
+  [pbr::OriginalName("MessageSeedRes")] MessageSeedRes = 10014,
+  /// <summary>
+  /// 登陆完成
+  /// </summary>
+  [pbr::OriginalName("LoginFinishRes")] LoginFinishRes = 10015,
+  /// <summary>
+  /// 实名认证
+  /// </summary>
+  [pbr::OriginalName("VerifiedReq")] VerifiedReq = 10016,
+  /// <summary>
+  /// 实名认证	
+  /// </summary>
+  [pbr::OriginalName("VerifiedRes")] VerifiedRes = 10017,
+  /// <summary>
+  /// Ticket登录
+  /// </summary>
+  [pbr::OriginalName("TicketLoginExReq")] TicketLoginExReq = 10018,
+  /// <summary>
+  /// Ticket登录
+  /// </summary>
+  [pbr::OriginalName("TicketReLoginExReq")] TicketReLoginExReq = 10019,
+  /// <summary>
+  /// Ticket登录（服务器内部使用）
+  /// </summary>
+  [pbr::OriginalName("TicketLoginInternalReq")] TicketLoginInternalReq = 10020,
+  /// <summary>
+  /// 登出
+  /// </summary>
+  [pbr::OriginalName("LogoutReq")] LogoutReq = 10021,
+  /// <summary>
+  /// 登出
+  /// </summary>
+  [pbr::OriginalName("LogoutRes")] LogoutRes = 10022,
+  [pbr::OriginalName("LoginInternalReq")] LoginInternalReq = 10023,
+  /// <summary>
+  /// 通用消息
+  /// </summary>
+  [pbr::OriginalName("GMCommandReq")] GmcommandReq = 10100,
+  /// <summary>
+  /// GM命令 
+  /// </summary>
+  [pbr::OriginalName("GMCommandRes")] GmcommandRes = 10101,
+  /// <summary>
+  /// 系统错误
+  /// </summary>
+  [pbr::OriginalName("SystemErrorRes")] SystemErrorRes = 10102,
+  /// <summary>
+  /// 玩家行为
+  /// </summary>
+  [pbr::OriginalName("UserActionReq")] UserActionReq = 10103,
+  /// <summary>
+  /// 错误统一消息	
+  /// </summary>
+  [pbr::OriginalName("UserErrorRes")] UserErrorRes = 10104,
+  /// <summary>
+  /// 用户基础信息
+  /// </summary>
+  [pbr::OriginalName("UserInfoRes")] UserInfoRes = 10300,
+  /// <summary>
+  /// 头像信息
+  /// </summary>
+  [pbr::OriginalName("AvatarsInfoReq")] AvatarsInfoReq = 10301,
+  /// <summary>
+  /// 头像信息
+  /// </summary>
+  [pbr::OriginalName("AvatarsInfoRes")] AvatarsInfoRes = 10302,
+  /// <summary>
+  /// 头像框信息
+  /// </summary>
+  [pbr::OriginalName("AvatarFrameInfoReq")] AvatarFrameInfoReq = 10303,
+  /// <summary>
+  /// 头像框信息
+  /// </summary>
+  [pbr::OriginalName("AvatarFrameInfoRes")] AvatarFrameInfoRes = 10304,
+  /// <summary>
+  /// 称号信息
+  /// </summary>
+  [pbr::OriginalName("TitleInfoReq")] TitleInfoReq = 10305,
+  /// <summary>
+  /// 称号信息	
+  /// </summary>
+  [pbr::OriginalName("TitleInfoRes")] TitleInfoRes = 10306,
+  /// <summary>
+  /// 更换头像
+  /// </summary>
+  [pbr::OriginalName("ChangeAvatarsReq")] ChangeAvatarsReq = 10307,
+  /// <summary>
+  /// 更换头像
+  /// </summary>
+  [pbr::OriginalName("ChangeAvatarsRes")] ChangeAvatarsRes = 10308,
+  /// <summary>
+  /// 更换头像框
+  /// </summary>
+  [pbr::OriginalName("ChangeAvatarFrameReq")] ChangeAvatarFrameReq = 10309,
+  /// <summary>
+  /// 更换头像框
+  /// </summary>
+  [pbr::OriginalName("ChangeAvatarFrameRes")] ChangeAvatarFrameRes = 10310,
+  /// <summary>
+  /// 更换称号
+  /// </summary>
+  [pbr::OriginalName("ChangeTitleReq")] ChangeTitleReq = 10311,
+  /// <summary>
+  /// 更换称号
+  /// </summary>
+  [pbr::OriginalName("ChangeTitleRes")] ChangeTitleRes = 10312,
+  /// <summary>
+  /// 修改昵称
+  /// </summary>
+  [pbr::OriginalName("ChangeUsernameReq")] ChangeUsernameReq = 10313,
+  /// <summary>
+  /// 修改昵称 
+  /// </summary>
+  [pbr::OriginalName("ChangeUsernameRes")] ChangeUsernameRes = 10314,
+  /// <summary>
+  /// 跑马灯	 
+  /// </summary>
+  [pbr::OriginalName("MarqueeRes")] MarqueeRes = 10315,
+  /// <summary>
+  /// 单个红点信息 
+  /// </summary>
+  [pbr::OriginalName("NewRedDotReq")] NewRedDotReq = 10316,
+  /// <summary>
+  /// 单个红点信息 
+  /// </summary>
+  [pbr::OriginalName("NewRedDotRes")] NewRedDotRes = 10317,
+  /// <summary>
+  /// 红点信息
+  /// </summary>
+  [pbr::OriginalName("AllNewRedDotsRes")] AllNewRedDotsRes = 10318,
+  /// <summary>
+  /// S->C 整形属性变更 value = 最终值
+  /// </summary>
+  [pbr::OriginalName("ChangeAttrNumRes")] ChangeAttrNumRes = 10319,
+  /// <summary>
+  /// 属性变更 
+  /// </summary>
+  [pbr::OriginalName("AttributeRes")] AttributeRes = 10320,
+  /// <summary>
+  /// 战斗力变更 
+  /// </summary>
+  [pbr::OriginalName("CombatRes")] CombatRes = 10321,
+  /// <summary>
+  /// 解锁头像
+  /// </summary>
+  [pbr::OriginalName("UnlockAvatarsReq")] UnlockAvatarsReq = 10322,
+  /// <summary>
+  /// 解锁头像 
+  /// </summary>
+  [pbr::OriginalName("UnlockAvatarsRes")] UnlockAvatarsRes = 10323,
+  /// <summary>
+  /// 解锁称号
+  /// </summary>
+  [pbr::OriginalName("UnlockTitleReq")] UnlockTitleReq = 10324,
+  /// <summary>
+  /// 解锁称号
+  /// </summary>
+  [pbr::OriginalName("UnlockTitleRes")] UnlockTitleRes = 10325,
+  /// <summary>
+  /// 同步玩家信息（服务器内部使用）
+  /// </summary>
+  [pbr::OriginalName("UserInfoSyncReq")] UserInfoSyncReq = 10326,
+  /// <summary>
+  /// 同步玩家战斗力（服务器内部使用）
+  /// </summary>
+  [pbr::OriginalName("CombatSyncReq")] CombatSyncReq = 10327,
+  /// <summary>
+  /// 同步玩家关卡进度（服务器内部使用）
+  /// </summary>
+  [pbr::OriginalName("UserStageSyncReq")] UserStageSyncReq = 10328,
+  /// <summary>
+  /// 新手引导信息
+  /// </summary>
+  [pbr::OriginalName("NoviceGuidanceRes")] NoviceGuidanceRes = 10329,
+  /// <summary>
+  /// 设置新手引导进度
+  /// </summary>
+  [pbr::OriginalName("NoviceGuidanceStepReq")] NoviceGuidanceStepReq = 10332,
+  /// <summary>
+  /// 设置新手引导进度
+  /// </summary>
+  [pbr::OriginalName("NoviceGuidanceStepRes")] NoviceGuidanceStepRes = 10333,
+  /// <summary>
+  /// 在线时间设置（客户端打点用）
+  /// </summary>
+  [pbr::OriginalName("OnlineTimeReq")] OnlineTimeReq = 10334,
+  /// <summary>
+  /// 在线时间设置（客户端打点用）
+  /// </summary>
+  [pbr::OriginalName("OnlineTimeRes")] OnlineTimeRes = 10335,
+  /// <summary>
+  /// 看广告
+  /// </summary>
+  [pbr::OriginalName("WatchingAdvertisementsReq")] WatchingAdvertisementsReq = 10336,
+  /// <summary>
+  /// 看广告
+  /// </summary>
+  [pbr::OriginalName("WatchingAdvertisementsRes")] WatchingAdvertisementsRes = 10337,
+  /// <summary>
+  /// 充值次数统计
+  /// </summary>
+  [pbr::OriginalName("RechargeStatisticsReq")] RechargeStatisticsReq = 10338,
+  /// <summary>
+  /// 充值次数统计
+  /// </summary>
+  [pbr::OriginalName("RechargeStatisticsRes")] RechargeStatisticsRes = 10339,
+  /// <summary>
+  /// 邮件
+  /// </summary>
+  [pbr::OriginalName("MailInfoRes")] MailInfoRes = 10400,
+  /// <summary>
+  /// 新增邮件通知
+  /// </summary>
+  [pbr::OriginalName("AddMailNoticeRes")] AddMailNoticeRes = 10401,
+  /// <summary>
+  /// 请求最新全服邮件
+  /// </summary>
+  [pbr::OriginalName("SynAllSerMailReq")] SynAllSerMailReq = 10402,
+  /// <summary>
+  /// 领取邮件
+  /// </summary>
+  [pbr::OriginalName("ReceiveMailReq")] ReceiveMailReq = 10403,
+  /// <summary>
+  /// 
+  /// </summary>
+  [pbr::OriginalName("ReceiveMailRes")] ReceiveMailRes = 10404,
+  /// <summary>
+  /// 一键删除邮件
+  /// </summary>
+  [pbr::OriginalName("DeleteMailReq")] DeleteMailReq = 10405,
+  /// <summary>
+  /// 
+  /// </summary>
+  [pbr::OriginalName("DeleteMailRes")] DeleteMailRes = 10406,
+  /// <summary>
+  /// 阅读邮件--支持多封邮件
+  /// </summary>
+  [pbr::OriginalName("ReadMailReq")] ReadMailReq = 10407,
+  /// <summary>
+  /// 
+  /// </summary>
+  [pbr::OriginalName("ReadMailRes")] ReadMailRes = 10408,
+  /// <summary>
+  /// VIP
+  /// </summary>
+  [pbr::OriginalName("VipInfoRes")] VipInfoRes = 10414,
+  /// <summary>
+  /// VIP领奖
+  /// </summary>
+  [pbr::OriginalName("RewardVipReq")] RewardVipReq = 10415,
+  /// <summary>
+  /// VIP领奖
+  /// </summary>
+  [pbr::OriginalName("RewardVipRes")] RewardVipRes = 10416,
+  /// <summary>
+  /// 观看视频
+  /// </summary>
+  [pbr::OriginalName("ViewVideoReq")] ViewVideoReq = 10417,
+  /// <summary>
+  /// 观看视频
+  /// </summary>
+  [pbr::OriginalName("ViewVideoRes")] ViewVideoRes = 10418,
+  /// <summary>
+  /// buff信息
+  /// </summary>
+  [pbr::OriginalName("BuffInfoRes")] BuffInfoRes = 10419,
+  /// <summary>
+  /// 购买特权商店
+  /// </summary>
+  [pbr::OriginalName("BuySpecialStoreReq")] BuySpecialStoreReq = 10420,
+  /// <summary>
+  /// 购买特权商店
+  /// </summary>
+  [pbr::OriginalName("BuySpecialStoreRes")] BuySpecialStoreRes = 10421,
+  /// <summary>
+  /// 每日每周商店信息
+  /// </summary>
+  [pbr::OriginalName("DailyStoreInfoRes")] DailyStoreInfoRes = 10422,
+  /// <summary>
+  /// 购买每日每周商店
+  /// </summary>
+  [pbr::OriginalName("BuyDailyStoreReq")] BuyDailyStoreReq = 10423,
+  /// <summary>
+  /// 购买每日每周商店
+  /// </summary>
+  [pbr::OriginalName("BuyDailyStoreRes")] BuyDailyStoreRes = 10424,
+  /// <summary>
+  /// 购买钻石商店
+  /// </summary>
+  [pbr::OriginalName("BuyDiamondStoreReq")] BuyDiamondStoreReq = 10425,
+  /// <summary>
+  /// 购买钻石商店
+  /// </summary>
+  [pbr::OriginalName("BuyDiamondStoreRes")] BuyDiamondStoreRes = 10426,
+  /// <summary>
+  /// 邮件同步
+  /// </summary>
+  [pbr::OriginalName("HW_SynMailReq")] HwSynMailReq = 10427,
+  /// <summary>
+  /// 
+  /// </summary>
+  [pbr::OriginalName("HW_SynMailRes")] HwSynMailRes = 10428,
+  /// <summary>
+  /// 广播给前端 最新的全服消息编号
+  /// </summary>
+  [pbr::OriginalName("AddAllServerMailNoticeRes")] AddAllServerMailNoticeRes = 10429,
+  /// <summary>
+  /// 
+  /// </summary>
+  [pbr::OriginalName("NewRollNoticeReq")] NewRollNoticeReq = 10430,
+  /// <summary>
+  /// 新增 OR 修改 跑马灯公告通知
+  /// </summary>
+  [pbr::OriginalName("NewRollNoticeRes")] NewRollNoticeRes = 10431,
+  /// <summary>
+  /// 社交
+  /// </summary>
+  [pbr::OriginalName("ViewPlayerReq")] ViewPlayerReq = 10500,
+  /// <summary>
+  /// 查看他人信息
+  /// </summary>
+  [pbr::OriginalName("ViewPlayerRes")] ViewPlayerRes = 10501,
+  /// <summary>
+  /// 获取访客列表
+  /// </summary>
+  [pbr::OriginalName("ReceptionRoomReq")] ReceptionRoomReq = 10502,
+  /// <summary>
+  /// 获取访客列表
+  /// </summary>
+  [pbr::OriginalName("ReceptionRoomRes")] ReceptionRoomRes = 10503,
+  /// <summary>
+  /// 领取拜访问奖励
+  /// </summary>
+  [pbr::OriginalName("RewardReceptionRoomReq")] RewardReceptionRoomReq = 10504,
+  /// <summary>
+  /// 领取拜访问奖励
+  /// </summary>
+  [pbr::OriginalName("RewardReceptionRoomRes")] RewardReceptionRoomRes = 10505,
+  /// <summary>
+  /// 拜访列表
+  /// </summary>
+  [pbr::OriginalName("PlayerViewReq")] PlayerViewReq = 10506,
+  /// <summary>
+  /// 拜访列表
+  /// </summary>
+  [pbr::OriginalName("PlayerViewRes")] PlayerViewRes = 10507,
+  /// <summary>
+  /// 拜访玩家
+  /// </summary>
+  [pbr::OriginalName("VisitPlayerReq")] VisitPlayerReq = 10508,
+  /// <summary>
+  /// 拜访玩家
+  /// </summary>
+  [pbr::OriginalName("VisitPlayerRes")] VisitPlayerRes = 10509,
+  /// <summary>
+  /// 掠夺玩家
+  /// </summary>
+  [pbr::OriginalName("PlunderPlayerReq")] PlunderPlayerReq = 10510,
+  /// <summary>
+  /// 掠夺玩家
+  /// </summary>
+  [pbr::OriginalName("PlunderPlayerRes")] PlunderPlayerRes = 10511,
+  /// <summary>
+  /// 驱逐玩家
+  /// </summary>
+  [pbr::OriginalName("ExpulsionPlayerReq")] ExpulsionPlayerReq = 10512,
+  /// <summary>
+  /// 驱逐玩家
+  /// </summary>
+  [pbr::OriginalName("ExpulsionPlayerRes")] ExpulsionPlayerRes = 10513,
+  /// <summary>
+  /// 召回英雄
+  /// </summary>
+  [pbr::OriginalName("RecallHeroReq")] RecallHeroReq = 10514,
+  /// <summary>
+  /// 召回英雄
+  /// </summary>
+  [pbr::OriginalName("RecallHeroRes")] RecallHeroRes = 10515,
+  /// <summary>
+  /// 一键拜访
+  /// </summary>
+  [pbr::OriginalName("OneClickVisitPlayerReq")] OneClickVisitPlayerReq = 10516,
+  /// <summary>
+  /// 一键拜访
+  /// </summary>
+  [pbr::OriginalName("OneClickVisitPlayerRes")] OneClickVisitPlayerRes = 10517,
+  /// <summary>
+  /// 玩家列表
+  /// </summary>
+  [pbr::OriginalName("PlayerEntryReq")] PlayerEntryReq = 10518,
+  /// <summary>
+  /// 玩家列表
+  /// </summary>
+  [pbr::OriginalName("PlayerEntryRes")] PlayerEntryRes = 10519,
+  /// <summary>
+  /// 刷新玩家列表
+  /// </summary>
+  [pbr::OriginalName("PlayerEntryRefreshReq")] PlayerEntryRefreshReq = 10520,
+  /// <summary>
+  /// 刷新玩家列表
+  /// </summary>
+  [pbr::OriginalName("PlayerEntryRefreshRes")] PlayerEntryRefreshRes = 10521,
+  /// <summary>
+  /// 事件日志
+  /// </summary>
+  [pbr::OriginalName("ViewVisitLogReq")] ViewVisitLogReq = 10522,
+  /// <summary>
+  /// 事件日志
+  /// </summary>
+  [pbr::OriginalName("ViewVisitLogRes")] ViewVisitLogRes = 10523,
+  /// <summary>
+  /// 领取事件奖励
+  /// </summary>
+  [pbr::OriginalName("RewardViewVisitLogReq")] RewardViewVisitLogReq = 10524,
+  /// <summary>
+  /// 领取事件奖励
+  /// </summary>
+  [pbr::OriginalName("RewardViewVisitLogRes")] RewardViewVisitLogRes = 10525,
+  /// <summary>
+  /// 查看他人建筑信息
+  /// </summary>
+  [pbr::OriginalName("ViewPlayerBuildReq")] ViewPlayerBuildReq = 10526,
+  /// <summary>
+  /// 查看他人建筑信息
+  /// </summary>
+  [pbr::OriginalName("ViewPlayerBuildRes")] ViewPlayerBuildRes = 10527,
+  /// <summary>
+  /// 社交道具信息
+  /// </summary>
+  [pbr::OriginalName("SocializeItemRes")] SocializeItemRes = 10528,
+  /// <summary>
+  /// 同步拜访玩家信息（服务器内部使用）
+  /// </summary>
+  [pbr::OriginalName("VisitPlayerSyncReq")] VisitPlayerSyncReq = 10529,
+  /// <summary>
+  /// 同步掠夺信息（服务器内部使用）
+  /// </summary>
+  [pbr::OriginalName("PlunderSyncReq")] PlunderSyncReq = 10530,
+  /// <summary>
+  /// 清除建筑信息（服务器内部使用）
+  /// </summary>
+  [pbr::OriginalName("PlunderBuildClearReq")] PlunderBuildClearReq = 10531,
+  /// <summary>
+  /// 同步玩家日志（服务器内部使用）
+  /// </summary>
+  [pbr::OriginalName("SocializeLogSyncReq")] SocializeLogSyncReq = 10532,
+  [pbr::OriginalName("RewardShieldReq")] RewardShieldReq = 10533,
+  [pbr::OriginalName("RewardShieldRes")] RewardShieldRes = 10534,
+  /// <summary>
+  /// 排行榜
+  /// </summary>
+  [pbr::OriginalName("ViewSelfRankingReq")] ViewSelfRankingReq = 10600,
+  /// <summary>
+  /// 查看自己排行榜信息
+  /// </summary>
+  [pbr::OriginalName("ViewSelfRankingRes")] ViewSelfRankingRes = 10601,
+  /// <summary>
+  /// 查看排行榜信息
+  /// </summary>
+  [pbr::OriginalName("ViewRankingReq")] ViewRankingReq = 10602,
+  /// <summary>
+  /// 查看排行榜信息
+  /// </summary>
+  [pbr::OriginalName("ViewRankingRes")] ViewRankingRes = 10603,
+  /// <summary>
+  /// 排行榜领奖
+  /// </summary>
+  [pbr::OriginalName("RewardRankingReq")] RewardRankingReq = 10604,
+  /// <summary>
+  /// 排行榜领奖
+  /// </summary>
+  [pbr::OriginalName("RewardRankingRes")] RewardRankingRes = 10605,
+  /// <summary>
+  /// 查看自己排行榜信息（服务器内部使用）
+  /// </summary>
+  [pbr::OriginalName("ViewSelfRankingInternalReq")] ViewSelfRankingInternalReq = 10606,
+  /// <summary>
+  /// 段位变更 
+  /// </summary>
+  [pbr::OriginalName("StageChangeRes")] StageChangeRes = 10607,
+  /// <summary>
+  /// 战斗相关 - 关卡
+  /// </summary>
+  [pbr::OriginalName("BattleInfoRes")] BattleInfoRes = 20000,
+  /// <summary>
+  /// C->S 进入战斗
+  /// </summary>
+  [pbr::OriginalName("EnterBattleReq")] EnterBattleReq = 20001,
+  /// <summary>
+  /// S->C 进入战斗
+  /// </summary>
+  [pbr::OriginalName("EnterBattleRes")] EnterBattleRes = 20002,
+  /// <summary>
+  /// C->S 战斗结算
+  /// </summary>
+  [pbr::OriginalName("FinishBattleReq")] FinishBattleReq = 20003,
+  /// <summary>
+  /// S->C 战斗结算
+  /// </summary>
+  [pbr::OriginalName("FinishBattleRes")] FinishBattleRes = 20004,
+  /// <summary>
+  /// C->S 副本扫荡结算
+  /// </summary>
+  [pbr::OriginalName("FinishMopUpReq")] FinishMopUpReq = 20006,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("FinishMopUpRes")] FinishMopUpRes = 20007,
+  /// <summary>
+  /// C->S 进入刷血副本
+  /// </summary>
+  [pbr::OriginalName("EnterLifeBattleReq")] EnterLifeBattleReq = 20008,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("EnterLifeBattleRes")] EnterLifeBattleRes = 20009,
+  /// <summary>
+  /// C->S 刷血副本结算
+  /// </summary>
+  [pbr::OriginalName("FinishLifeBattleReq")] FinishLifeBattleReq = 20010,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("FinishLifeBattleRes")] FinishLifeBattleRes = 20011,
+  /// <summary>
+  /// C->S 刷血副本扫荡结算
+  /// </summary>
+  [pbr::OriginalName("FinishLifeMopUpReq")] FinishLifeMopUpReq = 20012,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("FinishLifeMopUpRes")] FinishLifeMopUpRes = 20013,
+  /// <summary>
+  /// C->S 副本门票刷新请求
+  /// </summary>
+  [pbr::OriginalName("BattleTicketResetReq")] BattleTicketResetReq = 20014,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("BattleTicketResetRes")] BattleTicketResetRes = 20015,
+  /// <summary>
+  /// C->S 关卡挂机结算
+  /// </summary>
+  [pbr::OriginalName("StageFinishBattleReq")] StageFinishBattleReq = 20016,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("StageFinishBattleRes")] StageFinishBattleRes = 20017,
+  /// <summary>
+  /// S->C 关卡离线挂机结算
+  /// </summary>
+  [pbr::OriginalName("StageHangingOffLineFinishRes")] StageHangingOffLineFinishRes = 20018,
+  /// <summary>
+  /// C->S 关卡进度结算
+  /// </summary>
+  [pbr::OriginalName("StageAdvanceFinishBattleReq")] StageAdvanceFinishBattleReq = 20020,
+  /// <summary>
+  /// S->C
+  /// </summary>
+  [pbr::OriginalName("StageAdvanceFinishBattleRes")] StageAdvanceFinishBattleRes = 20021,
+  /// <summary>
+  /// C->S 进入挂机关卡预结算
+  /// </summary>
+  [pbr::OriginalName("EnterStageBattleReq")] EnterStageBattleReq = 20022,
+  /// <summary>
+  /// S->C
+  /// </summary>
+  [pbr::OriginalName("EnterStageBattleRes")] EnterStageBattleRes = 20023,
+  /// <summary>
+  /// C->S 关卡宝箱结算
+  /// </summary>
+  [pbr::OriginalName("StageAdvanceBoxFinishBattleReq")] StageAdvanceBoxFinishBattleReq = 20024,
+  /// <summary>
+  /// S->C
+  /// </summary>
+  [pbr::OriginalName("StageAdvanceBoxFinishBattleRes")] StageAdvanceBoxFinishBattleRes = 20025,
+  /// <summary>
+  /// 英雄模块 -----------------
+  /// </summary>
+  [pbr::OriginalName("MsgHeroListRes")] MsgHeroListRes = 20100,
+  /// <summary>
+  /// C->S 英雄合成
+  /// </summary>
+  [pbr::OriginalName("MsgHeroComposeReq")] MsgHeroComposeReq = 20101,
+  /// <summary>
+  /// S->C 英雄合成
+  /// </summary>
+  [pbr::OriginalName("MsgHeroComposeRes")] MsgHeroComposeRes = 20102,
+  /// <summary>
+  /// C->S 英雄升级
+  /// </summary>
+  [pbr::OriginalName("MsgHeroLevelReq")] MsgHeroLevelReq = 20104,
+  /// <summary>
+  /// S->C 英雄升级
+  /// </summary>
+  [pbr::OriginalName("MsgHeroLevelRes")] MsgHeroLevelRes = 20105,
+  /// <summary>
+  /// C->S 英雄上阵
+  /// </summary>
+  [pbr::OriginalName("MsgHeroBattleReq")] MsgHeroBattleReq = 20106,
+  /// <summary>
+  /// S->C 英雄上阵
+  /// </summary>
+  [pbr::OriginalName("MsgHeroBattleRes")] MsgHeroBattleRes = 20107,
+  /// <summary>
+  /// S->C 英雄新增
+  /// </summary>
+  [pbr::OriginalName("MsgAddHeroRes")] MsgAddHeroRes = 20108,
+  /// <summary>
+  /// C->S 英雄升星
+  /// </summary>
+  [pbr::OriginalName("MsgHeroUpStarReq")] MsgHeroUpStarReq = 20109,
+  /// <summary>
+  /// S->C 英雄升星
+  /// </summary>
+  [pbr::OriginalName("MsgHeroUpStarRes")] MsgHeroUpStarRes = 20110,
+  /// <summary>
+  /// C->S 英雄碎片合成
+  /// </summary>
+  [pbr::OriginalName("MsgHeroItemComposeReq")] MsgHeroItemComposeReq = 20111,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHeroItemComposeRes")] MsgHeroItemComposeRes = 20112,
+  /// <summary>
+  /// 物品模块-----------------
+  /// </summary>
+  [pbr::OriginalName("MsgItemListRes")] MsgItemListRes = 20150,
+  /// <summary>
+  /// C->S 新增物品
+  /// </summary>
+  [pbr::OriginalName("MsgAddItemReq")] MsgAddItemReq = 20151,
+  /// <summary>
+  /// S->C 新增物品
+  /// </summary>
+  [pbr::OriginalName("MsgAddItemRes")] MsgAddItemRes = 20152,
+  /// <summary>
+  /// S->C 移除物品
+  /// </summary>
+  [pbr::OriginalName("MsgRemoveItemRes")] MsgRemoveItemRes = 20153,
+  /// <summary>
+  /// C->S 打开箱子
+  /// </summary>
+  [pbr::OriginalName("MsgOpenBoxReq")] MsgOpenBoxReq = 20154,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgOpenBoxRes")] MsgOpenBoxRes = 20155,
+  /// <summary>
+  /// C->S 物品合成
+  /// </summary>
+  [pbr::OriginalName("MsgComposeReq")] MsgComposeReq = 20156,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgComposeRes")] MsgComposeRes = 20157,
+  /// <summary>
+  /// 武器模块
+  /// </summary>
+  [pbr::OriginalName("MsgWeaponListRes")] MsgWeaponListRes = 20200,
+  /// <summary>
+  /// C->S 武器合成
+  /// </summary>
+  [pbr::OriginalName("MsgWeaponComposeReq")] MsgWeaponComposeReq = 20201,
+  /// <summary>
+  /// S->C 武器合成
+  /// </summary>
+  [pbr::OriginalName("MsgWeaponComposeRes")] MsgWeaponComposeRes = 20202,
+  /// <summary>
+  /// C->S 武器升级
+  /// </summary>
+  [pbr::OriginalName("MsgWeaponLevelReq")] MsgWeaponLevelReq = 20204,
+  /// <summary>
+  /// S->C 武器升级
+  /// </summary>
+  [pbr::OriginalName("MsgWeaponLevelRes")] MsgWeaponLevelRes = 20205,
+  /// <summary>
+  /// C->S 武器上阵
+  /// </summary>
+  [pbr::OriginalName("MsgWeaponBattleReq")] MsgWeaponBattleReq = 20206,
+  /// <summary>
+  /// S->C 武器上阵
+  /// </summary>
+  [pbr::OriginalName("MsgWeaponBattleRes")] MsgWeaponBattleRes = 20207,
+  /// <summary>
+  /// S->C 武器新增
+  /// </summary>
+  [pbr::OriginalName("MsgAddWeaponRes")] MsgAddWeaponRes = 20208,
+  /// <summary>
+  /// S->C 英雄武器初始化
+  /// </summary>
+  [pbr::OriginalName("MsgWeaponBattleInitRes")] MsgWeaponBattleInitRes = 20209,
+  /// <summary>
+  /// 商店模块
+  /// </summary>
+  [pbr::OriginalName("MsgShopInfoRes")] MsgShopInfoRes = 20250,
+  /// <summary>
+  /// C->S 商店购买
+  /// </summary>
+  [pbr::OriginalName("MsgBuyItemReq")] MsgBuyItemReq = 20251,
+  /// <summary>
+  /// S->C 商店购买
+  /// </summary>
+  [pbr::OriginalName("MsgBuyItemRes")] MsgBuyItemRes = 20252,
+  /// <summary>
+  /// 黑市商店模块
+  /// </summary>
+  [pbr::OriginalName("BlackMarketInfoRes")] BlackMarketInfoRes = 20300,
+  /// <summary>
+  /// C->S 黑市商店购买
+  /// </summary>
+  [pbr::OriginalName("MsgBuyBlackMarketReq")] MsgBuyBlackMarketReq = 20301,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuyBlackMarketRes")] MsgBuyBlackMarketRes = 20302,
+  /// <summary>
+  /// C->S 黑市商店刷新
+  /// </summary>
+  [pbr::OriginalName("MsgResetBlackMarketReq")] MsgResetBlackMarketReq = 20303,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgResetBlackMarketRes")] MsgResetBlackMarketRes = 20304,
+  /// <summary>
+  /// 循环签到模块
+  /// </summary>
+  [pbr::OriginalName("MsgLoopSignInfoRes")] MsgLoopSignInfoRes = 20350,
+  /// <summary>
+  /// C->S 签到请求
+  /// </summary>
+  [pbr::OriginalName("MsgLoopSignReq")] MsgLoopSignReq = 20351,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgLoopSignRes")] MsgLoopSignRes = 20352,
+  /// <summary>
+  /// 主线任务模块
+  /// </summary>
+  [pbr::OriginalName("MsgMainTaskInfoRes")] MsgMainTaskInfoRes = 20400,
+  /// <summary>
+  /// C->S 领取任务奖励请求
+  /// </summary>
+  [pbr::OriginalName("MsgMainTaskRewardReq")] MsgMainTaskRewardReq = 20401,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgMainTaskRewardRes")] MsgMainTaskRewardRes = 20402,
+  /// <summary>
+  /// C->S 领取循环任务奖励
+  /// </summary>
+  [pbr::OriginalName("MsgCycleTaskRewardReq")] MsgCycleTaskRewardReq = 20403,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgCycleTaskRewardRes")] MsgCycleTaskRewardRes = 20404,
+  /// <summary>
+  /// C->S 领线循环任务积分奖励
+  /// </summary>
+  [pbr::OriginalName("MsgCycleTaskScoreRewardReq")] MsgCycleTaskScoreRewardReq = 20405,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgCycleTaskScoreRewardRes")] MsgCycleTaskScoreRewardRes = 20406,
+  /// <summary>
+  /// 日常任务模块
+  /// </summary>
+  [pbr::OriginalName("MsgDailyTaskInfoRes")] MsgDailyTaskInfoRes = 20450,
+  /// <summary>
+  /// C->S 领线日常任务奖励
+  /// </summary>
+  [pbr::OriginalName("MsgDailyTaskRewardReq")] MsgDailyTaskRewardReq = 20451,
+  /// <summary>
+  /// S->C
+  /// </summary>
+  [pbr::OriginalName("MsgDailyTaskRewardRes")] MsgDailyTaskRewardRes = 20452,
+  /// <summary>
+  /// C->S 领线日常任务积分奖励
+  /// </summary>
+  [pbr::OriginalName("MsgDailyTaskScoreRewardReq")] MsgDailyTaskScoreRewardReq = 20453,
+  /// <summary>
+  /// S->C
+  /// </summary>
+  [pbr::OriginalName("MsgDailyTaskScoreRewardRes")] MsgDailyTaskScoreRewardRes = 20454,
+  /// <summary>
+  /// 图鉴模块
+  /// </summary>
+  [pbr::OriginalName("MsgstBestiaryInfoRes")] MsgstBestiaryInfoRes = 20500,
+  /// <summary>
+  /// C->S 图鉴解锁
+  /// </summary>
+  [pbr::OriginalName("MsgBestiaryUnlockReq")] MsgBestiaryUnlockReq = 20501,
+  /// <summary>
+  /// S->C
+  /// </summary>
+  [pbr::OriginalName("MsgBestiaryUnlockRes")] MsgBestiaryUnlockRes = 20502,
+  /// <summary>
+  /// C->S 图鉴领奖
+  /// </summary>
+  [pbr::OriginalName("MsgBestiaryRewardReq")] MsgBestiaryRewardReq = 20503,
+  /// <summary>
+  /// S->C
+  /// </summary>
+  [pbr::OriginalName("MsgBestiaryRewardRes")] MsgBestiaryRewardRes = 20504,
+  /// <summary>
+  /// 成长养成模块
+  /// </summary>
+  [pbr::OriginalName("MsgDevelopmentRes")] MsgDevelopmentRes = 20550,
+  /// <summary>
+  /// C->S 养成升级
+  /// </summary>
+  [pbr::OriginalName("MsgDevelopmentLevelReq")] MsgDevelopmentLevelReq = 20551,
+  /// <summary>
+  /// S->C
+  /// </summary>
+  [pbr::OriginalName("MsgDevelopmentLevelRes")] MsgDevelopmentLevelRes = 20552,
+  /// <summary>
+  /// 天赋模块
+  /// </summary>
+  [pbr::OriginalName("MsgTalentInfoRes")] MsgTalentInfoRes = 20600,
+  /// <summary>
+  /// C->S 重置天赋
+  /// </summary>
+  [pbr::OriginalName("MsgTalentPointResetReq")] MsgTalentPointResetReq = 20601,
+  /// <summary>
+  /// S->C
+  /// </summary>
+  [pbr::OriginalName("MsgTalentPointResetRes")] MsgTalentPointResetRes = 20602,
+  /// <summary>
+  /// C->S 天赋升级
+  /// </summary>
+  [pbr::OriginalName("MsgTalentLevelReq")] MsgTalentLevelReq = 20603,
+  /// <summary>
+  /// S->C
+  /// </summary>
+  [pbr::OriginalName("MsgTalentLevelRes")] MsgTalentLevelRes = 20604,
+  /// <summary>
+  /// S->C 天赋点获得
+  /// </summary>
+  [pbr::OriginalName("MsgTalentAddPointNotifyRes")] MsgTalentAddPointNotifyRes = 20605,
+  /// <summary>
+  /// 装备模块
+  /// </summary>
+  [pbr::OriginalName("MsgEquipListRes")] MsgEquipListRes = 20700,
+  /// <summary>
+  /// C->S 锻造装备
+  /// </summary>
+  [pbr::OriginalName("MsgEquipForgingReq")] MsgEquipForgingReq = 20701,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgEquipForgingRes")] MsgEquipForgingRes = 20702,
+  /// <summary>
+  /// C->S 锻造升级
+  /// </summary>
+  [pbr::OriginalName("MsgForgingLevelReq")] MsgForgingLevelReq = 20704,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgForgingLevelRes")] MsgForgingLevelRes = 20705,
+  /// <summary>
+  /// C->S 装备上阵
+  /// </summary>
+  [pbr::OriginalName("MsgEquipBattleReq")] MsgEquipBattleReq = 20706,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgEquipBattleRes")] MsgEquipBattleRes = 20707,
+  /// <summary>
+  /// S->C 装备出售
+  /// </summary>
+  [pbr::OriginalName("MsgEquipSellReq")] MsgEquipSellReq = 20708,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgEquipSellRes")] MsgEquipSellRes = 20709,
+  /// <summary>
+  /// 建筑模块 ==========================================新版本========================================
+  /// </summary>
+  [pbr::OriginalName("MsgBuildInfoRes")] MsgBuildInfoRes = 20750,
+  /// <summary>
+  /// C->S 建筑加速
+  /// </summary>
+  [pbr::OriginalName("MsgBuildSpeedReq")] MsgBuildSpeedReq = 20751,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildSpeedRes")] MsgBuildSpeedRes = 20752,
+  /// <summary>
+  /// C->S 建筑解锁
+  /// </summary>
+  [pbr::OriginalName("MsgBuildUnlockReq")] MsgBuildUnlockReq = 20753,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildUnlockRes")] MsgBuildUnlockRes = 20754,
+  /// <summary>
+  /// C->S 建筑升级
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLevelReq")] MsgBuildLevelReq = 20755,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLevelRes")] MsgBuildLevelRes = 20756,
+  /// <summary>
+  /// C->S 建筑升级同步
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLevelSynReq")] MsgBuildLevelSynReq = 20757,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLevelSynRes")] MsgBuildLevelSynRes = 20758,
+  /// <summary>
+  /// C->S 动力核心升级
+  /// </summary>
+  [pbr::OriginalName("MsgBuildPowerCoreSkillReq")] MsgBuildPowerCoreSkillReq = 20759,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildPowerCoreSkillRes")] MsgBuildPowerCoreSkillRes = 20760,
+  /// <summary>
+  /// C->S 钢铁工厂/秘银工厂/矿石工厂/水晶工厂可以提升钢铁/秘银/矿石/水晶的资源生产 结算
+  /// </summary>
+  [pbr::OriginalName("MsgBuildProductionFinishReq")] MsgBuildProductionFinishReq = 20763,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildProductionFinishRes")] MsgBuildProductionFinishRes = 20764,
+  /// <summary>
+  /// S->C 建筑更新通知
+  /// </summary>
+  [pbr::OriginalName("MsgBuildNotifyRes")] MsgBuildNotifyRes = 20765,
+  /// <summary>
+  /// C->S 动力核心重置
+  /// </summary>
+  [pbr::OriginalName("MsgBuildPowerCoreSkillResetReq")] MsgBuildPowerCoreSkillResetReq = 20766,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildPowerCoreSkillResetRes")] MsgBuildPowerCoreSkillResetRes = 20767,
+  /// <summary>
+  /// C->S 购买试用队列
+  /// </summary>
+  [pbr::OriginalName("MsgBuildBuyQueueReq")] MsgBuildBuyQueueReq = 20768,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildBuyQueueRes")] MsgBuildBuyQueueRes = 20769,
+  /// <summary>
+  /// 建筑图书馆模块
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLibraryInfoRes")] MsgBuildLibraryInfoRes = 20800,
+  /// <summary>
+  /// C->S  图书馆加速
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLibrarySpeedReq")] MsgBuildLibrarySpeedReq = 20801,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLibrarySpeedRes")] MsgBuildLibrarySpeedRes = 20802,
+  /// <summary>
+  /// C->S  图书馆升级
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLibraryLevelReq")] MsgBuildLibraryLevelReq = 20803,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLibraryLevelRes")] MsgBuildLibraryLevelRes = 20804,
+  /// <summary>
+  /// C->S  图书馆升级同步
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLibraryLevelSynReq")] MsgBuildLibraryLevelSynReq = 20805,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLibraryLevelSynRes")] MsgBuildLibraryLevelSynRes = 20806,
+  /// <summary>
+  /// C->S  图书馆节解锁
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLibraryUnlockReq")] MsgBuildLibraryUnlockReq = 20807,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLibraryUnlockRes")] MsgBuildLibraryUnlockRes = 20808,
+  /// <summary>
+  /// 圣物模块
+  /// </summary>
+  [pbr::OriginalName("MsgHallowsListRes")] MsgHallowsListRes = 20850,
+  /// <summary>
+  /// C->S  圣物合成
+  /// </summary>
+  [pbr::OriginalName("MsgHallowsComposeReq")] MsgHallowsComposeReq = 20851,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHallowsComposeRes")] MsgHallowsComposeRes = 20852,
+  /// <summary>
+  /// C->S  圣物升级
+  /// </summary>
+  [pbr::OriginalName("MsgHallowsLevelReq")] MsgHallowsLevelReq = 20853,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHallowsLevelRes")] MsgHallowsLevelRes = 20854,
+  /// <summary>
+  /// C->S  圣物上阵
+  /// </summary>
+  [pbr::OriginalName("MsgHallowsBattleReq")] MsgHallowsBattleReq = 20855,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHallowsBattleRes")] MsgHallowsBattleRes = 20856,
+  /// <summary>
+  /// S->C  圣物新增
+  /// </summary>
+  [pbr::OriginalName("MsgAddHallowsRes")] MsgAddHallowsRes = 20857,
+  /// <summary>
+  /// C->S  圣物碎片合成
+  /// </summary>
+  [pbr::OriginalName("MsgHallowsItemComposeReq")] MsgHallowsItemComposeReq = 20858,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHallowsItemComposeRes")] MsgHallowsItemComposeRes = 20859,
+  /// <summary>
+  /// 遗物模块
+  /// </summary>
+  [pbr::OriginalName("MsgRelicListRes")] MsgRelicListRes = 20900,
+  /// <summary>
+  /// C->S  遗物合成
+  /// </summary>
+  [pbr::OriginalName("MsgRelicComposeReq")] MsgRelicComposeReq = 20901,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgRelicComposeRes")] MsgRelicComposeRes = 20902,
+  /// <summary>
+  /// C->S  遗物升级
+  /// </summary>
+  [pbr::OriginalName("MsgRelicLevelReq")] MsgRelicLevelReq = 20903,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgRelicLevelRes")] MsgRelicLevelRes = 20904,
+  /// <summary>
+  /// C->S  遗物上阵
+  /// </summary>
+  [pbr::OriginalName("MsgRelicBattleReq")] MsgRelicBattleReq = 20905,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgRelicBattleRes")] MsgRelicBattleRes = 20907,
+  /// <summary>
+  /// S->C  遗物新增
+  /// </summary>
+  [pbr::OriginalName("MsgAddRelicRes")] MsgAddRelicRes = 20908,
+  /// <summary>
+  /// C->S  遗物碎片合成
+  /// </summary>
+  [pbr::OriginalName("MsgRelicItemComposeReq")] MsgRelicItemComposeReq = 20909,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgRelicItemComposeRes")] MsgRelicItemComposeRes = 20910,
+  /// <summary>
+  /// 英雄酒馆模块
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubInfoRes")] MsgHeroPubInfoRes = 20950,
+  /// <summary>
+  /// C->S  解锁桌子
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubUnlockReq")] MsgHeroPubUnlockReq = 20951,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubUnlockRes")] MsgHeroPubUnlockRes = 20952,
+  /// <summary>
+  /// C->S  接待英雄-喝酒
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubServeReq")] MsgHeroPubServeReq = 20953,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubServeRes")] MsgHeroPubServeRes = 20954,
+  /// <summary>
+  /// C->S  领取接待奖励-收银
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubRewardReq")] MsgHeroPubRewardReq = 20955,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubRewardRes")] MsgHeroPubRewardRes = 20956,
+  /// <summary>
+  /// C->S  广告增加服务员
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubVideoWaiterReq")] MsgHeroPubVideoWaiterReq = 20957,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubVideoWaiterRes")] MsgHeroPubVideoWaiterRes = 20958,
+  /// <summary>
+  /// C->S  广告增加收钱员
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubVideoCashierReq")] MsgHeroPubVideoCashierReq = 20959,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubVideoCashierRes")] MsgHeroPubVideoCashierRes = 20960,
+  /// <summary>
+  /// C->S  开启商店
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubOpenShopReq")] MsgHeroPubOpenShopReq = 20961,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubOpenShopRes")] MsgHeroPubOpenShopRes = 20962,
+  /// <summary>
+  /// C->S  上菜状态记录
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubDishReq")] MsgHeroPubDishReq = 20963,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubDishRes")] MsgHeroPubDishRes = 20964,
+  /// <summary>
+  /// C->S  英雄/客人的生成
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubGuestReq")] MsgHeroPubGuestReq = 20965,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubGuestRes")] MsgHeroPubGuestRes = 20966,
+  /// <summary>
+  /// C->S  广告增加食材-灰复体力
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubVideoPowerReq")] MsgHeroPubVideoPowerReq = 20967,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubVideoPowerRes")] MsgHeroPubVideoPowerRes = 20968,
+  /// <summary>
+  /// C->S  领取接待奖励-展示
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubRewardShowReq")] MsgHeroPubRewardShowReq = 20969,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubRewardShowRes")] MsgHeroPubRewardShowRes = 20970,
+  /// <summary>
+  /// S->C  体力同步通知
+  /// </summary>
+  [pbr::OriginalName("MsgHeroPubPowerNotifyRes")] MsgHeroPubPowerNotifyRes = 20971,
+  /// <summary>
+  /// 能量魔方模块
+  /// </summary>
+  [pbr::OriginalName("MsgEnergyCubeListRes")] MsgEnergyCubeListRes = 21000,
+  /// <summary>
+  /// C->S  能量魔方合成
+  /// </summary>
+  [pbr::OriginalName("MsgEnergyCubeComposeReq")] MsgEnergyCubeComposeReq = 21001,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgEnergyCubeComposeRes")] MsgEnergyCubeComposeRes = 21002,
+  /// <summary>
+  /// C->S  能量魔方升级
+  /// </summary>
+  [pbr::OriginalName("MsgEnergyCubeLevelReq")] MsgEnergyCubeLevelReq = 21003,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgEnergyCubeLevelRes")] MsgEnergyCubeLevelRes = 21004,
+  /// <summary>
+  /// C->S  能量魔方上阵
+  /// </summary>
+  [pbr::OriginalName("MsgEnergyCubeBattleReq")] MsgEnergyCubeBattleReq = 21005,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgEnergyCubeBattleRes")] MsgEnergyCubeBattleRes = 21006,
+  /// <summary>
+  /// S->C  能量魔方新增
+  /// </summary>
+  [pbr::OriginalName("MsgAddEnergyCubeRes")] MsgAddEnergyCubeRes = 21007,
+  /// <summary>
+  /// C->S  能量魔方碎片合成
+  /// </summary>
+  [pbr::OriginalName("MsgEnergyCubeItemComposeReq")] MsgEnergyCubeItemComposeReq = 21008,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgEnergyCubeItemComposeRes")] MsgEnergyCubeItemComposeRes = 21009,
+  /// <summary>
+  /// 巨炮模块
+  /// </summary>
+  [pbr::OriginalName("MsgCannonInofoRes")] MsgCannonInofoRes = 21050,
+  /// <summary>
+  /// C->S  领取建造完成的巨炮
+  /// </summary>
+  [pbr::OriginalName("MsgCannonFinishReq")] MsgCannonFinishReq = 21055,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgCannonFinishRes")] MsgCannonFinishRes = 21056,
+  /// <summary>
+  /// C->S  巨炮合成
+  /// </summary>
+  [pbr::OriginalName("MsgCannonComposeReq")] MsgCannonComposeReq = 21058,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgCannonComposeRes")] MsgCannonComposeRes = 21059,
+  /// <summary>
+  /// C->S  巨炮上阵
+  /// </summary>
+  [pbr::OriginalName("MsgCannonBattleReq")] MsgCannonBattleReq = 21060,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgCannonBattleRes")] MsgCannonBattleRes = 21061,
+  /// <summary>
+  /// C->S  巨炮升级
+  /// </summary>
+  [pbr::OriginalName("MsgCannonUpLevelReq")] MsgCannonUpLevelReq = 21064,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgCannonUpLevelRes")] MsgCannonUpLevelRes = 21065,
+  /// <summary>
+  /// C->S  磨法实验室 熔炼
+  /// </summary>
+  [pbr::OriginalName("MsgCannonSmeltReq")] MsgCannonSmeltReq = 21066,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgCannonSmeltRes")] MsgCannonSmeltRes = 21067,
+  /// <summary>
+  /// 仓库模块
+  /// </summary>
+  [pbr::OriginalName("MsgWarehouseInfoRes")] MsgWarehouseInfoRes = 21100,
+  /// <summary>
+  /// S->C  仓库整形属性变更 value = 最终值
+  /// </summary>
+  [pbr::OriginalName("MsgChangeWarehouseAttrNumRes")] MsgChangeWarehouseAttrNumRes = 21101,
+  /// <summary>
+  ///通用解锁模块
+  /// </summary>
+  [pbr::OriginalName("MsgPassUnlockInfoRes")] MsgPassUnlockInfoRes = 21150,
+  /// <summary>
+  /// S->C  通用解锁整形属性变更 value = 最终值
+  /// </summary>
+  [pbr::OriginalName("MsgChangePassUnlockAttrNumRes")] MsgChangePassUnlockAttrNumRes = 21151,
+  /// <summary>
+  /// C->S  前端同步的解锁数据
+  /// </summary>
+  [pbr::OriginalName("MsgPassUnlockClientSynReq")] MsgPassUnlockClientSynReq = 21152,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgPassUnlockClientSynRes")] MsgPassUnlockClientSynRes = 21153,
+  /// <summary>
+  /// 勋章模块
+  /// </summary>
+  [pbr::OriginalName("MsgstMedalInfoRes")] MsgstMedalInfoRes = 21200,
+  /// <summary>
+  /// C->S  勋章解锁
+  /// </summary>
+  [pbr::OriginalName("MsgMedalUnlockReq")] MsgMedalUnlockReq = 21201,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgMedalUnlockRes")] MsgMedalUnlockRes = 21202,
+  /// <summary>
+  /// C->S  积分等级领奖
+  /// </summary>
+  [pbr::OriginalName("MsgMedalScoreRewardReq")] MsgMedalScoreRewardReq = 21203,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgMedalScoreRewardRes")] MsgMedalScoreRewardRes = 21204,
+  /// <summary>
+  /// 支付模块
+  /// </summary>
+  [pbr::OriginalName("MsgPayInfoRes")] MsgPayInfoRes = 21250,
+  /// <summary>
+  /// C->S  商店购买物品
+  /// </summary>
+  [pbr::OriginalName("MsgPayStoreBuyReq")] MsgPayStoreBuyReq = 21251,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgPayStoreBuyRes")] MsgPayStoreBuyRes = 21252,
+  /// <summary>
+  /// S->C  所有限时礼包信息
+  /// </summary>
+  [pbr::OriginalName("MsgPayGiftTimeInfoRes")] MsgPayGiftTimeInfoRes = 21260,
+  /// <summary>
+  /// C->S  购买限时礼包
+  /// </summary>
+  [pbr::OriginalName("MsgPayGiftTimeBuyReq")] MsgPayGiftTimeBuyReq = 21261,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgPayGiftTimeBuyRes")] MsgPayGiftTimeBuyRes = 21262,
+  /// <summary>
+  /// S->C  激活 限时礼包通知
+  /// </summary>
+  [pbr::OriginalName("MsgPayGiftTimeNotifyRes")] MsgPayGiftTimeNotifyRes = 21263,
+  /// <summary>
+  /// C->S 
+  /// </summary>
+  [pbr::OriginalName("MsgOrderCreationReq")] MsgOrderCreationReq = 21264,
+  /// <summary>
+  /// S->C   
+  /// </summary>
+  [pbr::OriginalName("MsgOrderCreationRes")] MsgOrderCreationRes = 21265,
+  /// <summary>
+  /// C->S 
+  /// </summary>
+  [pbr::OriginalName("MsgOrderFailReq")] MsgOrderFailReq = 21266,
+  /// <summary>
+  /// S->C   
+  /// </summary>
+  [pbr::OriginalName("MsgOrderFailRes")] MsgOrderFailRes = 21267,
+  /// <summary>
+  /// 新手成长模块
+  /// </summary>
+  [pbr::OriginalName("MsgNoviceDevelopmentInfoRes")] MsgNoviceDevelopmentInfoRes = 21300,
+  /// <summary>
+  /// C->S  领取新手成长奖励
+  /// </summary>
+  [pbr::OriginalName("MsgNoviceDevelopmentRewardReq")] MsgNoviceDevelopmentRewardReq = 21301,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgNoviceDevelopmentRewardRes")] MsgNoviceDevelopmentRewardRes = 21302,
+  /// <summary>
+  /// C->S  领线成长任务积分奖励
+  /// </summary>
+  [pbr::OriginalName("MsgNoviceDevelopmentScoreRewardReq")] MsgNoviceDevelopmentScoreRewardReq = 21303,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgNoviceDevelopmentScoreRewardRes")] MsgNoviceDevelopmentScoreRewardRes = 21304,
+  /// <summary>
+  /// 新手战令模块 
+  /// </summary>
+  [pbr::OriginalName("MsgNoviceWarOrderInfoRes")] MsgNoviceWarOrderInfoRes = 21350,
+  /// <summary>
+  /// C->S  领取新手战令奖励
+  /// </summary>
+  [pbr::OriginalName("MsgNoviceWarOrderRewardReq")] MsgNoviceWarOrderRewardReq = 21351,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgNoviceWarOrderRewardRes")] MsgNoviceWarOrderRewardRes = 21352,
+  /// <summary>
+  /// C->S  购买新手战令--测试用
+  /// </summary>
+  [pbr::OriginalName("MsgNoviceWarOrderBuyReq")] MsgNoviceWarOrderBuyReq = 21353,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgNoviceWarOrderBuyRes")] MsgNoviceWarOrderBuyRes = 21354,
+  /// <summary>
+  /// C->S  所有的占领任务完成时间
+  /// </summary>
+  [pbr::OriginalName("MsgNoviceWarOrderFinishTimeReq")] MsgNoviceWarOrderFinishTimeReq = 21355,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgNoviceWarOrderFinishTimeRes")] MsgNoviceWarOrderFinishTimeRes = 21356,
+  /// <summary>
+  /// 抽奖抽奖 古玩店/教堂/魔方 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLotteryDrawInfoRes")] MsgBuildLotteryDrawInfoRes = 21400,
+  /// <summary>
+  /// C->S  抽奖抽奖 古玩店/教堂/魔方
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLotteryDrawReq")] MsgBuildLotteryDrawReq = 21401,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgBuildLotteryDrawRes")] MsgBuildLotteryDrawRes = 21402,
+  /// <summary>
+  /// 月卡功能
+  /// </summary>
+  [pbr::OriginalName("MsgPayMonthCardInfoRes")] MsgPayMonthCardInfoRes = 21450,
+  /// <summary>
+  /// C->S  购买月卡----临时消息，后期转为充值功能处理
+  /// </summary>
+  [pbr::OriginalName("MsgPayMonthCardBuyReq")] MsgPayMonthCardBuyReq = 21451,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgPayMonthCardBuyRes")] MsgPayMonthCardBuyRes = 21452,
+  /// <summary>
+  /// C->S  领取月卡的奖励
+  /// </summary>
+  [pbr::OriginalName("MsgPayMonthCardReceiveReq")] MsgPayMonthCardReceiveReq = 21453,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("MsgPayMonthCardReceiveRes")] MsgPayMonthCardReceiveRes = 21454,
+  /// <summary>
+  /// 爬塔功能
+  /// </summary>
+  [pbr::OriginalName("BattleTowerInfoRes")] BattleTowerInfoRes = 21500,
+  /// <summary>
+  /// C->S  副本结算
+  /// </summary>
+  [pbr::OriginalName("FinishBattleTowerReq")] FinishBattleTowerReq = 21501,
+  /// <summary>
+  /// S->C
+  /// </summary>
+  [pbr::OriginalName("FinishBattleTowerRes")] FinishBattleTowerRes = 21502,
+  /// <summary>
+  /// C->S  快速结算
+  /// </summary>
+  [pbr::OriginalName("FastBattleTowerReq")] FastBattleTowerReq = 21503,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("FastBattleTowerRes")] FastBattleTowerRes = 21504,
+  /// <summary>
+  /// C->S  上阵魔石
+  /// </summary>
+  [pbr::OriginalName("CannonBattleTowerReq")] CannonBattleTowerReq = 21505,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("CannonBattleTowerRes")] CannonBattleTowerRes = 21506,
+  /// <summary>
+  /// C->S  上阵英雄
+  /// </summary>
+  [pbr::OriginalName("ExpeditionBattleTowerReq")] ExpeditionBattleTowerReq = 21507,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("ExpeditionBattleTowerRes")] ExpeditionBattleTowerRes = 21508,
+  /// <summary>
+  /// C->S  复活英雄
+  /// </summary>
+  [pbr::OriginalName("ResetBattleTowerReq")] ResetBattleTowerReq = 21509,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("ResetBattleTowerRes")] ResetBattleTowerRes = 21510,
+  /// <summary>
+  /// C->S  领取Buff
+  /// </summary>
+  [pbr::OriginalName("ReceiveBuffTowerReq")] ReceiveBuffTowerReq = 21511,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("ReceiveBuffTowerRes")] ReceiveBuffTowerRes = 21512,
+  /// <summary>
+  /// C->S  过天结算
+  /// </summary>
+  [pbr::OriginalName("NextDayFinishTowerReq")] NextDayFinishTowerReq = 21513,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("NextDayFinishTowerRes")] NextDayFinishTowerRes = 21514,
+  /// <summary>
+  /// C->S  刷新Buff
+  /// </summary>
+  [pbr::OriginalName("RefreshBuffTowerReq")] RefreshBuffTowerReq = 21515,
+  /// <summary>
+  /// S->C 
+  /// </summary>
+  [pbr::OriginalName("RefreshBuffTowerRes")] RefreshBuffTowerRes = 21516,
+}
+
+#endregion
+
 
 #endregion Designer generated code

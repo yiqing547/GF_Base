@@ -41,10 +41,16 @@ public class WebSocketComponent : GameFrameworkComponent
     /// </summary>
     /// <param name="msgID"></param>
     /// <param name="handler"></param>
-    public void Register(int msgID, OnRevicePacketMsg handler)
+    public void RegisterEvent(int msgID, OnRevicePacketMsg handler)
     {
         if (m_vHandles.ContainsKey(msgID)) return;
         m_vHandles.Add(msgID, handler);
+    }
+
+    public void UnRegisterEvent(int msgID)
+    {
+        if (!m_vHandles.ContainsKey(msgID)) return;
+        m_vHandles.Remove(msgID);
     }
 
     /// <summary>
@@ -140,7 +146,7 @@ public class WebSocketComponent : GameFrameworkComponent
     private void OnOpen(object sender, OpenEventArgs e)
     {
         //socket连接成功，广播成功事件
-        GameEntry.Event.Fire(ServerConnectSuccessEventArgs.EventId, ServerConnectSuccessEventArgs.Create());
+        GameEntry.Event.Fire(this, ServerConnectSuccessEventArgs.Create());
     }
 
     /// <summary>
