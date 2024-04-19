@@ -17,6 +17,7 @@ using UnityEngine;
 using UnityGameFramework.Runtime;
 using UnityEngine.Networking;
 using System;
+using HotfixBusiness.UnityWebSocket;
 
 namespace HotfixBusiness.UI
 {
@@ -27,6 +28,7 @@ namespace HotfixBusiness.UI
 	{
 		private int connectCount = 0;
 		private readonly int maxReconnectCount = 3;
+		private ServerInfo serverInfo;
 
 		protected override void OnInit(object userData)
 		{
@@ -37,6 +39,31 @@ namespace HotfixBusiness.UI
 			m_Btn_DeerExample.onClick.AddListener(Btn_DeerExampleEvent);
 			m_Btn_DeerGame.onClick.AddListener(Btn_DeerGameEvent);
 			/*--------------------Auto generate end button listener.Do not modify!----------------------*/
+		}
+
+		public override void OnRegisterEvent()
+		{
+			base.OnRegisterEvent();
+			GameEntry.WebSocket.Register((int)MID.LoginFinishRes, OnLoginFinish);
+			GameEntry.WebSocket.Register((int)MID.LoginRes, OnLoginRes);
+		}
+
+		private void OnLoginRes(byte[] msg)
+		{
+			LoginResponse loginResponse = ProtobufUtils.Deserialize<LoginResponse>(msg);
+			if (loginResponse != null)
+			{
+
+			}
+		}
+
+		private void OnLoginFinish(byte[] msg)
+		{
+			LoginFinishResponse loginFinishResponse = ProtobufUtils.Deserialize<LoginFinishResponse>(msg);
+			if (loginFinishResponse != null)
+			{
+
+			}
 		}
 
 		private void Btn_DeerExampleEvent()
@@ -56,7 +83,32 @@ namespace HotfixBusiness.UI
 			// 	procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureADeerExample);
 			// 	procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
 			// }
-			StartCoroutine(IRequestSeverList());
+			// StartCoroutine(IRequestSeverList());
+			string account = "yiqing";
+			LoginRequest request = new()
+			{
+				Account = account,
+				CellId = serverInfo.cellId,
+				Udid = SystemInfo.deviceUniqueIdentifier,
+				Version = Application.version,
+				Channel = "google",
+				OsInfo = SystemInfo.operatingSystem,
+#if EnableAnalytics
+            DistinctId = TDAnalytics.GetDistinctId() == null ? account : TDAnalytics.GetDistinctId(),
+#else
+				DistinctId = account,
+#endif
+			};
+
+#if UNITY_ANDROID
+        request.OsVersion = "Android";
+#elif UNITY_IOS
+        request.OsVersion = "iOS";
+#else
+			request.OsVersion = "other";
+#endif
+
+			GameEntry.WebSocket.Request((int)MID.LoginReq, request);
 		}
 
 		private void Btn_DeerGameEvent()
@@ -106,7 +158,8 @@ namespace HotfixBusiness.UI
 
 					if (servers.gateServers.Count > 0)
 					{
-						GameEntry.WebSocket.ConnectNet(servers.gateServers[0].ip, servers.gateServers[0].port);
+						serverInfo = servers.gateServers[0];
+						GameEntry.WebSocket.ConnectNet(serverInfo.ip, serverInfo.port);
 					}
 				}
 			}

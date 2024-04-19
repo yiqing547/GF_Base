@@ -1,0 +1,489 @@
+syntax = "proto3";
+option java_package = "com.topgame.message";
+option csharp_namespace ="HotfixBusiness.UnityWebSocket";
+
+enum MID{
+	None  											= 0;
+	/// 服务器内部消息===========================================================================
+	ServerRegisterReq 								= 101; // 注册服务器消息
+	ServerRegisterRes 								= 102; // 注册服务器消息
+	ServerListReq 									= 103; // 获取服务器列表
+	ServerListRes 									= 104; // 获取服务器列表
+	ChangeRoleServerReq 							= 105; // 改变角色服务器
+	ChangeRoleServerRes 							= 106; // 改变角色服务器
+	ServerEventReq 									= 107; // 服务器事件
+	ServerEventRes 									= 108; // 服务器事件
+	ServerStatusRes 								= 109; // 服务器状态 	
+
+	DefaultGateReq 									= 200;
+	DefaultGateRes 									= 201;	
+	
+	ServerMailsReq 									= 301;
+	DefaultServerMailReq 							= 302;
+	TaskSeasonReq 									= 303;
+	DefaultServerMarqueeReq 						= 304;
+	InfiniteParkourSeasonReq 						= 305;
+	InfiniteParkourChangeReq 						= 306;
+	UserServerReq 									= 307;
+	AddFriendLogReq 								= 308;
+	SetOtherTriggerReq 								= 309;
+	UserInfoChangeReq 								= 310;	
+	ServerGMEventReq 								= 311;	
+	
+	/// 客户端消息================================================================================
+
+	
+	// 登陆
+	LoginReq 										= 10001; // 登录
+	LoginRes 										= 10002; // 登录 
+	HeartReq 										= 10011; // 心跳
+	HeartRes 										= 10012; // 心跳
+	KillUserRes 									= 10013; // 玩家被踢下线
+	MessageSeedRes 									= 10014; // 消息种子
+	LoginFinishRes 									= 10015; // 登陆完成
+	VerifiedReq										= 10016; // 实名认证
+	VerifiedRes										= 10017; // 实名认证	
+	TicketLoginExReq 								= 10018; // Ticket登录
+	TicketReLoginExReq								= 10019; // Ticket登录
+	TicketLoginInternalReq 							= 10020; // Ticket登录（服务器内部使用）
+	LogoutReq 										= 10021; // 登出
+	LogoutRes 										= 10022; // 登出
+	LoginInternalReq 								= 10023;
+	
+	// 通用消息
+ 	GMCommandReq 									= 10100; // GM命令
+	GMCommandRes	 								= 10101; // GM命令 
+	SystemErrorRes 									= 10102; // 系统错误
+	UserActionReq 									= 10103; // 玩家行为
+	UserErrorRes 									= 10104; // 错误统一消息	
+ 
+	// 用户基础信息
+	UserInfoRes 									= 10300; // S->C 用户信息
+	AvatarsInfoReq 									= 10301; // 头像信息
+	AvatarsInfoRes 									= 10302; // 头像信息
+	AvatarFrameInfoReq 								= 10303; // 头像框信息
+	AvatarFrameInfoRes 								= 10304; // 头像框信息
+	TitleInfoReq 									= 10305; // 称号信息
+	TitleInfoRes 									= 10306; // 称号信息	
+	ChangeAvatarsReq 								= 10307; // 更换头像
+	ChangeAvatarsRes 								= 10308; // 更换头像
+	ChangeAvatarFrameReq 							= 10309; // 更换头像框
+	ChangeAvatarFrameRes 							= 10310; // 更换头像框
+	ChangeTitleReq 									= 10311; // 更换称号
+	ChangeTitleRes 									= 10312; // 更换称号
+	ChangeUsernameReq 								= 10313; // 修改昵称
+	ChangeUsernameRes 								= 10314; // 修改昵称 
+	MarqueeRes 										= 10315; // 跑马灯	 
+	NewRedDotReq 									= 10316; // 单个红点信息 
+	NewRedDotRes 									= 10317; // 单个红点信息 
+	AllNewRedDotsRes 								= 10318; // 红点信息
+	ChangeAttrNumRes 								= 10319; // S->C 整形属性变更 value = 最终值
+	AttributeRes 									= 10320; // 属性变更 
+	CombatRes 										= 10321; // 战斗力变更 
+	UnlockAvatarsReq 								= 10322; // 解锁头像
+	UnlockAvatarsRes 								= 10323; // 解锁头像 
+	UnlockTitleReq 									= 10324; // 解锁称号
+	UnlockTitleRes 									= 10325; // 解锁称号
+	UserInfoSyncReq 								= 10326; // 同步玩家信息（服务器内部使用）
+	CombatSyncReq									= 10327; // 同步玩家战斗力（服务器内部使用）
+	UserStageSyncReq								= 10328; // 同步玩家关卡进度（服务器内部使用）
+	NoviceGuidanceRes								= 10329; // 新手引导信息
+	NoviceGuidanceStepReq							= 10332; // 设置新手引导进度
+	NoviceGuidanceStepRes							= 10333; // 设置新手引导进度
+	OnlineTimeReq 								    = 10334; // 在线时间设置（客户端打点用）
+	OnlineTimeRes 								    = 10335; // 在线时间设置（客户端打点用）
+	WatchingAdvertisementsReq                       = 10336; // 看广告
+	WatchingAdvertisementsRes                       = 10337; // 看广告
+	RechargeStatisticsReq 							= 10338; // 充值次数统计
+	RechargeStatisticsRes 							= 10339; // 充值次数统计
+	
+	// 邮件
+	MailInfoRes 									= 10400; // 登录邮件信息推送
+	AddMailNoticeRes 								= 10401; // 新增邮件通知
+	SynAllSerMailReq 								= 10402; // 请求最新全服邮件
+	ReceiveMailReq 									= 10403; // 领取邮件
+	ReceiveMailRes 									= 10404; // 
+	DeleteMailReq 									= 10405; // 一键删除邮件
+	DeleteMailRes 									= 10406; // 
+	ReadMailReq 									= 10407; // 阅读邮件--支持多封邮件
+	ReadMailRes 									= 10408; // 
+
+	// VIP
+	VipInfoRes 										= 10414; // VIP信息
+	RewardVipReq 									= 10415; // VIP领奖
+	RewardVipRes 									= 10416; // VIP领奖
+	ViewVideoReq                                    = 10417; // 观看视频
+	ViewVideoRes                                    = 10418; // 观看视频
+	BuffInfoRes                                     = 10419; // buff信息
+	BuySpecialStoreReq                              = 10420; // 购买特权商店
+	BuySpecialStoreRes                              = 10421; // 购买特权商店
+	DailyStoreInfoRes                               = 10422; // 每日每周商店信息
+	BuyDailyStoreReq                                = 10423; // 购买每日每周商店
+	BuyDailyStoreRes                                = 10424; // 购买每日每周商店
+	BuyDiamondStoreReq                              = 10425; // 购买钻石商店
+	BuyDiamondStoreRes                              = 10426; // 购买钻石商店
+	HW_SynMailReq 									= 10427; // 邮件同步
+	HW_SynMailRes 									= 10428; // 
+	AddAllServerMailNoticeRes 						= 10429; // 广播给前端 最新的全服消息编号
+	NewRollNoticeReq 								= 10430; // 
+	NewRollNoticeRes 								= 10431; // 新增 OR 修改 跑马灯公告通知
+
+	// 社交
+	ViewPlayerReq = 10500; // 查看他人信息
+	ViewPlayerRes = 10501; // 查看他人信息
+	ReceptionRoomReq = 10502; // 获取访客列表
+	ReceptionRoomRes = 10503; // 获取访客列表
+	RewardReceptionRoomReq = 10504; // 领取拜访问奖励
+	RewardReceptionRoomRes = 10505; // 领取拜访问奖励
+	PlayerViewReq = 10506; // 拜访列表
+	PlayerViewRes = 10507; // 拜访列表
+	VisitPlayerReq = 10508; // 拜访玩家
+	VisitPlayerRes = 10509; // 拜访玩家
+	PlunderPlayerReq = 10510; // 掠夺玩家
+	PlunderPlayerRes = 10511; // 掠夺玩家
+	ExpulsionPlayerReq = 10512; // 驱逐玩家
+	ExpulsionPlayerRes = 10513; // 驱逐玩家
+	RecallHeroReq = 10514; // 召回英雄
+	RecallHeroRes = 10515; // 召回英雄
+	OneClickVisitPlayerReq = 10516; // 一键拜访
+	OneClickVisitPlayerRes = 10517; // 一键拜访
+	PlayerEntryReq = 10518; // 玩家列表
+	PlayerEntryRes = 10519; // 玩家列表
+	PlayerEntryRefreshReq = 10520; // 刷新玩家列表
+	PlayerEntryRefreshRes = 10521; // 刷新玩家列表
+	ViewVisitLogReq = 10522; // 事件日志
+	ViewVisitLogRes = 10523; // 事件日志
+	RewardViewVisitLogReq = 10524; // 领取事件奖励
+	RewardViewVisitLogRes = 10525; // 领取事件奖励
+	ViewPlayerBuildReq = 10526; // 查看他人建筑信息
+	ViewPlayerBuildRes = 10527; // 查看他人建筑信息
+	SocializeItemRes = 10528; // 社交道具信息
+	VisitPlayerSyncReq = 10529; // 同步拜访玩家信息（服务器内部使用）
+	PlunderSyncReq = 10530; // 同步掠夺信息（服务器内部使用）
+	PlunderBuildClearReq = 10531; // 清除建筑信息（服务器内部使用）
+	SocializeLogSyncReq = 10532; // 同步玩家日志（服务器内部使用）
+	RewardShieldReq = 10533;
+	RewardShieldRes = 10534;
+	
+	// 排行榜
+	ViewSelfRankingReq = 10600; // 查看自己排行榜信息
+	ViewSelfRankingRes = 10601; // 查看自己排行榜信息
+	ViewRankingReq = 10602; // 查看排行榜信息
+	ViewRankingRes = 10603; // 查看排行榜信息
+	RewardRankingReq = 10604; // 排行榜领奖
+	RewardRankingRes = 10605; // 排行榜领奖
+	ViewSelfRankingInternalReq = 10606; // 查看自己排行榜信息（服务器内部使用）
+	StageChangeRes = 10607; // 段位变更 
+
+	// 战斗相关 - 关卡
+	BattleInfoRes 									= 20000; // S->C 战斗登录推送
+	EnterBattleReq 									= 20001; // C->S 进入战斗
+	EnterBattleRes 									= 20002; // S->C 进入战斗
+	FinishBattleReq 								= 20003; // C->S 战斗结算
+	FinishBattleRes 								= 20004; // S->C 战斗结算
+	FinishMopUpReq 									= 20006; // C->S 副本扫荡结算
+	FinishMopUpRes 									= 20007; // S->C 
+	EnterLifeBattleReq 								= 20008; // C->S 进入刷血副本
+	EnterLifeBattleRes 								= 20009; // S->C 
+	FinishLifeBattleReq 							= 20010; // C->S 刷血副本结算
+	FinishLifeBattleRes 							= 20011; // S->C 
+	FinishLifeMopUpReq 								= 20012; // C->S 刷血副本扫荡结算
+	FinishLifeMopUpRes 								= 20013; // S->C 
+	BattleTicketResetReq 							= 20014; // C->S 副本门票刷新请求
+	BattleTicketResetRes 							= 20015; // S->C 
+	StageFinishBattleReq 							= 20016; // C->S 关卡挂机结算
+	StageFinishBattleRes 							= 20017; // S->C 
+	StageHangingOffLineFinishRes 					= 20018; // S->C 关卡离线挂机结算
+	StageAdvanceFinishBattleReq 					= 20020; // C->S 关卡进度结算
+	StageAdvanceFinishBattleRes 					= 20021; // S->C
+	EnterStageBattleReq 							= 20022; // C->S 进入挂机关卡预结算
+	EnterStageBattleRes 							= 20023; // S->C
+	StageAdvanceBoxFinishBattleReq 					= 20024; // C->S 关卡宝箱结算
+	StageAdvanceBoxFinishBattleRes 					= 20025; // S->C
+
+	// 英雄模块 -----------------
+ 	MsgHeroListRes 									= 20100; // S->C 英雄列表	
+	MsgHeroComposeReq								= 20101; // C->S 英雄合成
+	MsgHeroComposeRes								= 20102; // S->C 英雄合成
+	MsgHeroLevelReq									= 20104; // C->S 英雄升级
+	MsgHeroLevelRes									= 20105; // S->C 英雄升级
+	MsgHeroBattleReq								= 20106; // C->S 英雄上阵
+	MsgHeroBattleRes								= 20107; // S->C 英雄上阵
+	MsgAddHeroRes	 								= 20108; // S->C 英雄新增
+	MsgHeroUpStarReq								= 20109; // C->S 英雄升星
+	MsgHeroUpStarRes								= 20110; // S->C 英雄升星
+	MsgHeroItemComposeReq							= 20111; // C->S 英雄碎片合成
+	MsgHeroItemComposeRes							= 20112; // S->C 
+
+	// 物品模块-----------------
+ 	MsgItemListRes 									= 20150; // S->C 物品列表	
+	MsgAddItemReq									= 20151; // C->S 新增物品
+	MsgAddItemRes									= 20152; // S->C 新增物品
+	MsgRemoveItemRes  								= 20153; // S->C 移除物品
+	MsgOpenBoxReq 									= 20154; // C->S 打开箱子
+	MsgOpenBoxRes									= 20155; // S->C 
+	MsgComposeReq 									= 20156; // C->S 物品合成
+	MsgComposeRes									= 20157; // S->C 
+
+	// 武器模块
+ 	MsgWeaponListRes 								= 20200; // S->C 武器列表	
+	MsgWeaponComposeReq								= 20201; // C->S 武器合成
+	MsgWeaponComposeRes								= 20202; // S->C 武器合成
+	MsgWeaponLevelReq								= 20204; // C->S 武器升级
+	MsgWeaponLevelRes								= 20205; // S->C 武器升级
+	MsgWeaponBattleReq								= 20206; // C->S 武器上阵
+	MsgWeaponBattleRes								= 20207; // S->C 武器上阵
+	MsgAddWeaponRes	 								= 20208; // S->C 武器新增
+	MsgWeaponBattleInitRes	 						= 20209; // S->C 英雄武器初始化
+
+	// 商店模块
+	MsgShopInfoRes 									= 20250; // S->C 商店基本信息	
+	MsgBuyItemReq									= 20251; // C->S 商店购买
+	MsgBuyItemRes									= 20252; // S->C 商店购买
+
+	// 黑市商店模块
+	BlackMarketInfoRes 								= 20300; // S->C 登录推送黑市模块信息	
+	MsgBuyBlackMarketReq							= 20301; // C->S 黑市商店购买
+	MsgBuyBlackMarketRes							= 20302; // S->C 
+	MsgResetBlackMarketReq							= 20303; // C->S 黑市商店刷新
+	MsgResetBlackMarketRes							= 20304; // S->C 
+
+	// 循环签到模块
+	MsgLoopSignInfoRes 								= 20350; // S->C 循环签到基础信息	
+	MsgLoopSignReq									= 20351; // C->S 签到请求
+	MsgLoopSignRes									= 20352; // S->C 
+
+	// 主线任务模块
+	MsgMainTaskInfoRes 								= 20400; // S->C 主线任务基础信息	
+	MsgMainTaskRewardReq							= 20401; // C->S 领取任务奖励请求
+	MsgMainTaskRewardRes							= 20402; // S->C 
+	MsgCycleTaskRewardReq							= 20403; // C->S 领取循环任务奖励
+	MsgCycleTaskRewardRes							= 20404; // S->C 
+	MsgCycleTaskScoreRewardReq						= 20405; // C->S 领线循环任务积分奖励
+	MsgCycleTaskScoreRewardRes						= 20406; // S->C 
+
+
+	// 日常任务模块
+	MsgDailyTaskInfoRes 							= 20450; // S->C 日常任务基础信息	
+	MsgDailyTaskRewardReq							= 20451; // C->S 领线日常任务奖励
+	MsgDailyTaskRewardRes							= 20452; // S->C
+	MsgDailyTaskScoreRewardReq						= 20453; // C->S 领线日常任务积分奖励
+	MsgDailyTaskScoreRewardRes						= 20454; // S->C
+
+	// 图鉴模块
+	MsgstBestiaryInfoRes 							= 20500; // S->C 图鉴解锁基础信息	
+	MsgBestiaryUnlockReq							= 20501; // C->S 图鉴解锁
+	MsgBestiaryUnlockRes							= 20502; // S->C
+	MsgBestiaryRewardReq							= 20503; // C->S 图鉴领奖
+	MsgBestiaryRewardRes							= 20504; // S->C
+
+	// 成长养成模块
+	MsgDevelopmentRes 								= 20550; // S->C 养成基础信息	
+	MsgDevelopmentLevelReq							= 20551; // C->S 养成升级
+	MsgDevelopmentLevelRes							= 20552; // S->C
+
+	// 天赋模块
+	MsgTalentInfoRes 								= 20600; // S->C 养成基础信息	
+	MsgTalentPointResetReq							= 20601; // C->S 重置天赋
+	MsgTalentPointResetRes							= 20602; // S->C
+	MsgTalentLevelReq								= 20603; // C->S 天赋升级
+	MsgTalentLevelRes								= 20604; // S->C
+	MsgTalentAddPointNotifyRes						= 20605; // S->C 天赋点获得
+
+	// 装备模块
+ 	MsgEquipListRes 								= 20700; // S->C 装备基础信息
+	MsgEquipForgingReq								= 20701; // C->S 锻造装备
+	MsgEquipForgingRes								= 20702; // S->C 
+	MsgForgingLevelReq								= 20704; // C->S 锻造升级
+	MsgForgingLevelRes								= 20705; // S->C 
+	MsgEquipBattleReq								= 20706; // C->S 装备上阵
+	MsgEquipBattleRes								= 20707; // S->C 
+	MsgEquipSellReq	 								= 20708; // S->C 装备出售
+	MsgEquipSellRes	 								= 20709; // S->C 
+
+	// 建筑模块 ==========================================新版本========================================
+	MsgBuildInfoRes 								= 20750; // S->C 建筑基础信息
+	MsgBuildSpeedReq								= 20751; // C->S 建筑加速
+	MsgBuildSpeedRes								= 20752; // S->C 
+	MsgBuildUnlockReq								= 20753; // C->S 建筑解锁
+	MsgBuildUnlockRes								= 20754; // S->C 
+	MsgBuildLevelReq								= 20755; // C->S 建筑升级
+	MsgBuildLevelRes								= 20756; // S->C 
+	MsgBuildLevelSynReq								= 20757; // C->S 建筑升级同步
+	MsgBuildLevelSynRes								= 20758; // S->C 
+	MsgBuildPowerCoreSkillReq						= 20759; // C->S 动力核心升级
+	MsgBuildPowerCoreSkillRes						= 20760; // S->C 
+	MsgBuildProductionFinishReq						= 20763; // C->S 钢铁工厂/秘银工厂/矿石工厂/水晶工厂可以提升钢铁/秘银/矿石/水晶的资源生产 结算
+	MsgBuildProductionFinishRes						= 20764; // S->C 
+	MsgBuildNotifyRes								= 20765; // S->C 建筑更新通知
+	MsgBuildPowerCoreSkillResetReq					= 20766; // C->S 动力核心重置
+	MsgBuildPowerCoreSkillResetRes					= 20767; // S->C 
+	MsgBuildBuyQueueReq								= 20768; // C->S 购买试用队列
+	MsgBuildBuyQueueRes								= 20769; // S->C 
+
+
+	// 建筑图书馆模块
+	MsgBuildLibraryInfoRes 							= 20800; // S->C  图书馆基础信息
+	MsgBuildLibrarySpeedReq							= 20801; // C->S  图书馆加速
+	MsgBuildLibrarySpeedRes							= 20802; // S->C 
+	MsgBuildLibraryLevelReq							= 20803; // C->S  图书馆升级
+	MsgBuildLibraryLevelRes							= 20804; // S->C 
+	MsgBuildLibraryLevelSynReq						= 20805; // C->S  图书馆升级同步
+	MsgBuildLibraryLevelSynRes						= 20806; // S->C 
+	MsgBuildLibraryUnlockReq						= 20807; // C->S  图书馆节解锁
+	MsgBuildLibraryUnlockRes						= 20808; // S->C 
+
+	// 圣物模块
+	MsgHallowsListRes 								= 20850; // S->C  圣物基础信息
+	MsgHallowsComposeReq							= 20851; // C->S  圣物合成
+	MsgHallowsComposeRes							= 20852; // S->C 
+	MsgHallowsLevelReq								= 20853; // C->S  圣物升级
+	MsgHallowsLevelRes								= 20854; // S->C 
+	MsgHallowsBattleReq								= 20855; // C->S  圣物上阵
+	MsgHallowsBattleRes								= 20856; // S->C 
+	MsgAddHallowsRes								= 20857; // S->C  圣物新增
+	MsgHallowsItemComposeReq						= 20858; // C->S  圣物碎片合成
+	MsgHallowsItemComposeRes						= 20859; // S->C 
+
+	// 遗物模块
+	MsgRelicListRes 								= 20900; // S->C  遗物基础信息
+	MsgRelicComposeReq								= 20901; // C->S  遗物合成
+	MsgRelicComposeRes								= 20902; // S->C 
+	MsgRelicLevelReq								= 20903; // C->S  遗物升级
+	MsgRelicLevelRes								= 20904; // S->C 
+	MsgRelicBattleReq								= 20905; // C->S  遗物上阵
+	MsgRelicBattleRes								= 20907; // S->C 
+	MsgAddRelicRes									= 20908; // S->C  遗物新增
+	MsgRelicItemComposeReq							= 20909; // C->S  遗物碎片合成
+	MsgRelicItemComposeRes							= 20910; // S->C 
+
+	// 英雄酒馆模块
+	MsgHeroPubInfoRes 								= 20950; // S->C  英雄酒馆基础信息
+	MsgHeroPubUnlockReq								= 20951; // C->S  解锁桌子
+	MsgHeroPubUnlockRes								= 20952; // S->C 
+	MsgHeroPubServeReq								= 20953; // C->S  接待英雄-喝酒
+	MsgHeroPubServeRes								= 20954; // S->C 
+	MsgHeroPubRewardReq								= 20955; // C->S  领取接待奖励-收银
+	MsgHeroPubRewardRes								= 20956; // S->C 
+	MsgHeroPubVideoWaiterReq						= 20957; // C->S  广告增加服务员
+	MsgHeroPubVideoWaiterRes						= 20958; // S->C 
+	MsgHeroPubVideoCashierReq						= 20959; // C->S  广告增加收钱员
+	MsgHeroPubVideoCashierRes						= 20960; // S->C 
+	MsgHeroPubOpenShopReq							= 20961; // C->S  开启商店
+	MsgHeroPubOpenShopRes							= 20962; // S->C 
+	MsgHeroPubDishReq								= 20963; // C->S  上菜状态记录
+	MsgHeroPubDishRes								= 20964; // S->C 
+	MsgHeroPubGuestReq								= 20965; // C->S  英雄/客人的生成
+	MsgHeroPubGuestRes								= 20966; // S->C 
+	MsgHeroPubVideoPowerReq							= 20967; // C->S  广告增加食材-灰复体力
+	MsgHeroPubVideoPowerRes							= 20968; // S->C 
+	MsgHeroPubRewardShowReq							= 20969; // C->S  领取接待奖励-展示
+	MsgHeroPubRewardShowRes							= 20970; // S->C 
+	MsgHeroPubPowerNotifyRes						= 20971; // S->C  体力同步通知
+
+
+
+	// 能量魔方模块
+	MsgEnergyCubeListRes 							= 21000; // S->C  能量魔方基础信息
+	MsgEnergyCubeComposeReq							= 21001; // C->S  能量魔方合成
+	MsgEnergyCubeComposeRes							= 21002; // S->C 
+	MsgEnergyCubeLevelReq							= 21003; // C->S  能量魔方升级
+	MsgEnergyCubeLevelRes							= 21004; // S->C 
+	MsgEnergyCubeBattleReq							= 21005; // C->S  能量魔方上阵
+	MsgEnergyCubeBattleRes							= 21006; // S->C 
+	MsgAddEnergyCubeRes								= 21007; // S->C  能量魔方新增
+	MsgEnergyCubeItemComposeReq						= 21008; // C->S  能量魔方碎片合成
+	MsgEnergyCubeItemComposeRes						= 21009; // S->C 
+
+	// 巨炮模块
+	MsgCannonInofoRes 								= 21050; // S->C  巨炮基础信息
+	MsgCannonFinishReq								= 21055; // C->S  领取建造完成的巨炮
+	MsgCannonFinishRes								= 21056; // S->C 
+	MsgCannonComposeReq								= 21058; // C->S  巨炮合成
+	MsgCannonComposeRes								= 21059; // S->C 
+	MsgCannonBattleReq								= 21060; // C->S  巨炮上阵
+	MsgCannonBattleRes								= 21061; // S->C 
+	MsgCannonUpLevelReq								= 21064; // C->S  巨炮升级
+	MsgCannonUpLevelRes								= 21065; // S->C 
+	MsgCannonSmeltReq								= 21066; // C->S  磨法实验室 熔炼
+	MsgCannonSmeltRes								= 21067; // S->C 
+
+	// 仓库模块
+	MsgWarehouseInfoRes 							= 21100; // S->C  仓库基本属性
+	MsgChangeWarehouseAttrNumRes 					= 21101; // S->C  仓库整形属性变更 value = 最终值
+
+	//通用解锁模块
+	MsgPassUnlockInfoRes 							= 21150; // S->C  通用解锁基本属性
+	MsgChangePassUnlockAttrNumRes 					= 21151; // S->C  通用解锁整形属性变更 value = 最终值
+	MsgPassUnlockClientSynReq						= 21152; // C->S  前端同步的解锁数据
+	MsgPassUnlockClientSynRes						= 21153; // S->C 
+
+
+	// 勋章模块
+	MsgstMedalInfoRes 								= 21200; // S->C  勋章基础信息
+	MsgMedalUnlockReq								= 21201; // C->S  勋章解锁
+	MsgMedalUnlockRes								= 21202; // S->C 
+	MsgMedalScoreRewardReq							= 21203; // C->S  积分等级领奖
+	MsgMedalScoreRewardRes							= 21204; // S->C 
+
+	// 支付模块
+	MsgPayInfoRes 									= 21250; // S->C  支付模块信息
+	MsgPayStoreBuyReq								= 21251; // C->S  商店购买物品
+	MsgPayStoreBuyRes								= 21252; // S->C 
+
+	MsgPayGiftTimeInfoRes 							= 21260; // S->C  所有限时礼包信息
+	MsgPayGiftTimeBuyReq							= 21261; // C->S  购买限时礼包
+	MsgPayGiftTimeBuyRes							= 21262; // S->C 
+	MsgPayGiftTimeNotifyRes							= 21263; // S->C  激活 限时礼包通知
+	MsgOrderCreationReq								= 21264; // C->S 
+	MsgOrderCreationRes								= 21265; // S->C   
+	MsgOrderFailReq									= 21266; // C->S 
+	MsgOrderFailRes									= 21267; // S->C   
+
+	// 新手成长模块
+	MsgNoviceDevelopmentInfoRes 					= 21300; // S->C  新手成长基础信息
+	MsgNoviceDevelopmentRewardReq					= 21301; // C->S  领取新手成长奖励
+	MsgNoviceDevelopmentRewardRes					= 21302; // S->C 
+	MsgNoviceDevelopmentScoreRewardReq				= 21303; // C->S  领线成长任务积分奖励
+	MsgNoviceDevelopmentScoreRewardRes				= 21304; // S->C 
+
+	// 新手战令模块 
+	MsgNoviceWarOrderInfoRes 						= 21350; // S->C  新手战令奖基础信息
+	MsgNoviceWarOrderRewardReq						= 21351; // C->S  领取新手战令奖励
+	MsgNoviceWarOrderRewardRes						= 21352; // S->C 
+	MsgNoviceWarOrderBuyReq							= 21353; // C->S  购买新手战令--测试用
+	MsgNoviceWarOrderBuyRes							= 21354; // S->C 
+	MsgNoviceWarOrderFinishTimeReq					= 21355; // C->S  所有的占领任务完成时间
+	MsgNoviceWarOrderFinishTimeRes					= 21356; // S->C 
+
+	// 抽奖抽奖 古玩店/教堂/魔方 
+	MsgBuildLotteryDrawInfoRes 						= 21400; // S->C  新手战令奖基础信息
+	MsgBuildLotteryDrawReq							= 21401; // C->S  抽奖抽奖 古玩店/教堂/魔方
+	MsgBuildLotteryDrawRes							= 21402; // S->C 
+
+	// 月卡功能
+	MsgPayMonthCardInfoRes 							= 21450; // S->C  月卡基础信息
+	MsgPayMonthCardBuyReq							= 21451; // C->S  购买月卡----临时消息，后期转为充值功能处理
+	MsgPayMonthCardBuyRes							= 21452; // S->C 
+	MsgPayMonthCardReceiveReq						= 21453; // C->S  领取月卡的奖励
+	MsgPayMonthCardReceiveRes						= 21454; // S->C 
+
+	// 爬塔功能
+	BattleTowerInfoRes 								= 21500; // S->C  登录推送
+	FinishBattleTowerReq							= 21501; // C->S  副本结算
+	FinishBattleTowerRes							= 21502; // S->C
+	FastBattleTowerReq								= 21503; // C->S  快速结算
+	FastBattleTowerRes								= 21504; // S->C 
+	CannonBattleTowerReq							= 21505; // C->S  上阵魔石
+	CannonBattleTowerRes							= 21506; // S->C 
+	ExpeditionBattleTowerReq						= 21507; // C->S  上阵英雄
+	ExpeditionBattleTowerRes						= 21508; // S->C 
+	ResetBattleTowerReq								= 21509; // C->S  复活英雄
+	ResetBattleTowerRes								= 21510; // S->C 
+	ReceiveBuffTowerReq								= 21511; // C->S  领取Buff
+	ReceiveBuffTowerRes								= 21512; // S->C 
+	NextDayFinishTowerReq							= 21513; // C->S  过天结算
+	NextDayFinishTowerRes							= 21514; // S->C 
+	RefreshBuffTowerReq								= 21515; // C->S  刷新Buff
+	RefreshBuffTowerRes								= 21516; // S->C 
+}

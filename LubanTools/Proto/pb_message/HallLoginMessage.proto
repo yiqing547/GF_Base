@@ -1,0 +1,196 @@
+syntax = "proto3";
+option java_package = "com.topgame.message.hall";
+option csharp_namespace ="HotfixBusiness.UnityWebSocket"; 
+
+// 登录类型
+enum LoginType{
+    Account = 0; //账号登录
+	FastLogin = 1; //快速登录
+}
+
+enum LoginErrorCode{
+    Success = 0; //成功
+	WrongPassword = 1; // 密码错误
+	PasswordLength = 2; // 密码长度错误
+	AccountLength = 3; // 帐号长度错误
+	PasswordChar = 4; // 密码字符错误
+	AccountChar = 5; // 帐号字符错误
+	AccountLoggedIn = 6; // 帐号已登陆
+	Banned = 7; // 帐号被封
+	NoServer = 8; // 服务器不可用
+	LoginTicketInvalid = 9;
+	Exception = 10; // 账号异常
+	ServerIdError = 11; // 服务器ID错误
+}
+
+//登录（进入游戏）
+message LoginRequest {
+	int64 sessionID = 1; // 会话ID（服务器内部使用）
+	int32 gateId = 2; // 网关ID（服务器内部使用）
+	string ip = 3; // IP地址（服务器内部使用）
+	bool isNeedOverload = 4;//（服务器内部使用） 
+	bool isNewUser = 20;	//（服务器内部使用）
+
+	string account = 5; // 账号
+	string password = 6; // 密码
+    LoginType loginType = 7; // 登录类型 
+	string version = 8; // 版本号
+	bool isMandatory = 9; // 是否强制登陆
+	int32 pt = 10; // 枚举，平台类型：1-> iOS，2-> android，3-> 其他]
+	string udid = 11; // 设备唯一标识 
+	string osInfo = 12; // 操作系统信息，ios 11.0.1等]
+	string deviceType = 13; // 设备类型ipad， iPhone、HUAWEI、小米、OPPO、VIVO等
+	string deviceModel = 14; // 设备型号iPhone6s，ipad mini2，oppoR9，vivo x7等等	
+	string registrationToken  = 15; // 设备的注册令	
+	int64 sendTime = 17;	
+	bool isReconnection = 18;
+	int32 cellId = 19; // 服务器区服Id
+	string channel = 21; // 来源渠道
+	string osVersion = 22; // 操作系统版本
+	string oppVersion = 23; // app版本号
+	string distinctId = 24; // 访客id
+}
+
+message LoginResponse {
+	int64 sessionID				= 1; // 会话ID（服务器内部使用）
+	bool isCreate 				= 2; // 是否是创建新角色（服务器内部使用）
+	
+  
+	LoginErrorCode loginError 	= 3; // 登陆错误码
+	int64 uid 					= 4; //用户id 		
+	int32 onlineTime 			= 5; // 在线时长（秒）
+	string account 				= 6; //账号
+	int64 accountId 			= 7;
+	string password 			= 8; //密码
+	bool isRealName 			= 9; // 是否实名
+	int32 age 					= 10; // 年龄
+	bool isReconnection 		= 11;
+}
+ 
+
+enum KillUserType{
+    SameAccount = 0; // 顶号
+	CloseServer = 1; // 服务器关闭
+	Kickout = 2;
+}
+
+message KillUserResponse {
+ 
+	KillUserType killUserType = 1;
+}
+
+
+message MessageSeedResponse {	
+ 
+	uint32 seed = 1; // 消息种子
+}
+
+message LoginFinishResponse {	
+ 
+	int64 finishTime = 1;	
+	bool reLogin = 2;
+}
+ 
+enum VerifiedType{
+     
+	VerifiedSuc = 0;
+	VerifiedNull = 1;  
+	VerifiedFail = 2;
+}
+
+message VerifiedRequest { 
+	string name = 1; // 姓名
+	string identification = 2; // 身份证号码
+	int32 age = 3; // 年龄
+	string account = 4;
+}
+
+message VerifiedResponse {	
+
+	VerifiedType result = 1;
+	int32 onlineTime = 2; // 在线时长（秒） 
+	bool isRealName = 3; // 是否实名
+	int32 age = 4; // 年龄
+	int32 underageRemainingTime = 5;
+}
+
+//心跳
+message HeartRequest{ 	
+	int64 userId = 1; //（服务器内部使用）	
+	int64 sessionID = 2; //（服务器内部使用）	
+}
+
+message HeartResponse{ 
+	int64 serverTime = 1; //服务器时间 
+	int32 onlineTime = 2; // 在线时长（秒）
+	string sessionTicket = 3;  
+}
+
+message TicketLoginReqData {
+	int64 sessionID_ = 1;
+    int32 gateId = 2;
+    string ip = 3;
+    int32 cellId_ = 4;
+    bool forceKickout = 5;
+    int32 platform = 6;
+    string deviceId = 7;
+    string osInfo= 8;
+    string deviceType = 9;
+    string deviceModel = 10;
+    string registrationToken = 11;
+    int64 sendTime = 12;
+    bool isReconnection = 13;
+}
+
+message TicketLoginExRequest { 
+	string ticket = 1;  
+	TicketLoginReqData encryptedData = 2;
+}
+
+message TicketReLoginExRequest { 
+	string sessionTicket = 1; 
+	TicketLoginReqData data = 2;	
+}
+
+message TicketLoginInternalRequest { 
+	int64 accountId = 1;
+    string account = 2;
+    bool needOverload = 3;
+    TicketLoginReqData data = 4;
+}
+
+message LogoutRequest {
+  
+}
+
+message LogoutResponse {	
+	 
+}
+
+message LoginInternalRequest {
+	int64 sessionID = 1; // 会话ID（服务器内部使用）
+	int32 gateId = 2; // 网关ID（服务器内部使用）
+	string ip = 3; // IP地址（服务器内部使用）
+	bool isNeedOverload = 4;//（服务器内部使用）  
+	int64 userId = 19; //（服务器内部使用）  
+	int32 cellId = 20; //（服务器内部使用） 
+	bool isNewUser = 21;	//（服务器内部使用） 
+
+	string account = 5; // 账号
+	string password = 6; // 密码
+    LoginType loginType = 7; // 登录类型 
+	string version = 8; // 版本号
+	bool isMandatory = 9; // 是否强制登陆
+	int32 pt = 10; // 枚举，平台类型：1-> iOS，2-> android，3-> 其他]
+	string udid = 11; // 设备唯一标识 
+	string osInfo = 12; // 操作系统信息，ios 11.0.1等]
+	string deviceType = 13; // 设备类型ipad， iPhone、HUAWEI、小米、OPPO、VIVO等
+	string deviceModel = 14; // 设备型号iPhone6s，ipad mini2，oppoR9，vivo x7等等	
+	string registrationToken  = 15; // 设备的注册令	
+	int64 sendTime = 17;	
+	bool isReconnection = 18;	
+	string channel = 22; // 来源渠道
+	string osVersion = 23; // 操作系统版本
+	string oppVersion = 24; // app版本号
+	string distinctId = 25; // 访客id
+}

@@ -1,5 +1,5 @@
 //-----------Auto Generate ByTools-----------
-//-----------Time:2023/6/16 19:33:24-----------
+//-----------Time:2024/4/19 10:18:23-----------
 //-----------Don't change-----------
 public static class ProtoEventName
 {
