@@ -60,16 +60,23 @@ public static partial class AssetUtility
         {
             return "Assets/Deer/AssetsHotfix/UI/IconNew/Icon_Empty.png";
         }
-
+        /// <summary>
+        /// 获取精灵资源名称
+        /// </summary>
+        /// <param name="spriteName"></param>
+        /// <returns></returns>
+        public static string GetSpritePath(string spriteName)
+        {
+            return $"Assets/Deer/AssetsHotfix/UI/UIArt/UISprites/{spriteName}.png";
+        }
         /// <summary>
         /// 获取精灵资源收集器
         /// </summary>
-        /// <param name="groupName"></param>
         /// <param name="collectionName"></param>
         /// <returns></returns>
-        public static string GetSpriteCollectionPath(string groupName, string collectionName)
+        public static string GetSpriteCollectionPath(string collectionName)
         {
-            return $"Assets/Deer/AssetsHotfix/{groupName}/UI/UIArt/AtlasCollection/{collectionName}.asset";
+            return $"Assets/Deer/AssetsHotfix/UI/UIArt/AtlasCollection/{collectionName}.asset";
         }
 
         /// <summary>

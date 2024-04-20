@@ -22,10 +22,10 @@ namespace UGFExtensions.SpriteCollection
         /// <param name="groupName"></param>
         /// <param name="collectionName"></param>
         /// <param name="spriteName"></param>
-        public static void SetSpriteByNameAsync(this Image image, string collectionName, string spriteName, string groupName = "BaseAssets")
+        public static void SetSpriteByNameAsync(this Image image, string collectionName, string spriteName)
         {
-            string collectionPath = AssetUtility.UI.GetSpriteCollectionPath(groupName, collectionName);
-            string spritePath = AssetUtility.UI.GetSpritePath(groupName, $"{collectionName}/{spriteName}");
+            string collectionPath = AssetUtility.UI.GetSpriteCollectionPath(collectionName);
+            string spritePath = AssetUtility.UI.GetSpritePath($"{collectionName}/{spriteName}");
             GameEntry.SpriteCollection.SetSpriteAsync(WaitSetImage.Create(image, collectionPath, spritePath));
         }
     }
