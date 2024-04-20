@@ -11,30 +11,30 @@
 		"Name":"HotfixCommon.dll",
 		"PathRoot":"Hotfix",
 		"GroupName":"BaseAssets",
-		"HashCode":-985257513,
-		"Length":147968,
-		"CompressedHashCode":-1346501105,
-		"CompressedLength":55002,
+		"HashCode":101757995,
+		"Length":254976,
+		"CompressedHashCode":1831504396,
+		"CompressedLength":90392,
 		"IsLoadReadOnly":true
 	},
 	{
 		"Name":"HotfixFramework.Runtime.dll",
 		"PathRoot":"Hotfix",
 		"GroupName":"BaseAssets",
-		"HashCode":-533718386,
-		"Length":164352,
-		"CompressedHashCode":938262067,
-		"CompressedLength":67868,
+		"HashCode":805289466,
+		"Length":162816,
+		"CompressedHashCode":41261495,
+		"CompressedLength":67284,
 		"IsLoadReadOnly":true
 	},
 	{
 		"Name":"HotfixBusiness.dll",
 		"PathRoot":"Hotfix",
 		"GroupName":"BaseAssets",
-		"HashCode":967759340,
+		"HashCode":-472657923,
 		"Length":31744,
-		"CompressedHashCode":369917397,
-		"CompressedLength":14085,
+		"CompressedHashCode":-2121352962,
+		"CompressedLength":14095,
 		"IsLoadReadOnly":true
 	}
 ]

@@ -40,40 +40,48 @@ namespace HotfixBusiness.UI
 
 		private void Btn_DeerExampleEvent()
 		{
-			if (!DeerSettingsUtils.DeerGlobalSettings.m_UseDeerExample)
+			// if (!DeerSettingsUtils.DeerGlobalSettings.m_UseDeerExample)
+			// {
+			// 	DialogParams dialogParams = new DialogParams();
+			// 	dialogParams.Mode = 1;
+			// 	dialogParams.Title = "提示";
+			// 	dialogParams.Message = "Deer例子已经被移除! [DeerTools/DeerExample/AddExample]可以添加Deer例子。";
+			// 	dialogParams.ConfirmText = "确定";
+			// 	GameEntry.UI.OpenDialog(dialogParams);
+			// 	return;
+			// }
+			// if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
+			// {
+			// 	procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureADeerExample);
+			// 	procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
+			// }
+			
+			GameEntry.AssetObject.LoadGameObjectByName(nameof(UITask_Cell), (bool result, object gameObject, int serialId) =>
 			{
-				DialogParams dialogParams = new DialogParams();
-				dialogParams.Mode = 1;
-				dialogParams.Title = "提示";
-				dialogParams.Message = "Deer例子已经被移除! [DeerTools/DeerExample/AddExample]可以添加Deer例子。";
-				dialogParams.ConfirmText = "确定";
-				GameEntry.UI.OpenDialog(dialogParams);
-				return;
-			}
-			if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
-			{
-				procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureADeerExample);
-				procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
-			}
+				GameObject go = (GameObject)gameObject;
+				go.SetActive(true);
+				go.transform.position = new Vector2(0, 0);
+				go.transform.SetParent(transform, false);
+			});
 		}
 
 		private void Btn_DeerGameEvent()
 		{
-			if (!DeerSettingsUtils.DeerGlobalSettings.m_UseDeerExample)
-			{
-				DialogParams dialogParams = new DialogParams();
-				dialogParams.Mode = 1;
-				dialogParams.Title = "提示";
-				dialogParams.Message = "Deer游戏例子已经被移除! [DeerTools/DeerExample/AddExample]可以添加Deer游戏例子。";
-				dialogParams.ConfirmText = "确定";
-				GameEntry.UI.OpenDialog(dialogParams);
-				return;
-			}
-			if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
-			{
-				procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureAGameExample);
-				procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
-			}
+			// if (!DeerSettingsUtils.DeerGlobalSettings.m_UseDeerExample)
+			// {
+			// 	DialogParams dialogParams = new DialogParams();
+			// 	dialogParams.Mode = 1;
+			// 	dialogParams.Title = "提示";
+			// 	dialogParams.Message = "Deer游戏例子已经被移除! [DeerTools/DeerExample/AddExample]可以添加Deer游戏例子。";
+			// 	dialogParams.ConfirmText = "确定";
+			// 	GameEntry.UI.OpenDialog(dialogParams);
+			// 	return;
+			// }
+			// if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
+			// {
+			// 	procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureAGameExample);
+			// 	procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
+			// }
 		}
 
 		/*--------------------Auto generate footer.Do not add anything below the footer!------------*/
