@@ -43,7 +43,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIArt/UISprites/Common/loading.png
+      Data: Assets/Deer/AssetsHotfix/UI/UIArt/UISprites/Common/loading.png
     - Name: $v
       Entry: 10
       Data: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIArt/UISprites/Common/loadingbg.png
+      Data: Assets/Deer/AssetsHotfix/UI/UIArt/UISprites/Common/loadingbg.png
     - Name: $v
       Entry: 10
       Data: 1

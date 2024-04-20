@@ -178,7 +178,7 @@ public partial class GameEntry
     /// </summary>
     private static void LoadCustomComponent()
     {
-        GameEntryMain.Resource.LoadAsset("Assets/Deer/AssetsHotfix/BaseAssets/GF/Customs.prefab", new LoadAssetCallbacks(LoadAssetSuccessCallback, LoadAssetFailureCallback));
+        GameEntryMain.Resource.LoadAsset("Assets/Deer/AssetsHotfix/GF/Customs.prefab", new LoadAssetCallbacks(LoadAssetSuccessCallback, LoadAssetFailureCallback));
     }
 
     private static void LoadAssetFailureCallback(string assetName, LoadResourceStatus status, string errorMessage, object userData)

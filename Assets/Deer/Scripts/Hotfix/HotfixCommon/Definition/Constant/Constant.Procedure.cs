@@ -40,22 +40,22 @@ public static partial class Constant
         public const string ProcedureMainMenu = "HotfixBusiness.Procedure.ProcedureMainMenu";
         public const string ProcedureResetMain = "HotfixBusiness.Procedure.ProcedureResetMain";
         
-        public const string ProcedureADeerExample = "HotfixADeerExample.Procedure.ProcedureADeerExample";
+        // public const string ProcedureADeerExample = "HotfixADeerExample.Procedure.ProcedureADeerExample";
         public const string ProcedureDeerMain = "HotfixADeerExample.Procedure.ProcedureDeerMain";
         public const string ProcedureDeerLogin = "HotfixADeerExample.Procedure.ProcedureDeerLogin";
         
-        public const string ProcedureAGameExample = "HotfixAGameExample.Procedure.ProcedureAGameExample";
+        // public const string ProcedureAGameExample = "HotfixAGameExample.Procedure.ProcedureAGameExample";
         public const string ProcedureGamePlay = "HotfixAGameExample.Procedure.ProcedureGamePlay";
         public const string ProcedureGameMenu = "HotfixAGameExample.Procedure.ProcedureGameMenu";
         private static Dictionary<string, ProcedureInfo> ProcedureInfos = new Dictionary<string, ProcedureInfo>()
         {
-            {ProcedureMainMenu,new ProcedureInfo(ProcedureMainMenu,false,false,"BaseAssets","")},
-            {ProcedureADeerExample,new ProcedureInfo(ProcedureADeerExample,true,false,"ADeerExample","")},
-            {ProcedureDeerLogin,new ProcedureInfo(ProcedureDeerLogin,false,true,"ADeerExample","")},
-            {ProcedureDeerMain,new ProcedureInfo(ProcedureDeerMain,false,true,"ADeerExample","Main")},
-            {ProcedureAGameExample,new ProcedureInfo(ProcedureAGameExample,true,false,"AGameExample","")},
-            {ProcedureGamePlay,new ProcedureInfo(ProcedureGamePlay,false,true,"AGameExample","RaceScene_")},
-            {ProcedureGameMenu,new ProcedureInfo(ProcedureGameMenu,false,false,"AGameExample","")},
+            {ProcedureMainMenu,new ProcedureInfo(ProcedureMainMenu,false,false,"111BaseAssets","")},
+            // {ProcedureADeerExample,new ProcedureInfo(ProcedureADeerExample,true,false,"ADeerExample","")},
+            // {ProcedureDeerLogin,new ProcedureInfo(ProcedureDeerLogin,false,true,"ADeerExample","")},
+            // {ProcedureDeerMain,new ProcedureInfo(ProcedureDeerMain,false,true,"ADeerExample","Main")},
+            // {ProcedureAGameExample,new ProcedureInfo(ProcedureAGameExample,true,false,"AGameExample","")},
+            // {ProcedureGamePlay,new ProcedureInfo(ProcedureGamePlay,false,true,"AGameExample","RaceScene_")},
+            // {ProcedureGameMenu,new ProcedureInfo(ProcedureGameMenu,false,false,"AGameExample","")},
         };
 
         public static bool IsJumpScene(string procedureName)
