@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rules:
   - valid: 1
-    name: BaseAssets/GameConfigs
+    name: GameConfigs
     variant: 
     fileSystem: 
     groups: BaseAssets
@@ -24,7 +24,7 @@ MonoBehaviour:
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/GF
+    name: GF
     variant: 
     fileSystem: 
     groups: BaseAssets
@@ -34,7 +34,7 @@ MonoBehaviour:
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sounds/Music
+    name: Sounds/Music
     variant: 
     fileSystem: 
     groups: BaseAssets
@@ -44,7 +44,7 @@ MonoBehaviour:
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sounds/UISound
+    name: Sounds/UISound
     variant: 
     fileSystem: 
     groups: BaseAssets
@@ -54,7 +54,7 @@ MonoBehaviour:
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Font
+    name: Font
     variant: 
     fileSystem: 
     groups: BaseAssets
@@ -64,7 +64,7 @@ MonoBehaviour:
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIForms
+    name: UI/UIForms
     variant: 
     fileSystem: 
     groups: BaseAssets
@@ -74,7 +74,7 @@ MonoBehaviour:
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIPrefabs
+    name: UI/UIPrefabs
     variant: 
     fileSystem: 
     groups: BaseAssets
@@ -84,7 +84,7 @@ MonoBehaviour:
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIArt/AtlasCollection
+    name: UI/UIArt/AtlasCollection
     variant: 
     fileSystem: 
     groups: BaseAssets
@@ -94,7 +94,7 @@ MonoBehaviour:
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIArt/Texture
+    name: UI/UIArt/Texture
     variant: 
     fileSystem: 
     groups: BaseAssets
@@ -104,7 +104,7 @@ MonoBehaviour:
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIArt/UISprites
+    name: UI/UIArt/UISprites
     variant: 
     fileSystem: 
     groups: BaseAssets
@@ -114,7 +114,7 @@ MonoBehaviour:
     filterType: 2
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UITemplate
+    name: UITemplate
     variant: 
     fileSystem: 
     groups: BaseAssets
