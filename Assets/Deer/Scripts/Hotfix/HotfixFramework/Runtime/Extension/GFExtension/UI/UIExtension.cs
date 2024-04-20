@@ -28,60 +28,9 @@ public static class UIExtension
     private static int m_UILoadingFormId;
     private static int m_UILoadingOneFormId;
 
-
-
-    /// <summary>
-    /// 血条节点
-    /// </summary>
-    private static HealthbarRoot m_HealthbarRoot;
-    public static HealthbarRoot HealthbarRoot
-    {
-        get
-        {
-            if (m_HealthbarRoot == null)
-            {
-                m_HealthbarRoot = GameEntry.UI.GetInstanceRoot().Find("HealthbarRoot").gameObject.GetOrAddComponent<HealthbarRoot>();
-                m_HealthbarRoot.gameObject.SetActive(true);
-            }
-            return m_HealthbarRoot;
-        }
-    }
-    /// <summary>
-    /// 飘字节点
-    /// </summary>
-    private static ShootTextRoot m_ShootTextRoot;
-    public static ShootTextRoot ShootTextRoot
-    {
-        get
-        {
-            if (m_ShootTextRoot == null)
-            {
-                m_ShootTextRoot = GameEntry.UI.GetInstanceRoot().Find("ShootTextRoot").gameObject.GetOrAddComponent<ShootTextRoot>();
-                m_ShootTextRoot.gameObject.SetActive(true);
-            }
-            return m_ShootTextRoot;
-        }
-    }
 	public static Canvas GetCanvas(this UIComponent uiComponent)
     {
        return GameEntry.UI.GetInstanceRoot().GetComponent<Canvas>();
-    }
-    /// <summary>
-    /// 获取血条节点
-    /// </summary>
-    /// <param name="uiComponent"></param>
-    /// <returns></returns>
-    public static HealthbarRoot GetHealthbarRoot(this UIComponent uiComponent)
-    {
-        return HealthbarRoot;
-    }
-    /// <summary>
-    /// 获取飘字界面
-    /// </summary>
-    /// <returns></returns>
-    public static ShootTextRoot GetShootTextRoot(this UIComponent uiComponent)
-    {
-        return ShootTextRoot;
     }
 
     public static bool HasUIForm(this UIComponent uiComponent,  ConstantUI.EUIFormId euiFormId, string uiGroupName = null)
