@@ -548,8 +548,7 @@ public class ShootText : MonoBehaviour
         else
         {
             GameObject obj = shootTextComponentPrefabs[TextShowComponentType.Image];
-            string groupName = Constant.Procedure.FindAssetGroup(GameEntry.Procedure.CurrentProcedure.GetType().FullName);
-            obj.GetComponent<Image>().SetSprite(AssetUtility.UI.GetSpriteCollectionPath(groupName,"shoottext"),AssetUtility.UI.GetSpritePath(groupName,$"a/{numberOperator}"));
+            obj.GetComponent<Image>().SetSprite(AssetUtility.UI.GetSpriteCollectionPath("shoottext"),AssetUtility.UI.GetSpritePath($"a/{numberOperator}"));
             numberDic.Add(numberKey,obj);
             operatorObj = Instantiate(obj);
         }
@@ -568,8 +567,7 @@ public class ShootText : MonoBehaviour
             else
             {
                 GameObject obj = shootTextComponentPrefabs[TextShowComponentType.Image];
-                string groupName = Constant.Procedure.FindAssetGroup(GameEntry.Procedure.CurrentProcedure.GetType().FullName);
-                obj.GetComponent<Image>().SetSprite(AssetUtility.UI.GetSpriteCollectionPath(groupName, "shoottext"),AssetUtility.UI.GetSpritePath(groupName,$"a/{numberOperator}"));
+                obj.GetComponent<Image>().SetSprite(AssetUtility.UI.GetSpriteCollectionPath("shoottext"),AssetUtility.UI.GetSpritePath($"a/{numberOperator}"));
                 numberDic.Add(numberKey,obj);
                 operatorObj = Instantiate(obj);
             }
