@@ -17,7 +17,13 @@ using UnityEngine;
 /// </summary>
 public static class AssetObjectComponentExtension
 {
-	public static int LoadGameObject(this AssetObjectComponent assetObjectComponent, string strPath, string strShowName, LoadAssetObjectComplete loadAssetObjectComplete = null)
+	public static int LoadGameObjectByName(this AssetObjectComponent assetObjectComponent, string assetName, LoadAssetObjectComplete loadAssetObjectComplete = null)
+	{
+		Debug.LogError($"LoadGameObjectByName {assetName} {Time.time}");
+		string strPath = AssetUtility.UI.GetAssetPath(assetName);
+		return assetObjectComponent.LoadAssetAsync(strPath, assetName, typeof(GameObject), loadAssetObjectComplete);
+	}
+	public static int LoadGameObject(this AssetObjectComponent assetObjectComponent, string strPath, string strShowName = "", LoadAssetObjectComplete loadAssetObjectComplete = null)
 	{
 		return assetObjectComponent.LoadAssetAsync(strPath, strShowName, typeof(GameObject), loadAssetObjectComplete);
 	}
