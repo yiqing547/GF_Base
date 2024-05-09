@@ -2,64 +2,69 @@
 <UnityGameFramework>
   <ResourceCollection>
     <Resources>
-      <Resource Name="BaseAssets/Font" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/GameConfigs" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/GF" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIArt/AtlasCollection/Common" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIArt/Texture/loading_bg" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIArt/UISprites/Common" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIForms/UIDialog/UIDialogForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIForms/UILoading/UILoadingForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIForms/UILoadingOne/UILoadingOneForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIForms/UIMainMenu/UIMainMenuForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIForms/UITips/UITipsForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIPrefabs" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/Joystick/Joystick" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/ScrollView/HGridScrollView" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/ScrollView/HListScrollView" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/ScrollView/ScrollVItemPrefab" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/ScrollView/VGridScrollView" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/ScrollView/VListScrollView" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/UIButton" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/UIForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/UIHealthBar" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/UIInputField" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/UIModel" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/UISpriteAnimation" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UITemplate/UIToggle" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="Font" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="GameConfigs" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="GF" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UI/UIArt/AtlasCollection/Common" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UI/UIArt/AtlasCollection/UITask" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UI/UIArt/Texture/loading_bg" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UI/UIArt/UISprites/Common" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UI/UIArt/UISprites/UITask" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UI/UIForms/UIDialog/UIDialogForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UI/UIForms/UILoading/UILoadingForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UI/UIForms/UILoadingOne/UILoadingOneForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UI/UIForms/UIMainMenu/UIMainMenuForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UI/UIForms/UITask/UITask_Cell" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UI/UIForms/UITips/UITipsForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UITemplate/Joystick/Joystick" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UITemplate/ScrollView/HGridScrollView" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UITemplate/ScrollView/HListScrollView" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UITemplate/ScrollView/ScrollVItemPrefab" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UITemplate/ScrollView/VGridScrollView" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UITemplate/ScrollView/VListScrollView" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UITemplate/UIButton" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UITemplate/UIForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UITemplate/UIInputField" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UITemplate/UIModel" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UITemplate/UISpriteAnimation" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
+      <Resource Name="UITemplate/UIToggle" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
     </Resources>
     <Assets>
-      <Asset Guid="022e3a7a56dcd374b99c91524e195749" ResourceName="BaseAssets/UITemplate/ScrollView/VGridScrollView" />
-      <Asset Guid="0c210c5b35c48d4408b1fdf6cd3f3061" ResourceName="BaseAssets/Font" />
-      <Asset Guid="102e820a7b9321d42b127d3104a7ca5a" ResourceName="BaseAssets/UI/UIForms/UILoading/UILoadingForm" />
-      <Asset Guid="1933ea8013f08d644bac0beabf442d59" ResourceName="BaseAssets/UITemplate/ScrollView/HListScrollView" />
-      <Asset Guid="227f8b54bf3f57b4392a62306a97b840" ResourceName="BaseAssets/UI/UIPrefabs" />
-      <Asset Guid="3c31266dd0ae57c468b36845e0397b6a" ResourceName="BaseAssets/Font" />
-      <Asset Guid="466741b236a7df54fa016d0554d0d255" ResourceName="BaseAssets/UI/UIPrefabs" />
-      <Asset Guid="55132911c10aa8047bd0d678757f5794" ResourceName="BaseAssets/UITemplate/UIHealthBar" />
-      <Asset Guid="56c3b222b5f9329408e788cb5f734add" ResourceName="BaseAssets/UI/UIArt/Texture/loading_bg" />
-      <Asset Guid="6a059a129e1575d4fb9a6b8abce19c6e" ResourceName="BaseAssets/UITemplate/UIButton" />
-      <Asset Guid="716a243830ee50249a909f893f37c5d4" ResourceName="BaseAssets/UI/UIArt/UISprites/Common" />
-      <Asset Guid="7247e1fea0760b54caa253020097fcdf" ResourceName="BaseAssets/UITemplate/ScrollView/ScrollVItemPrefab" />
-      <Asset Guid="745e65d5ee916dd47944050290a22205" ResourceName="BaseAssets/UITemplate/Joystick/Joystick" />
-      <Asset Guid="80a9390956026d548935e7833d3257fa" ResourceName="BaseAssets/UI/UIPrefabs" />
-      <Asset Guid="a493fd7876190a04b972bf7b3f90d962" ResourceName="BaseAssets/UITemplate/ScrollView/HGridScrollView" />
-      <Asset Guid="a5671ef5b26e98f48b513cadb9e87e2b" ResourceName="BaseAssets/UI/UIArt/UISprites/Common" />
-      <Asset Guid="b171dbc43fa6a5243aaaa39a77b13dd6" ResourceName="BaseAssets/UI/UIForms/UIMainMenu/UIMainMenuForm" />
-      <Asset Guid="b5b6e5e5b63377b4e9b3556b6812194d" ResourceName="BaseAssets/UI/UIForms/UITips/UITipsForm" />
-      <Asset Guid="be2db0afaf364114488351f7201458b1" ResourceName="BaseAssets/UI/UIArt/AtlasCollection/Common" />
-      <Asset Guid="c3bacb295d4014847a8ef29520f9d1a2" ResourceName="BaseAssets/UI/UIPrefabs" />
-      <Asset Guid="d021a4349078f974ca8eb3f903f1fbd6" ResourceName="BaseAssets/UITemplate/UIToggle" />
-      <Asset Guid="d5ac5cc365a9d7f469a91f84c485f9f2" ResourceName="BaseAssets/UITemplate/UIModel" />
-      <Asset Guid="dbc1d4bc6018f1f4f928156f5e3ffe21" ResourceName="BaseAssets/GameConfigs" />
-      <Asset Guid="e41de5d16c3cfa04da3d39b8aebad451" ResourceName="BaseAssets/UI/UIForms/UIDialog/UIDialogForm" />
-      <Asset Guid="e827f6256d45d1a4c8936370bebe2973" ResourceName="BaseAssets/UITemplate/UISpriteAnimation" />
-      <Asset Guid="ec2ada8d5b3d0154a8edbefa51801e76" ResourceName="BaseAssets/UITemplate/UIInputField" />
-      <Asset Guid="ee434b8e75f92804ca01e3be759e7c7f" ResourceName="BaseAssets/UITemplate/UIForm" />
-      <Asset Guid="f3ab0d53e9c425d4da9724fab4bfd7d9" ResourceName="BaseAssets/GF" />
-      <Asset Guid="f4fa68baee1efc34e801c1853c42e375" ResourceName="BaseAssets/UITemplate/ScrollView/VListScrollView" />
-      <Asset Guid="f9612d2ea47890742846a458b552127a" ResourceName="BaseAssets/Font" />
-      <Asset Guid="fb08855e4c34fc04891f62f0cf3225da" ResourceName="BaseAssets/UI/UIForms/UILoadingOne/UILoadingOneForm" />
+      <Asset Guid="022e3a7a56dcd374b99c91524e195749" ResourceName="UITemplate/ScrollView/VGridScrollView" />
+      <Asset Guid="0c210c5b35c48d4408b1fdf6cd3f3061" ResourceName="Font" />
+      <Asset Guid="102e820a7b9321d42b127d3104a7ca5a" ResourceName="UI/UIForms/UILoading/UILoadingForm" />
+      <Asset Guid="1933ea8013f08d644bac0beabf442d59" ResourceName="UITemplate/ScrollView/HListScrollView" />
+      <Asset Guid="3c31266dd0ae57c468b36845e0397b6a" ResourceName="Font" />
+      <Asset Guid="431f62f94c2dc42a58ebaf51d4e97585" ResourceName="UI/UIArt/UISprites/UITask" />
+      <Asset Guid="4b088ffff5ad549e297c0ed62219f567" ResourceName="UI/UIArt/AtlasCollection/UITask" />
+      <Asset Guid="56c3b222b5f9329408e788cb5f734add" ResourceName="UI/UIArt/Texture/loading_bg" />
+      <Asset Guid="5c6a7c83db2e44a10b44f4b2824bd7be" ResourceName="UI/UIForms/UITask/UITask_Cell" />
+      <Asset Guid="67112b71debbb4478be53b08eff141a4" ResourceName="UI/UIArt/UISprites/UITask" />
+      <Asset Guid="6a059a129e1575d4fb9a6b8abce19c6e" ResourceName="UITemplate/UIButton" />
+      <Asset Guid="716a243830ee50249a909f893f37c5d4" ResourceName="UI/UIArt/UISprites/Common" />
+      <Asset Guid="7247e1fea0760b54caa253020097fcdf" ResourceName="UITemplate/ScrollView/ScrollVItemPrefab" />
+      <Asset Guid="745e65d5ee916dd47944050290a22205" ResourceName="UITemplate/Joystick/Joystick" />
+      <Asset Guid="a1a27f94603244e99af98e014df73172" ResourceName="UI/UIArt/UISprites/UITask" />
+      <Asset Guid="a493fd7876190a04b972bf7b3f90d962" ResourceName="UITemplate/ScrollView/HGridScrollView" />
+      <Asset Guid="a5671ef5b26e98f48b513cadb9e87e2b" ResourceName="UI/UIArt/UISprites/Common" />
+      <Asset Guid="afe7b04a8488a40b7b7afede1939badc" ResourceName="UI/UIArt/UISprites/UITask" />
+      <Asset Guid="b171dbc43fa6a5243aaaa39a77b13dd6" ResourceName="UI/UIForms/UIMainMenu/UIMainMenuForm" />
+      <Asset Guid="b2202c9fce2bb4cc3bc91d89346f4bbb" ResourceName="UI/UIArt/UISprites/UITask" />
+      <Asset Guid="b5b6e5e5b63377b4e9b3556b6812194d" ResourceName="UI/UIForms/UITips/UITipsForm" />
+      <Asset Guid="be2db0afaf364114488351f7201458b1" ResourceName="UI/UIArt/AtlasCollection/Common" />
+      <Asset Guid="d021a4349078f974ca8eb3f903f1fbd6" ResourceName="UITemplate/UIToggle" />
+      <Asset Guid="d5ac5cc365a9d7f469a91f84c485f9f2" ResourceName="UITemplate/UIModel" />
+      <Asset Guid="dbc1d4bc6018f1f4f928156f5e3ffe21" ResourceName="GameConfigs" />
+      <Asset Guid="df980c9bd9a56456e8b9cf6d24b518a0" ResourceName="UI/UIArt/UISprites/UITask" />
+      <Asset Guid="dfdb929eae00b40dfa8316dbd4c56f39" ResourceName="UI/UIArt/UISprites/UITask" />
+      <Asset Guid="e41de5d16c3cfa04da3d39b8aebad451" ResourceName="UI/UIForms/UIDialog/UIDialogForm" />
+      <Asset Guid="e827f6256d45d1a4c8936370bebe2973" ResourceName="UITemplate/UISpriteAnimation" />
+      <Asset Guid="ec2ada8d5b3d0154a8edbefa51801e76" ResourceName="UITemplate/UIInputField" />
+      <Asset Guid="ee434b8e75f92804ca01e3be759e7c7f" ResourceName="UITemplate/UIForm" />
+      <Asset Guid="f3ab0d53e9c425d4da9724fab4bfd7d9" ResourceName="GF" />
+      <Asset Guid="f4fa68baee1efc34e801c1853c42e375" ResourceName="UITemplate/ScrollView/VListScrollView" />
+      <Asset Guid="f9612d2ea47890742846a458b552127a" ResourceName="Font" />
+      <Asset Guid="fb08855e4c34fc04891f62f0cf3225da" ResourceName="UI/UIForms/UILoadingOne/UILoadingOneForm" />
     </Assets>
   </ResourceCollection>
 </UnityGameFramework>

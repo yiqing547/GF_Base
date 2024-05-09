@@ -14,111 +14,101 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rules:
   - valid: 1
-    name: BaseAssets/GameConfigs
+    name: GameConfigs
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/GameConfigs
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/GameConfigs
     loadType: 0
     packed: 0
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/GF
+    name: GF
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/GF
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/GF
     loadType: 0
     packed: 0
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sounds/Music
+    name: Sounds/Music
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/Sounds/Music
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/Sounds/Music
     loadType: 0
     packed: 0
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sounds/UISound
+    name: Sounds/UISound
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/Sounds/UISound
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/Sounds/UISound
     loadType: 0
     packed: 0
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Font
+    name: Font
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/Font
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/Font
     loadType: 0
     packed: 0
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIForms
+    name: UI/UIForms
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIForms
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/UI/UIForms
     loadType: 0
     packed: 0
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIPrefabs
+    name: UI/UIArt/AtlasCollection
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIPrefabs
-    loadType: 0
-    packed: 0
-    filterType: 0
-    searchPatterns: '*.*'
-  - valid: 1
-    name: BaseAssets/UI/UIArt/AtlasCollection
-    variant: 
-    fileSystem: 
-    groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIArt/AtlasCollection
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/UI/UIArt/AtlasCollection
     loadType: 0
     packed: 0
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIArt/Texture
+    name: UI/UIArt/Texture
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIArt/Texture
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/UI/UIArt/Texture
     loadType: 0
     packed: 0
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIArt/UISprites
+    name: UI/UIArt/UISprites
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIArt/UISprites
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/UI/UIArt/UISprites
     loadType: 0
     packed: 0
     filterType: 2
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UITemplate
+    name: UITemplate
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UITemplate
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/UITemplate
     loadType: 0
     packed: 0
     filterType: 1

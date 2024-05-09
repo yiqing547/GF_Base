@@ -15,9 +15,9 @@ namespace cfg
    
 public sealed class Tables
 {
-    public Common.TbGlobalConfig TbGlobalConfig {get; private set; }
     public Error.TbErrorInfo TbErrorInfo {get; private set; }
     public Error.TbCodeInfo TbCodeInfo {get; private set; }
+    public Common.TbGlobalConfig TbGlobalConfig {get; private set; }
     public Deer.TbSounds_Config TbSounds_Config {get; private set; }
     public Deer.TbLanguage_Config TbLanguage_Config {get; private set; }
     public Deer.TbUIData_GameMode TbUIData_GameMode {get; private set; }
@@ -35,11 +35,6 @@ public sealed class Tables
 		List<UniTask> list = new List<UniTask>();
 		list.Add(UniTask.Create(async () =>
 		{
-			TbGlobalConfig = new Common.TbGlobalConfig(await loader("common_tbglobalconfig")); 
-			tables.Add("Common.TbGlobalConfig", TbGlobalConfig);
-		}));
-		list.Add(UniTask.Create(async () =>
-		{
 			TbErrorInfo = new Error.TbErrorInfo(await loader("error_tberrorinfo")); 
 			tables.Add("Error.TbErrorInfo", TbErrorInfo);
 		}));
@@ -47,6 +42,11 @@ public sealed class Tables
 		{
 			TbCodeInfo = new Error.TbCodeInfo(await loader("error_tbcodeinfo")); 
 			tables.Add("Error.TbCodeInfo", TbCodeInfo);
+		}));
+		list.Add(UniTask.Create(async () =>
+		{
+			TbGlobalConfig = new Common.TbGlobalConfig(await loader("common_tbglobalconfig")); 
+			tables.Add("Common.TbGlobalConfig", TbGlobalConfig);
 		}));
 		list.Add(UniTask.Create(async () =>
 		{
@@ -91,9 +91,9 @@ public sealed class Tables
 
 		await UniTask.WhenAll(list);
 
-        TbGlobalConfig.Resolve(tables); 
         TbErrorInfo.Resolve(tables); 
         TbCodeInfo.Resolve(tables); 
+        TbGlobalConfig.Resolve(tables); 
         TbSounds_Config.Resolve(tables); 
         TbLanguage_Config.Resolve(tables); 
         TbUIData_GameMode.Resolve(tables); 
@@ -106,9 +106,9 @@ public sealed class Tables
 
     public void TranslateText(System.Func<string, string, string> translator)
     {
-        TbGlobalConfig.TranslateText(translator); 
         TbErrorInfo.TranslateText(translator); 
         TbCodeInfo.TranslateText(translator); 
+        TbGlobalConfig.TranslateText(translator); 
         TbSounds_Config.TranslateText(translator); 
         TbLanguage_Config.TranslateText(translator); 
         TbUIData_GameMode.TranslateText(translator); 

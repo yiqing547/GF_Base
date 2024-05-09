@@ -33,7 +33,7 @@ namespace GameFramework.Resource
             private readonly byte[] m_CachedHashBytes;
             private IObjectPool<AssetObject> m_AssetPool;
             private IObjectPool<ResourceObject> m_ResourcePool;
-            private readonly bool m_UseTask = true;
+            private readonly bool m_UseTask = false;
 
             /// <summary>
             /// 初始化加载资源器的新实例。
