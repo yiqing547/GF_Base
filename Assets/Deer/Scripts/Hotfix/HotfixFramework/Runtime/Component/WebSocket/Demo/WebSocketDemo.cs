@@ -34,7 +34,7 @@ public class WebSocketDemo : MonoBehaviour
 
     private void OnLoginRes(byte[] msg)
     {
-        LoginResponse loginResponse = ProtobufUtils.Deserialize<LoginResponse>(msg);
+        LoginResponse loginResponse = LoginResponse.Parser.ParseFrom(msg);
         if (loginResponse != null)
         {
 
